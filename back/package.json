@@ -1,0 +1,19 @@
+{
+  "name": "port-game-backend",
+  "version": "1.0.0",
+  "description": "the node server for the Port Game",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^1.7.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

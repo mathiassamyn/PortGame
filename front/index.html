@@ -1,0 +1,34 @@
+﻿<html>
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+    <!--angular-->
+    <script src="Scripts/angular/angular.js"></script>
+    <script src="Scripts/angular/angular-route.js"></script>
+
+    <!--app core-->
+    <script src="Scripts/app.js"></script>
+    <script src="Scripts/app.config.js"></script>
+
+    <!--things we use-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+
+    <!--factories-->
+    <script src="Scripts/factories/socket.js"></script>
+
+    <!--controllers-->
+    <script src="Scripts/controllers/gameMasterCtrl.js"></script>
+
+	<title>Port Centre - Game</title>
+    <base href="/" />
+</head>
+<body ng-app="Port Game" ng-controller="gameMasterCtrl">
+
+    <a href="/">game</a>
+    <a href="/admin">admin</a>
+    <div ng-view></div>
+
+</body>
+</html>
