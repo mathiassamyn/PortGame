@@ -1,13 +1,18 @@
-﻿<form action="#!/checkCredentials" method="post">
-    <div>
-        <label>Username:</label>
-        <input type="text" name="username" />
-    </div>
-    <div>
-        <label>Password:</label>
-        <input type="password" name="password" />
-    </div>
-    <div>
-        <input type="submit" value="Log In" />
-    </div>
+﻿<form>
+    <p>Choose username</p>
+    <input ng-model="username"/>
+
+    <p>Choose team</p>
+    <select ng-options="item for item in teamList" ng-model="team">
+        <!--<option value="{{item}}">{{item}}</option>-->
+        <option value="">--Select Team--</option>
+    </select>
+
+    <p>Choose guide</p>
+    <select ng-options="item for item in guideList" ng-model="guide">
+        <!--<option value="{{item}}">{{item}}</option>-->
+        <option value="">--Select Guide--</option>
+    </select>
+
+    <button ng-click="toGame(guide)">next</button>
 </form>

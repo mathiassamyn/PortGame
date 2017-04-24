@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PortGame(1)", ".", "{D337F92D-8648-45E8-ADB2-39AA3D091069}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PortGame", ".", "{D337F92D-8648-45E8-ADB2-39AA3D091069}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_24856"

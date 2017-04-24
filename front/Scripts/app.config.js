@@ -1,20 +1,19 @@
-﻿app.config(function ($routeProvider, $locationProvider) {
+﻿app.config(function ($routeProvider) {
     $routeProvider
-    .when("/", {
-        title: "main",
-        templateUrl: "../views/main.html"
-    })
-    .when("/register", {
-        title: "register",
-        templateUrl: "../views/register.html"
+    .when("/game/:guide", {
+        title: "game",
+        templateUrl: "../views/game.html",
+        controller: "gameMasterCtrl"
     })
     .when("/login", {
         title: "log in",
-        templateUrl: "../views/login.html"
+        templateUrl: "../views/login.html",
+        controller: "loginCtrl"
     })
-    .when("/admin", {
+    .when("/admin/:guide", {
         title: "admin",
-        templateUrl: "../views/admin.html"
+        templateUrl: "../views/admin.html",
+        controller: "gameMasterCtrl"
     })
     .when("/notFound", {
         title: "404 - Not Found",
@@ -23,6 +22,4 @@
     .otherwise({
         redirectTo: "/notFound"
     });
-
-    $locationProvider.html5Mode(true);
 });

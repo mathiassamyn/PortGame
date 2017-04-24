@@ -1,13 +1,9 @@
-﻿app.controller("gameMasterCtrl", ["$scope", "socket", function ($scope, socket) {
+﻿app.controller("gameMasterCtrl", ["$scope", "socket", "$routeParams", function ($scope, socket, $routeParams) {
 
-    var room;
+    var room = $routeParams.guide;
+    socket.emit("join", room);
 
     $scope.game = { state: "PLAYING!!!" };
-
-    $scope.joinRoom = function (msg) {
-        room = msg;
-        socket.emit("join", room);
-    };
 
     $scope.pauseGame = function () {
         socket.emit("pause", room);
@@ -29,5 +25,13 @@
         });
     });
 
+    //only needed if controller is outside ng-view
+    //$scope.$on('$routeChangeSuccess', function () {
+    //    if ($routeParams != undefined) {
+    //        console.log($routeParams.guide);
+    //        room = $routeParams.guide;
+    //        socket.emit("join", room);
+    //    }
+    //});
 
 }])
