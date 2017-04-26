@@ -1,7 +1,9 @@
 ﻿app.controller("loginCtrl", ["$scope", "$location", function ($scope, $location) {
 
-    $scope.toGame = function (guide) {
-        $location.path("/game/" + guide);
+    $scope.toGame = function (guide, team, username) {
+        if (guide !== undefined && team !== undefined && username !== undefined) {
+            $location.path("/map/" + guide + "/" + team + "/" + username);
+        }
     }
 
     //for testing purposes

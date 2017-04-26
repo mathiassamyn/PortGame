@@ -1,16 +1,19 @@
 ﻿app.controller("gameMasterCtrl", ["$scope", "socket", "$routeParams", function ($scope, socket, $routeParams) {
 
-    var room = $routeParams.guide;
-    socket.emit("join", room);
+    $scope.room = $routeParams.guide;
+    $scope.team = $routeParams.team;
+    $scope.username = $routeParams.username;
+
+    socket.emit("join", $scope.room);
 
     $scope.game = { state: "PLAYING!!!" };
 
     $scope.pauseGame = function () {
-        socket.emit("pause", room);
+        socket.emit("pause", $scope.room);
     };
 
     $scope.resumeGame = function () {
-        socket.emit("resume", room);
+        socket.emit("resume", $scope.room);
     };
 
     socket.on("pause", function (msg) {

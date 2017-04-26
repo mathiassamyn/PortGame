@@ -1,8 +1,8 @@
 ﻿app.config(function ($routeProvider) {
     $routeProvider
-    .when("/game/:guide", {
-        title: "game",
-        templateUrl: "../views/game.html",
+    .when("/map/:guide/:team/:username", {
+        title: "map",
+        templateUrl: "../views/map.html",
         controller: "gameMasterCtrl"
     })
     .when("/login", {
