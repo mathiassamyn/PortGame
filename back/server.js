@@ -1,76 +1,17 @@
 ﻿var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
+var SQL = require("./SQL.js");
 
 app.use(express.static("../front"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-//db connection using tedious
-var Connection = require("tedious").Connection;
-var Request = require("tedious").Request;
-var DBConfig = require("./DBConfig.json");
-
-var connection = new Connection(DBConfig);
-
-connection.on("connect", function (err) {
-    if (err) {
-        console.log(err);
-    } else console.log("Successfully connected to database");
-});
-
-//function getTopFive() {
-//    request = new Request("SELECT PLAYER_ID FROM Scores ORDER BY Score DESC",
-//        function (err, rowCount, rows) {
-//            console.log(rowCount + " row(s) returned");
-//            console.log(rows);
-//        }
-//    );
-
-//    request.on("row", function (columns) {
-//        columns.forEach(function (column) {
-//            console.log("%s\t%s", column.metadata.colName, column.value);
-//        });
-//    });
-
-//    connection.execSql(request);
-//}
 
 //API calls
 app.post("/login", function (req, res) {
-    console.log(req.body);
     //TODO: check if name already exists
-    //TODO: put this in seperate files
-    var query = "declare @username varchar(255), " +
-                    "@firstname varchar(255), " +
-                    "@lastname varchar(255), " +
-                    "@teamName varchar(255), " +
-                    "@guideID int, " +
-                    "@teamID int; " +
-
-        "set @username = '" + req.body.Username + "'; " +
-        "set @firstname = '" + req.body.FirstName + "'; " +
-        "set @lastname = '" + req.body.LastName + "'; " +
-        "set @teamName = '" + req.body.Team + "'; " +
-
-        "select @guideID = GUIDE_ID from Guides " +
-        "where FirstName = @firstname and LastName = @lastname; " +
-
-        "select @teamID = TEAM_ID from Teams " +
-        "where Name = @teamName; " +
-
-        "insert into Players (Name, GUIDE_ID, TEAM_ID) " +
-        "values (@username, @guideID, @teamID); ";
-
-    console.log(query);
-    request = new Request(query,
-            function (err, rowCount, rows) {
-                if (err) {
-                    res.status(500).send("Something went wrong");
-                } else res.status(200).send("Player successfully added");
-            }
-        );
-    connection.execSql(request);
+    SQL.addUser(req.body.Username, req.body.FirstName, req.body.LastName, req.body.Team, res);
 })
 
 
