@@ -3,14 +3,12 @@
     <input ng-model="username"/>
 
     <p>Choose team</p>
-    <select ng-options="item for item in teamList" ng-model="team">
-        <!--<option value="{{item}}">{{item}}</option>-->
+    <select ng-options="item.id as item.name for item in teamList" ng-model="team">
         <option value="">--Select Team--</option>
     </select>
 
     <p>Choose guide</p>
-    <select ng-options="item for item in guideList" ng-model="guide">
-        <!--<option value="{{item}}">{{item}}</option>-->
+    <select ng-options="item.id as item.name for item in guideList" ng-model="guide">
         <option value="">--Select Guide--</option>
     </select>
 

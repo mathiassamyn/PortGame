@@ -11,7 +11,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //API calls
 app.post("/login", function (req, res) {
     //TODO: check if name already exists
-    SQL.addUser(req.body.Username, req.body.FirstName, req.body.LastName, req.body.Team, res);
+    SQL.addUser(req.body.username, req.body.teamID, req.body.guideID, res);
+})
+
+app.get("/guides", function (req, res) {
+    SQL.getGuides(res);
+})
+
+app.get("/teams", function (req, res) {
+    SQL.getTeams(res);
 })
 
 
