@@ -1,7 +1,78 @@
-﻿var express = require('express');
+﻿var express = require("express");
 var app = express();
+var bodyParser = require("body-parser");
 
-app.use(express.static('../front'));
+app.use(express.static("../front"));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+//db connection using tedious
+var Connection = require("tedious").Connection;
+var Request = require("tedious").Request;
+var DBConfig = require("./DBConfig.json");
+
+var connection = new Connection(DBConfig);
+
+connection.on("connect", function (err) {
+    if (err) {
+        console.log(err);
+    } else console.log("Successfully connected to database");
+});
+
+//function getTopFive() {
+//    request = new Request("SELECT PLAYER_ID FROM Scores ORDER BY Score DESC",
+//        function (err, rowCount, rows) {
+//            console.log(rowCount + " row(s) returned");
+//            console.log(rows);
+//        }
+//    );
+
+//    request.on("row", function (columns) {
+//        columns.forEach(function (column) {
+//            console.log("%s\t%s", column.metadata.colName, column.value);
+//        });
+//    });
+
+//    connection.execSql(request);
+//}
+
+//API calls
+app.post("/login", function (req, res) {
+    console.log(req.body);
+    //TODO: check if name already exists
+    //TODO: put this in seperate files
+    var query = "declare @username varchar(255), " +
+                    "@firstname varchar(255), " +
+                    "@lastname varchar(255), " +
+                    "@teamName varchar(255), " +
+                    "@guideID int, " +
+                    "@teamID int; " +
+
+        "set @username = '" + req.body.Username + "'; " +
+        "set @firstname = '" + req.body.FirstName + "'; " +
+        "set @lastname = '" + req.body.LastName + "'; " +
+        "set @teamName = '" + req.body.Team + "'; " +
+
+        "select @guideID = GUIDE_ID from Guides " +
+        "where FirstName = @firstname and LastName = @lastname; " +
+
+        "select @teamID = TEAM_ID from Teams " +
+        "where Name = @teamName; " +
+
+        "insert into Players (Name, GUIDE_ID, TEAM_ID) " +
+        "values (@username, @guideID, @teamID); ";
+
+    console.log(query);
+    request = new Request(query,
+            function (err, rowCount, rows) {
+                if (err) {
+                    res.status(500).send("Something went wrong");
+                } else res.status(200).send("Player successfully added");
+            }
+        );
+    connection.execSql(request);
+})
+
 
 //data for testing
 var scoreObject = {
@@ -13,20 +84,20 @@ var scores1 = scores2 = scores3 = [scoreObject, scoreObject, scoreObject, scoreO
 
 //socket.io
 
-var server = require('http').Server(app);
-var io = require('socket.io')(server);
+var server = require("http").Server(app);
+var io = require("socket.io")(server);
 
-io.on('connection', function (socket) {
-    socket.on('join', function (room) {
+io.on("connection", function (socket) {
+    socket.on("join", function (room) {
         socket.join(room);
     });
-    socket.on('pause', function (room) {
-        socket.to(room).emit('pause', 'the game has been paused');
+    socket.on("pause", function (room) {
+        socket.to(room).emit("pause", "the game has been paused");
     });
-    socket.on('resume', function (room) {
-        socket.to(room).emit('resume', 'the game has been resumed');
+    socket.on("resume", function (room) {
+        socket.to(room).emit("resume", "the game has been resumed");
     });
-    socket.on('region', function (data) {
+    socket.on("region", function (data) {
         //for demo, normally the database will be used
         var scoreData = {
             username: data.username,
@@ -41,7 +112,7 @@ io.on('connection', function (socket) {
             data.team = owner(scores3, scoreData);
         }
 
-        io.in(data.room).emit('new region owner', data);
+        io.in(data.room).emit("new region owner", data);
     });
 });
 
@@ -73,7 +144,7 @@ var addScore = function (scoreArray, scoreData) {
 }
 
 var getOwner = function (scoreArray) {
-    scoreArray.sort(sort_by('team', true, function (a) { return a.toUpperCase() }));
+    scoreArray.sort(sort_by("team", true, function (a) { return a.toUpperCase() }));
 
     var scores = [];
     var index = 0;
@@ -94,7 +165,7 @@ var getOwner = function (scoreArray) {
         }
     }
     
-    scores.sort(sort_by('score', true, parseInt));
+    scores.sort(sort_by("score", true, parseInt));
     return scores[0].team;
 }
 
@@ -112,5 +183,5 @@ var sort_by = function (field, reverse, primer) {
 }
 
 server.listen(3000, function () {
-    console.log('server up and running at 3000 port');
+    console.log("server up and running at 3000 port");
 });

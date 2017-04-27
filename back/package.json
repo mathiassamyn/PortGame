@@ -4,8 +4,10 @@
   "description": "the node server for the Port Game",
   "main": "server.js",
   "dependencies": {
+    "body-parser": "^1.17.1",
     "express": "^4.15.2",
-    "socket.io": "^1.7.3"
+    "socket.io": "^1.7.3",
+    "tedious": "~2.0.0"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
