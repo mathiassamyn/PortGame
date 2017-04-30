@@ -50,6 +50,7 @@ function executeQuery(query, response) {
 exports.addUser = function (username, teamID, guideID, response) {
     var query =
             "insert into Players (Name, GUIDE_ID, TEAM_ID) " +
+            "output inserted.PLAYER_ID " +
             "values ('" + username + "', '" + guideID + "', '" + teamID + "');";
 
     executeQuery(query, response);

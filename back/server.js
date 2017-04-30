@@ -2,6 +2,7 @@
 var app = express();
 var bodyParser = require("body-parser");
 var SQL = require("./SQL.js");
+var cookie = require("cookie");
 
 app.use(express.static("../front"));
 app.use(bodyParser.json());
@@ -10,8 +11,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 //API calls
 app.post("/login", function (req, res) {
-    //TODO: check if name already exists
-    SQL.addUser(req.body.username, req.body.teamID, req.body.guideID, res);
+    var cookies = cookie.parse(req.headers.cookie);
+    SQL.addUser(req.body.username, cookies.teamID, cookies.guideID, res);
 })
 
 app.get("/guides", function (req, res) {

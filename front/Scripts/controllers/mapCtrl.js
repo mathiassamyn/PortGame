@@ -6,8 +6,8 @@
             region: id,
             team: $scope.team,
             room: $scope.room,
-            username: $scope.username,
-            score: $scope.score
+            user: $scope.user,
+            score: score
         };
         socket.emit("region", msg);
     };

@@ -1,8 +1,8 @@
-﻿app.controller("gameMasterCtrl", ["$scope", "socket", "$routeParams", function ($scope, socket, $routeParams) {
+﻿app.controller("gameMasterCtrl", ["$scope", "socket", "$cookies", function ($scope, socket, $cookies) {
 
-    $scope.room = $routeParams.guide;
-    $scope.team = $routeParams.team;
-    $scope.username = $routeParams.username;
+    $scope.room = $cookies.get("guideID");
+    $scope.team = $cookies.get("teamID");
+    $scope.user = $cookies.get("playerID");
 
     socket.emit("join", $scope.room);
 

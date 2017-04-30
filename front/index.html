@@ -1,4 +1,4 @@
-﻿<html>
+﻿<html ng-app="Port Game">
 <head>
     <meta charset="UTF-8">
 
@@ -7,6 +7,7 @@
     <!--angular-->
     <script src="Scripts/angular/angular.js"></script>
     <script src="Scripts/angular/angular-route.js"></script>
+    <script src="Scripts/angular/angular-cookies.js"></script>
 
     <!--app core-->
     <script src="Scripts/app.js"></script>
@@ -17,15 +18,16 @@
 
     <!--factories-->
     <script src="Scripts/factories/socket.js"></script>
+    <script src="Scripts/factories/initData.js"></script>
 
     <!--controllers-->
     <script src="Scripts/controllers/gameMasterCtrl.js"></script>
     <script src="Scripts/controllers/loginCtrl.js"></script>
     <script src="Scripts/controllers/mapCtrl.js"></script>
 
-	<title>Port Centre - Game</title>
+    <title ng-bind="'Port Control - ' + title"></title>
 </head>
-<body ng-app="Port Game">
+<body>
     <div ng-view></div>
 
 </body>

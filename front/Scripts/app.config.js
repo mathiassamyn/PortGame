@@ -1,22 +1,23 @@
 ﻿app.config(function ($routeProvider) {
     $routeProvider
-    .when("/map/:guide/:team/:username", {
-        title: "map",
-        templateUrl: "../views/map.html",
-        controller: "gameMasterCtrl"
-    })
+        //.when("/login/:guide/:team/:username", {
     .when("/login", {
-        title: "log in",
+        title: "Log In",
         templateUrl: "../views/login.html",
         controller: "loginCtrl"
     })
+    .when("/map", {
+        title: "Map",
+        templateUrl: "../views/map.html",
+        controller: "gameMasterCtrl"
+    })
     .when("/admin/:guide", {
-        title: "admin",
+        title: "Admin",
         templateUrl: "../views/admin.html",
         controller: "gameMasterCtrl"
     })
     .when("/notFound", {
-        title: "404 - Not Found",
+        title: "Not Found",
         templateUrl: "../views/404.html"
     })
     .otherwise({
