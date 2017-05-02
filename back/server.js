@@ -23,6 +23,16 @@ app.get("/teams", function (req, res) {
     SQL.getTeams(res);
 })
 
+app.get("/guideStarted", function (req, res) {
+    var cookies = cookie.parse(req.headers.cookie);
+    SQL.getGuideStarted(cookies.guideID, res);
+})
+
+app.post("/guideStarted", function (req, res) {
+    var cookies = cookie.parse(req.headers.cookie);
+    SQL.setGuideStarted(cookies.guideID, req.body.started, res);
+})
+
 
 //data for testing
 var scoreObject = {
@@ -38,14 +48,23 @@ var server = require("http").Server(app);
 var io = require("socket.io")(server);
 
 io.on("connection", function (socket) {
-    socket.on("join", function (room) {
-        socket.join(room);
+    socket.on("join", function (room) {       
+        socket.join(room, function () {
+            console.log("new client joined room: " + room);
+        });
+        
+    });
+    socket.on("start", function (room) {
+        socket.to(room).emit("start");
+    });
+    socket.on("stop", function (room) {
+        socket.to(room).emit("stop");
     });
     socket.on("pause", function (room) {
-        socket.to(room).emit("pause", "the game has been paused");
+        socket.to(room).emit("pause");
     });
     socket.on("resume", function (room) {
-        socket.to(room).emit("resume", "the game has been resumed");
+        socket.to(room).emit("resume");
     });
     socket.on("region", function (data) {
         //for demo, normally the database will be used

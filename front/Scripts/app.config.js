@@ -6,15 +6,20 @@
         templateUrl: "../views/login.html",
         controller: "loginCtrl"
     })
+    .when("/wait", {
+        title: "Please Wait",
+        templateUrl: "../views/waiting.html",
+        controller: "waitCtrl"
+    })
     .when("/map", {
         title: "Map",
         templateUrl: "../views/map.html",
-        controller: "gameMasterCtrl"
+        controller: "mapCtrl"
     })
     .when("/admin/:guide", {
         title: "Admin",
         templateUrl: "../views/admin.html",
-        controller: "gameMasterCtrl"
+        controller: "adminCtrl"
     })
     .when("/notFound", {
         title: "Not Found",

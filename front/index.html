@@ -24,11 +24,14 @@
     <script src="Scripts/controllers/gameMasterCtrl.js"></script>
     <script src="Scripts/controllers/loginCtrl.js"></script>
     <script src="Scripts/controllers/mapCtrl.js"></script>
+    <script src="Scripts/controllers/adminCtrl.js"></script>
+    <script src="Scripts/controllers/waitCtrl.js"></script>
 
     <title ng-bind="'Port Control - ' + title"></title>
 </head>
-<body>
+<body ng-controller="gameMasterCtrl" ng-disabled="viewEnabled==false">
     <div ng-view></div>
-
+    <!--inline styling just for demo purposes-->
+    <div style="position: absolute;top:0;left:0;width: 100%;height:100vh;background-color: #237cea;z-index:2;opacity:0.8;" ng-hide="viewEnabled"></div>
 </body>
 </html>

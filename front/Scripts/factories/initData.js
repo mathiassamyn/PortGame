@@ -6,7 +6,6 @@ app.factory('initData', function ($http) {
      
     $http.get("/guides").then(
         function successCallback(response) {
-            console.log("after response");
             for (var i = 0; i < response.data.length; i++) {
                 guideList[i] = {
                     id: response.data[i][2].value,

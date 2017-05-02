@@ -65,3 +65,13 @@ exports.getTeams = function (response) {
     var query = "select Name, TEAM_ID from Teams";
     executeQuery(query, response)
 }
+
+exports.getGuideStarted = function (guideID, response) {
+    var query = "select Started from Guides where GUIDE_ID = " + guideID;
+    executeQuery(query, response);
+}
+
+exports.setGuideStarted = function (guideID, started, response) {
+    var query = "update Guides set Started = " + started + " where GUIDE_ID = " + guideID;
+    executeQuery(query, response);
+}
