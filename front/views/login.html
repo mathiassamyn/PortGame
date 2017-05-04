@@ -1,16 +1,27 @@
-﻿<form>
-    <p>Choose username</p>
-    <input ng-model="username"/>
+﻿<div class="pageContainer login">  
+    <div class="pure-g contentContainer">
+        <div class="pure-u-1-1">
+            <div class="logo">
+                <img src="img/logo-negative.svg" alt="Logo Port Control">
+            </div>
+        </div>
+        <div class="pure-u-1-1 loginContainer">
+            <form class="loginForm">
+                <p>Choose username</p>
+                <input ng-model="username"/>
 
-    <p>Choose team</p>
-    <select ng-options="item.id as item.name for item in teamList" ng-model="team">
-        <option value="">--Select Team--</option>
-    </select>
+                <p>Choose team</p>
+                <select ng-options="item.id as item.name for item in teamList" ng-model="team">
+                    <option value="">--Select Team--</option>
+                </select>
 
-    <p>Choose guide</p>
-    <select ng-options="item.id as item.name for item in guideList" ng-model="guide">
-        <option value="">--Select Guide--</option>
-    </select>
+                <p>Choose guide</p>
+                <select ng-options="item.id as item.name for item in guideList" ng-model="guide">
+                    <option value="">--Select Guide--</option>
+                </select>
 
-    <button ng-click="toGame(guide, team, username)">next</button>
-</form>
+                <button ng-click="toGame(guide, team, username)">next</button>
+            </form>
+        </div>
+    </div>
+</div>
