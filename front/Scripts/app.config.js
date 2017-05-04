@@ -21,12 +21,12 @@
         templateUrl: "../views/admin.html",
         controller: "adminCtrl"
     })
-    .when("/introduction", {
-        title: "Introduction",
-        templateUrl: "../views/introduction.html",
-        controller: "introductionCtrl"
+    .when("/game/:region/:game", {
+        title: "Game",
+        templateUrl: "../views/game.html",
+        controller: "gameCtrl"
     })
-    .when("/bonusgames", {
+    .when("/bonusgames/:region", {
         title: "Bonus Games",
         templateUrl: "../views/bonusGames.html",
         controller: "bonusGamesCtrl"
@@ -46,12 +46,12 @@
         templateUrl: "../views/market.html",
         controller: "marketCtrl"
     })
-    .when("/region", {
+    .when("/region/:region", {
         title: "Region",
         templateUrl: "../views/region.html",
         controller: "regionCtrl"
     })
-    .when("/result", {
+    .when("/result/:region/:game", {
         title: "Result",
         templateUrl: "../views/result.html",
         controller: "resultCtrl"
@@ -69,6 +69,9 @@
     .when("/notFound", {
         title: "Not Found",
         templateUrl: "../views/404.html"
+    })
+    .when("/", {
+        redirectTo: "/login"
     })
     .otherwise({
         redirectTo: "/notFound"
