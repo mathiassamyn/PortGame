@@ -1,8 +1,9 @@
 ﻿<div>
-    <h1>{{game.state}}</h1>
-    <button id="region1" ng-click="regionOwner('region1', score)">region 1: {{region1}}</button>
-    <button id="region2" ng-click="regionOwner('region2', score)">region 2: {{region2}}</button>
-    <button id="region3" ng-click="regionOwner('region3', score)">region 3: {{region3}}</button>
-    <p>score</p>
-    <input type="number" ng-model="score" />
+    <button id="region1" ng-click="regionView('region1')">region 1: {{region1}}</button>
+    <button id="region2" ng-click="regionView('region2')">region 2: {{region2}}</button>
+    <button id="region3" ng-click="regionView('region3')">region 3: {{region3}}</button>
+
+    <a href="/#!/inventory">inventory</a>
+    <a href="/#!/market">market</a>
+    <a href="/#!/wallet">wallet</a>
 </div>
