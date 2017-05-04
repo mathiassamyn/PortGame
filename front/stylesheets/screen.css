@@ -118,69 +118,154 @@ pre {
 }
 
 /* line 73, ../sass/screen.scss */
-h1, h2, h3, h4, h5, p, li {
+h2, h3, h4, h5, p, li {
   color: #ffffff;
   font-size: 1em;
 }
 
-/* line 80, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+/* line 83, ../sass/screen.scss */
 body {
   width: 100vw;
   height: 100vh;
 }
 
-/* line 93, ../sass/screen.scss */
+/* line 91, ../sass/screen.scss */
+.headerContainer {
+  height: 80px;
+  width: 100%;
+  text-transform: uppercase;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  display: block;
+  text-align: center;
+}
+
+/* line 100, ../sass/screen.scss */
+#login {
+  background-color: #0086CD;
+  color: #ffffff;
+}
+
+/* line 104, ../sass/screen.scss */
+#manufacturing {
+  background-color: #E30613;
+  color: #ffffff;
+}
+
+/* line 108, ../sass/screen.scss */
+#logistics {
+  background-color: #EF7D00;
+  color: #ffffff;
+}
+
+/* line 113, ../sass/screen.scss */
+.headerContainer h1 {
+  line-height: 80px;
+}
+
+/* line 117, ../sass/screen.scss */
+.headerImage {
+  width: 100%;
+}
+
+/* line 122, ../sass/screen.scss */
+.headerImage img {
+  width: 100%;
+}
+
+/* line 130, ../sass/screen.scss */
+.regionHeaderChemistry {
+  height: 80px;
+  width: 100%;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  display: block;
+  text-align: left;
+  float: left;
+  bottom: 80px;
+  background: #E30613;
+}
+
+/* line 141, ../sass/screen.scss */
+.chemistry {
+  background: #E30613;
+  height: 80px;
+  opacity: 0.7;
+  position: absolue;
+}
+
+/* line 147, ../sass/screen.scss */
+.chemistry h1 {
+  color: #ffffff;
+  line-height: 80px;
+  padding-left: 64px;
+  float: left;
+}
+
+/* line 155, ../sass/screen.scss */
+.logistics .chemistry {
+  background: #E30613;
+  height: 80px;
+  opacity: 0.7;
+  position: absolue;
+}
+
+/* line 167, ../sass/screen.scss */
 .login {
   background: #0086CD;
   height: 100vh;
 }
 
-/* line 98, ../sass/screen.scss */
+/* line 172, ../sass/screen.scss */
 .pageContainer {
   height: 100vh;
 }
 
-/* line 101, ../sass/screen.scss */
+/* line 175, ../sass/screen.scss */
 .contentContainer {
   height: 100%;
 }
 
-/* line 105, ../sass/screen.scss */
+/* line 179, ../sass/screen.scss */
 .logo {
   width: 60%;
   margin: 0 auto;
   margin-top: 10%;
 }
 
-/* line 111, ../sass/screen.scss */
+/* line 185, ../sass/screen.scss */
 .logo img {
   width: 100%;
 }
 
-/* line 114, ../sass/screen.scss */
+/* line 188, ../sass/screen.scss */
 .loginContainer {
   width: 50%;
   margin: 0 auto;
 }
 
-/* line 120, ../sass/screen.scss */
+/* line 194, ../sass/screen.scss */
 .loginForm {
   width: 100%;
 }
 
-/* line 130, ../sass/screen.scss */
+/* line 204, ../sass/screen.scss */
 .mapContainer {
   width: 100%;
   position: relative;
 }
 
-/* line 135, ../sass/screen.scss */
+/* line 209, ../sass/screen.scss */
 .mapContainer img {
   width: 100%;
   z-index: 1;
 }
 
-/* line 140, ../sass/screen.scss */
+/* line 214, ../sass/screen.scss */
 .region {
   z-index: 2;
 }

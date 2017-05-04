@@ -16,6 +16,21 @@
         templateUrl: "../views/map.html",
         controller: "mapCtrl"
     })
+
+    ///REGION PAGES 
+
+    .when("/manufacturing", {
+        title: "Manufacturing",
+        templateUrl: "../views/r-manufacturing.html",
+        controller: "regionCtrl"
+    })
+    .when("/logistics", {
+        title: "Logistics",
+        templateUrl: "../views/r-logistics.html",
+        controller: "regionCtrl"
+    })
+
+
     .when("/admin/:guide", {
         title: "Admin",
         templateUrl: "../views/admin.html",
