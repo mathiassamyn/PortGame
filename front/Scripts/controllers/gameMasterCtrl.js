@@ -21,6 +21,9 @@
 
     socket.on("stop", function () {
         //TODO: make stop function
+        $scope.$apply(function () {
+            $location.path("/endresult");
+        });
     });
 
 }])
