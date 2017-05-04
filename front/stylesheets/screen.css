@@ -66,3 +66,131 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
+
+/* line 32, ../sass/screen.scss */
+h1 {
+  font-family: "Futura", Helvetica, Arial, sans-serif;
+  font-size: 23px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 23px;
+}
+
+/* line 40, ../sass/screen.scss */
+h3 {
+  font-family: "Futura", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 23px;
+}
+
+/* line 48, ../sass/screen.scss */
+p {
+  font-family: "Futura", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+/* line 56, ../sass/screen.scss */
+blockquote {
+  font-family: "Futura", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+/* line 64, ../sass/screen.scss */
+pre {
+  font-family: "Futura", Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+/* line 73, ../sass/screen.scss */
+h1, h2, h3, h4, h5, p, li, a {
+  color: #ffffff;
+  font-size: 1em;
+}
+
+/* line 80, ../sass/screen.scss */
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* line 93, ../sass/screen.scss */
+.login {
+  background: #0086CD;
+  height: 100vh;
+}
+
+/* line 98, ../sass/screen.scss */
+.pageContainer {
+  height: 100vh;
+}
+
+/* line 101, ../sass/screen.scss */
+.contentContainer {
+  height: 100%;
+}
+
+/* line 105, ../sass/screen.scss */
+.logo {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+/* line 111, ../sass/screen.scss */
+.logo img {
+  width: 100%;
+}
+
+/* line 114, ../sass/screen.scss */
+.loginContainer {
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* line 120, ../sass/screen.scss */
+.loginForm {
+  width: 100%;
+}
+
+/* line 130, ../sass/screen.scss */
+.mapContainer {
+  width: 100%;
+  position: relative;
+}
+
+/* line 135, ../sass/screen.scss */
+.mapContainer img {
+  width: 100%;
+  z-index: 1;
+}
+
+/* line 140, ../sass/screen.scss */
+.region {
+  z-index: 2;
+}
+
+/* line 145, ../sass/screen.scss */
+.cars img {
+  position: absolute;
+  margin: 0 auto;
+  width: 7.5%;
+  top: 45%;
+  left: 68.5%;
+  z-index: 5;
+}
