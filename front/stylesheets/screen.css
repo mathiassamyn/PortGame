@@ -184,13 +184,3 @@ body {
 .region {
   z-index: 2;
 }
-
-/* line 145, ../sass/screen.scss */
-.cars img {
-  position: absolute;
-  margin: 0 auto;
-  width: 7.5%;
-  top: 45%;
-  left: 68.5%;
-  z-index: 5;
-}
