@@ -1,4 +1,4 @@
-﻿app.controller("loginCtrl", ["$scope", "$location", "$http", "initData", "$cookies", "socket", function ($scope, $location, $http, initData, $cookies, socket) {
+﻿app.controller("loginCtrl", ["$scope", "$state", "$http", "initData", "$cookies", "socket", function ($scope, $state, $http, initData, $cookies, socket) {
 
     $scope.toGame = function (guide, team, username) {
         if (guide !== undefined && team !== undefined && username !== undefined) {
@@ -8,7 +8,8 @@
                 function successCallback(response) {                     
                     $cookies.put("playerID", response.data[0][0].value);
                     socket.emit("join", guide);
-                    $location.path("/wait");
+                    //$location.path("/wait");
+                    $state.go("map");
                 },
                 function errorCallback(response) {
                     console.log(response);

@@ -1,10 +1,10 @@
-﻿app.controller("regionCtrl", ["$scope", "$location", "$routeParams", function ($scope, $location, $routeParams) {
+﻿app.controller("regionCtrl", ["$scope", "$state", "$stateParams", function ($scope, $state, $stateParams) {
     $scope.bonusGameView = function () {
-        $location.path("/bonusgames/" + $routeParams.region);
+        $state.go("bonusgames", { region: $stateParams.region });
 
     }
 
     $scope.standardGameView = function (game) {
-        $location.path("/game/" + $routeParams.region + "/" + game);
+        $state.go("game", { region: $stateParams.region, game: game});
     }
 }])
