@@ -110,6 +110,18 @@
 
     })
 
+    .state("region.manufacturing", {
+
+        templateUrl: "../views/r-manufacturing.html"
+
+    })
+
+    .state("region.logistics", {
+
+        templateUrl: "../views/r-logistics.html"
+
+    })
+
     .state("result", {
 
         url: "/result/:region/:game",
