@@ -8,8 +8,7 @@
                 function successCallback(response) {                     
                     $cookies.put("playerID", response.data[0][0].value);
                     socket.emit("join", guide);
-                    //$location.path("/wait");
-                    $state.go("map");
+                    $state.go("wait");
                 },
                 function errorCallback(response) {
                     console.log(response);

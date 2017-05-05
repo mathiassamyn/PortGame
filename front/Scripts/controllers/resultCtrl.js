@@ -1,5 +1,5 @@
-﻿app.controller("resultCtrl", ["$scope", "$location", "$routeParams", function ($scope, $location, $routeParams) {
+﻿app.controller("resultCtrl", ["$scope", "$state", "$stateParams", function ($scope, $state, $stateParams) {
     $scope.playAgain = function () {
-        $location.path("/game/" + $routeParams.region + "/" + $routeParams.game);
+        $state.go("game", { region: $stateParams.region, game: $stateParams.game });
     }
 }])

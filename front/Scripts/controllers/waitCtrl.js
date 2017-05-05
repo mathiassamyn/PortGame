@@ -1,8 +1,8 @@
-﻿app.controller("waitCtrl", ["$scope", "$location", "$http", function ($scope, $location, $http) {
+﻿app.controller("waitCtrl", ["$scope", "$state", "$http", function ($scope, $state, $http) {
     $http.get("/guideStarted").then(
         function successCallback(response) {
             if (response.data[0][0].value == true) {
-                $location.path("/map");
+                $state.go("map");
             }
         },
         function errorCallback(response) {
