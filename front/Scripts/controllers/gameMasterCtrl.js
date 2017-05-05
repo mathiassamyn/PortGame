@@ -1,4 +1,4 @@
-﻿app.controller("gameMasterCtrl", ["$scope", "socket", "$cookies", "$location", function ($scope, socket, $cookies, $location) {
+﻿app.controller("gameMasterCtrl", ["$scope", "socket", "$cookies", "$state", function ($scope, socket, $cookies, $state) {
 
     $scope.viewEnabled = true;
     socket.on("pause", function () {
@@ -15,14 +15,14 @@
 
     socket.on("start", function () {
         $scope.$apply(function () {
-            $location.path("/map");
+            $state.go("map");
         });
     });
 
     socket.on("stop", function () {
         //TODO: make stop function
         $scope.$apply(function () {
-            $location.path("/endresult");
+            $state.go("endresult");
         });
     });
 

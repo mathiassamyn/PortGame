@@ -1,94 +1,213 @@
-﻿app.config(function ($routeProvider) {
-    $routeProvider
-        //.when("/login/:guide/:team/:username", {
-    .when("/login", {
-        title: "Log In",
+﻿app.config(function ($stateProvider, $urlRouterProvider) {
+
+    $urlRouterProvider
+
+    .when("/", "/login")
+
+    .otherwise('/notfound');
+
+
+
+    $stateProvider
+
+    .state("login", {
+
+        url: "/login",
+
         templateUrl: "../views/login.html",
+
         controller: "loginCtrl"
+
     })
-    .when("/wait", {
-        title: "Please Wait",
+
+    .state("wait", {
+
+        url: "/wait",
+
         templateUrl: "../views/waiting.html",
+
         controller: "waitCtrl"
+
     })
-    .when("/map", {
-        title: "Map",
+
+    .state("map", {
+
+        url: "/map",
+
         templateUrl: "../views/map.html",
+
         controller: "mapCtrl"
+
     })
 
-    ///REGION PAGES 
+    .state("admin", {
 
-    .when("/manufacturing", {
-        title: "Manufacturing",
-        templateUrl: "../views/r-manufacturing.html",
-        controller: "regionCtrl"
-    })
-    .when("/logistics", {
-        title: "Logistics",
-        templateUrl: "../views/r-logistics.html",
-        controller: "regionCtrl"
-    })
+        url: "/admin/:guide",
 
-
-    .when("/admin/:guide", {
-        title: "Admin",
         templateUrl: "../views/admin.html",
+
         controller: "adminCtrl"
+
     })
-    .when("/game/:region/:game", {
-        title: "Game",
+
+    .state("game", {
+
+        url: "/game/:region/:game",
+
         templateUrl: "../views/game.html",
+
         controller: "gameCtrl"
+
     })
-    .when("/bonusgames/:region", {
-        title: "Bonus Games",
+
+    .state("bonusgames", {
+
+        url: "/bonusgames/:region",
+
         templateUrl: "../views/bonusGames.html",
+
         controller: "bonusGamesCtrl"
+
     })
-    .when("/endresult", {
-        title: "End Result",
+
+    .state("endresult", {
+
+        url: "/endresult",
+
         templateUrl: "../views/endResult.html",
+
         controller: "endResultCtrl"
+
     })
-    .when("/inventory", {
-        title: "Inventory",
+
+    .state("inventory", {
+
+        url: "/inventory",
+
         templateUrl: "../views/inventory.html",
+
         controller: "inventoryCtrl"
+
     })
-    .when("/market", {
-        title: "Market",
+
+    .state("market", {
+
+        url: "/market",
+
         templateUrl: "../views/market.html",
+
         controller: "marketCtrl"
+
     })
-    .when("/region/:region", {
-        title: "Region",
+
+    .state("region", {
+
+        url: "/region/:region",
+
         templateUrl: "../views/region.html",
+
         controller: "regionCtrl"
+
     })
-    .when("/result/:region/:game", {
-        title: "Result",
+
+    .state("result", {
+
+        url: "/result/:region/:game",
+
         templateUrl: "../views/result.html",
+
         controller: "resultCtrl"
+
     })
-    .when("/social", {
-        title: "Social",
+
+    .state("social", {
+
+        url: "/social",
+
         templateUrl: "../views/social.html",
+
         controller: "socialCtrl"
+
     })
-    .when("/wallet", {
-        title: "Wallet",
+
+    .state("wallet", {
+
+        url: "/wallet",
+
         templateUrl: "../views/wallet.html",
+
         controller: "walletCtrl"
+
     })
-    .when("/notFound", {
-        title: "Not Found",
-        templateUrl: "../views/404.html"
+
+    .state("notFound", {
+
+        url: "/notfound",
+
+        templateUrl: "../views/404.html",
+
     })
-    .when("/", {
-        redirectTo: "/login"
-    })
-    .otherwise({
-        redirectTo: "/notFound"
-    });
+
+   
+
+    //.when("/region/:region", {
+
+    //    title: "Region",
+
+    //    templateUrl: "../views/region.html",
+
+    //    controller: "regionCtrl"
+
+    //})
+
+    //.when("/result/:region/:game", {
+
+    //    title: "Result",
+
+    //    templateUrl: "../views/result.html",
+
+    //    controller: "resultCtrl"
+
+    //})
+
+    //.when("/social", {
+
+    //    title: "Social",
+
+    //    templateUrl: "../views/social.html",
+
+    //    controller: "socialCtrl"
+
+    //})
+
+    //.when("/wallet", {
+
+    //    title: "Wallet",
+
+    //    templateUrl: "../views/wallet.html",
+
+    //    controller: "walletCtrl"
+
+    //})
+
+    //.when("/notFound", {
+
+    //    title: "Not Found",
+
+    //    templateUrl: "../views/404.html"
+
+    //})
+
+    //.when("/", {
+
+    //    redirectTo: "/login"
+
+    //})
+
+    //.otherwise({
+
+    //    redirectTo: "/notFound"
+
+    //});
+
 });

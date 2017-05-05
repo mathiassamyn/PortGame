@@ -1,6 +1,6 @@
-﻿app.controller("adminCtrl", ["$scope", "socket", "$cookies", "$routeParams", "$http", function ($scope, socket, $cookies, $routeParams, $http) {
+﻿app.controller("adminCtrl", ["$scope", "socket", "$cookies", "$stateParams", "$http", function ($scope, socket, $cookies, $stateParams, $http) {
 
-    var room = $routeParams.guide;
+    var room = $stateParams.guide;
 
     $cookies.put("guideID", room);
     socket.emit("join", room);
