@@ -23,6 +23,10 @@ app.get("/teams", function (req, res) {
     SQL.getTeams(res);
 })
 
+app.get("/minigames", function (req, res) {
+    SQL.getMinigames(res);
+})
+
 app.get("/guideStarted", function (req, res) {
     var cookies = cookie.parse(req.headers.cookie);
     SQL.getGuideStarted(cookies.guideID, res);

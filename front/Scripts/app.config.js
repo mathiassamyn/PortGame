@@ -2,224 +2,171 @@
 
     $urlRouterProvider
 
-    .when("/", "/login")
+        .when("/", "/login")
 
-    .otherwise('/notfound');
+        .otherwise('/notfound');
 
 
 
     $stateProvider
 
-    .state("login", {
+        .state("login", {
 
-        url: "/login",
+            url: "/login",
 
-        templateUrl: "../views/login.html",
+            templateUrl: "../views/login.html",
 
-        controller: "loginCtrl"
+            controller: "loginCtrl"
 
-    })
+        })
 
-    .state("wait", {
+        .state("wait", {
 
-        url: "/wait",
+            url: "/wait",
 
-        templateUrl: "../views/waiting.html",
+            templateUrl: "../views/waiting.html",
 
-        controller: "waitCtrl"
+            controller: "waitCtrl"
 
-    })
+        })
 
-    .state("map", {
+        .state("map", {
 
-        url: "/map",
+            url: "/map",
 
-        templateUrl: "../views/map.html",
+            templateUrl: "../views/map.html",
 
-        controller: "mapCtrl"
+            controller: "mapCtrl"
 
-    })
+        })
 
-    .state("admin", {
+        .state("admin", {
 
-        url: "/admin/:guide",
+            url: "/admin/:guide",
 
-        templateUrl: "../views/admin.html",
+            templateUrl: "../views/admin.html",
 
-        controller: "adminCtrl"
+            controller: "adminCtrl"
 
-    })
+        })
 
-    .state("game", {
+        .state("game", {
 
-        url: "/game/:region/:game",
+            //url: "/game/:region/:game",
+            url: "/game/:region",
 
-        templateUrl: "../views/game.html",
+            templateUrl: "../views/game.html",
 
-        controller: "gameCtrl"
+            controller: "gameCtrl"
 
-    })
+        })
 
-    .state("bonusgames", {
+        .state("game.flappybird", {
 
-        url: "/bonusgames/:region",
+            templateUrl: "../views/canvas.html",
 
-        templateUrl: "../views/bonusGames.html",
+            controller: "flappyBirdCtrl"
 
-        controller: "bonusGamesCtrl"
+        })
 
-    })
+        .state("bonusgames", {
 
-    .state("endresult", {
+            url: "/bonusgames/:region",
 
-        url: "/endresult",
+            templateUrl: "../views/bonusGames.html",
 
-        templateUrl: "../views/endResult.html",
+            controller: "bonusGamesCtrl"
 
-        controller: "endResultCtrl"
+        })
 
-    })
+        .state("endresult", {
 
-    .state("inventory", {
+            url: "/endresult",
 
-        url: "/inventory",
+            templateUrl: "../views/endResult.html",
 
-        templateUrl: "../views/inventory.html",
+            controller: "endResultCtrl"
 
-        controller: "inventoryCtrl"
+        })
 
-    })
+        .state("inventory", {
 
-    .state("market", {
+            url: "/inventory",
 
-        url: "/market",
+            templateUrl: "../views/inventory.html",
 
-        templateUrl: "../views/market.html",
+            controller: "inventoryCtrl"
 
-        controller: "marketCtrl"
+        })
 
-    })
+        .state("market", {
 
-    .state("region", {
+            url: "/market",
 
-        url: "/region/:region",
+            templateUrl: "../views/market.html",
 
-        templateUrl: "../views/region.html",
+            controller: "marketCtrl"
 
-        controller: "regionCtrl"
+        })
 
-    })
+        .state("region", {
 
-    .state("region.manufacturing", {
+            url: "/region/:region",
 
-        templateUrl: "../views/r-manufacturing.html"
+            templateUrl: "../views/region.html",
 
-    })
+            controller: "regionCtrl"
 
-    .state("region.logistics", {
+        })
 
-        templateUrl: "../views/r-logistics.html"
+        .state("region.manufacturing", {
 
-    })
+            templateUrl: "../views/r-manufacturing.html"
 
-    .state("result", {
+        })
 
-        url: "/result/:region/:game",
+        .state("region.logistics", {
 
-        templateUrl: "../views/result.html",
+            templateUrl: "../views/r-logistics.html"
 
-        controller: "resultCtrl"
+        })
 
-    })
+        .state("result", {
 
-    .state("social", {
+            url: "/result/:region/:game",
 
-        url: "/social",
+            templateUrl: "../views/result.html",
 
-        templateUrl: "../views/social.html",
+            controller: "resultCtrl"
 
-        controller: "socialCtrl"
+        })
 
-    })
+        .state("social", {
 
-    .state("wallet", {
+            url: "/social",
 
-        url: "/wallet",
+            templateUrl: "../views/social.html",
 
-        templateUrl: "../views/wallet.html",
+            controller: "socialCtrl"
 
-        controller: "walletCtrl"
+        })
 
-    })
+        .state("wallet", {
 
-    .state("notFound", {
+            url: "/wallet",
 
-        url: "/notfound",
+            templateUrl: "../views/wallet.html",
 
-        templateUrl: "../views/404.html",
+            controller: "walletCtrl"
 
-    })
+        })
 
-   
+        .state("notFound", {
 
-    //.when("/region/:region", {
+            url: "/notfound",
 
-    //    title: "Region",
+            templateUrl: "../views/404.html",
 
-    //    templateUrl: "../views/region.html",
-
-    //    controller: "regionCtrl"
-
-    //})
-
-    //.when("/result/:region/:game", {
-
-    //    title: "Result",
-
-    //    templateUrl: "../views/result.html",
-
-    //    controller: "resultCtrl"
-
-    //})
-
-    //.when("/social", {
-
-    //    title: "Social",
-
-    //    templateUrl: "../views/social.html",
-
-    //    controller: "socialCtrl"
-
-    //})
-
-    //.when("/wallet", {
-
-    //    title: "Wallet",
-
-    //    templateUrl: "../views/wallet.html",
-
-    //    controller: "walletCtrl"
-
-    //})
-
-    //.when("/notFound", {
-
-    //    title: "Not Found",
-
-    //    templateUrl: "../views/404.html"
-
-    //})
-
-    //.when("/", {
-
-    //    redirectTo: "/login"
-
-    //})
-
-    //.otherwise({
-
-    //    redirectTo: "/notFound"
-
-    //});
+        })
 
 });

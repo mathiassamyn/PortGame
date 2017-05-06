@@ -16,8 +16,12 @@
     <script src="Scripts/app.js"></script>
     <script src="Scripts/app.config.js"></script>
 
-    <!--things we use-->
+    <!--websockets-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+
+    <!--flappy bird-->
+    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+    <script src="http://www.appcycle.me/flappy/ndgmr.Collision.js"></script>
 
     <!--factories-->
     <script src="Scripts/factories/socket.js"></script>
@@ -38,10 +42,11 @@
     <script src="Scripts/controllers/socialCtrl.js"></script>
     <script src="Scripts/controllers/walletCtrl.js"></script>
     <script src="Scripts/controllers/gameCtrl.js"></script>
+    <script src="Scripts/controllers/flappyBirdCtrl.js"></script>
 
     <title ng-bind="'Port Control - ' + title"></title>
 </head>
-<body ng-controller="gameMasterCtrl" ng-disabled="viewEnabled==false">
+<body ng-controller="gameMasterCtrl">
         
         <div ui-view></div>
         <!--inline styling just for demo purposes-->

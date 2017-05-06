@@ -48,10 +48,9 @@ function executeQuery(query, response) {
 }
 
 exports.addUser = function (username, teamID, guideID, response) {
-    var query =
-            "insert into Players (Name, GUIDE_ID, TEAM_ID) " +
-            "output inserted.PLAYER_ID " +
-            "values ('" + username + "', '" + guideID + "', '" + teamID + "');";
+    var query = "insert into Players (Name, GUIDE_ID, TEAM_ID) " +
+                "output inserted.PLAYER_ID " +
+                "values ('" + username + "', '" + guideID + "', '" + teamID + "');";
 
     executeQuery(query, response);
 }
@@ -73,5 +72,14 @@ exports.getGuideStarted = function (guideID, response) {
 
 exports.setGuideStarted = function (guideID, started, response) {
     var query = "update Guides set Started = " + started + " where GUIDE_ID = " + guideID;
+    executeQuery(query, response);
+}
+
+exports.getMinigames = function (response) {
+    var query = "select regions.Name, minigames.Name, Basegame " +
+                "from minigames " +
+                "inner join regions on minigames.REGION_ID = regions.REGION_ID " +
+                "order by regions.name ";
+
     executeQuery(query, response);
 }
