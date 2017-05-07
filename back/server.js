@@ -37,6 +37,20 @@ app.post("/guideStarted", function (req, res) {
     SQL.setGuideStarted(cookies.guideID, req.body.started, res);
 })
 
+app.post("/score", function (req, res) {
+    var cookies = cookie.parse(req.headers.cookie);
+    SQL.setScore(cookies.playerID, req.body.game, req.body.score, res);
+})
+
+app.get("/topFive/:game", function (req, res) {
+    var cookies = cookie.parse(req.headers.cookie);
+    SQL.getTopFive(cookies.guideID, req.params.game, res);
+})
+
+//app.get("/owner/:game", function (req, res) {
+//    var cookies = cookie.parse(req.headers.cookie);
+//    SQL.getOwner(cookies.guideID, req.params.game, res);
+//})
 
 //data for testing
 var scoreObject = {

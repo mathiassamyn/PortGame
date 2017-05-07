@@ -133,7 +133,7 @@
 
         .state("result", {
 
-            url: "/result/:region/:game",
+            url: "/result/:region/:game/:score",
 
             templateUrl: "../views/result.html",
 

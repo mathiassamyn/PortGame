@@ -1,3 +1,7 @@
-﻿game result list
+﻿Your score: {{score}}
+Top 5:
+<ol>
+    <li ng-repeat="result in topFive" ng-style="{'color' : 'black'}">{{result.player}} | {{result.team}} | {{result.score}}</li>
+</ol>
 <button ng-click="playAgain()">play again</button>
 <a ui-sref="map">map</a>
