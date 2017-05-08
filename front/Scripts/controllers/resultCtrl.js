@@ -28,10 +28,8 @@
     $http.get("/owner/" + region).then(
         function successCallback(response) {
             if (response.data.length > 0) {
-                console.log($scope[region].teamID);
-                if ($scope[region].teamID !== response.data[0][0]) {
-                    console.log("new team, guide: " + guide);
-                    socket.emit("region", { room: guide, region: region, teamID: response.data[0][0], team: response.data[0][1] });
+                if ($scope[region].teamID !== response.data[0][0].value) {
+                    socket.emit("region", { room: guide, region: region, teamID: response.data[0][0].value, team: response.data[0][1].value });
                 }
             }
         },
