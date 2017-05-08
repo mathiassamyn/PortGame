@@ -59,7 +59,7 @@
         h = stage.canvas.height;
 
         manifest = [
-            { src: "http://www.appcycle.me/flappy/img/bird.png", id: "bird" },
+            { src: "../../img/container.png", id: "bird" },
             {
                 src: "http://www.appcycle.me/flappy/img/background.png",
                 id: "background"
