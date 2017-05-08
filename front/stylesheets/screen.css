@@ -184,16 +184,84 @@ body {
 }
 
 /* line 133, ../sass/screen.scss */
+.loginContainer {
+  width: 75%;
+  margin: 0 auto;
+  padding: 8px 8px 8px 8px;
+}
+
+/* line 139, ../sass/screen.scss */
 .headerImg {
   width: 100%;
 }
 
-/* line 137, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
 .headerImg img {
   width: 100%;
 }
 
-/* line 141, ../sass/screen.scss */
+/* line 147, ../sass/screen.scss */
+.textContainer {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* line 153, ../sass/screen.scss */
+.introText {
+  padding: 16px 16px 16px 16px;
+}
+
+/* line 157, ../sass/screen.scss */
+.introText h1 {
+  padding: 8px 8px 8px 8px;
+  color: #ffffff;
+}
+
+/* line 162, ../sass/screen.scss */
+.introText p {
+  padding: 8px 8px 8px 8px;
+}
+
+/* line 171, ../sass/screen.scss */
+.mainselection {
+  overflow: hidden;
+  width: 100%;
+  height: 5%;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+  border: 0px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  background: #ffffff url("http://i62.tinypic.com/15xvbd5.png") no-repeat scroll 98% center;
+  font-size: 2em;
+  font-family: "Futura", Helvetica, Arial, sans-serif;
+  padding-left: 2%;
+}
+
+/* line 187, ../sass/screen.scss */
+.inputLogin {
+  overflow: hidden;
+  width: 100%;
+  height: 5%;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+  border: 0px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  font-size: 2em;
+  font-family: "Futura", Helvetica, Arial, sans-serif;
+  padding-left: 2%;
+}
+
+/* line 201, ../sass/screen.scss */
+.formHeader {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-size: 2em;
+  font-family: "Futura", Helvetica, Arial, sans-serif;
+}
+
+/* line 208, ../sass/screen.scss */
 .nextButton {
   width: 60%;
   height: 5%;
@@ -202,39 +270,39 @@ body {
   -webkit-border-radius: 4px 4px 4px 4px;
   border-radius: 4px 4px 4px 4px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  border: 0px;
   background: #86BC25;
   margin-top: 5%;
   float: right;
+  font-size: 2em;
+  font-family: "Futura", Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  margin-top: 10%;
+  font-weight: bold;
 }
 
-/* line 158, ../sass/screen.scss */
-.mainselection {
+/* line 226, ../sass/screen.scss */
+.undefined {
+  width: 60%;
+  height: 5%;
   overflow: hidden;
-  width: 100%;
-  -moz-border-radius: 2px 2px 2px 2px;
-  -webkit-border-radius: 2px 2px 2px 2px;
-  border-radius: 2px 2px 2px 2px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-  background: #ffffff url("http://i62.tinypic.com/15xvbd5.png") no-repeat scroll 98% center;
+  border: 0px;
+  background: #4E5051;
+  opacity: 0.5;
+  margin-top: 5%;
+  float: right;
+  font-size: 2em;
+  font-family: "Futura", Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  margin-top: 10%;
+  font-weight: bold;
 }
 
-/* line 169, ../sass/screen.scss */
-.inputLogin {
-  overflow: hidden;
-  width: 100%;
-  -moz-border-radius: 2px 2px 2px 2px;
-  -webkit-border-radius: 2px 2px 2px 2px;
-  border-radius: 2px 2px 2px 2px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-}
-
-/* line 178, ../sass/screen.scss */
-.formHeader {
-  padding-top: 2%;
-  padding-bottom: 2%;
-}
-
-/* line 190, ../sass/screen.scss */
+/* line 255, ../sass/screen.scss */
 .regionHeaderChemistry {
   height: 80px;
   width: 100%;
@@ -246,7 +314,7 @@ body {
   background: #E30613;
 }
 
-/* line 201, ../sass/screen.scss */
+/* line 266, ../sass/screen.scss */
 .chemistry {
   background: #E30613;
   height: 80px;
@@ -254,7 +322,7 @@ body {
   position: absolue;
 }
 
-/* line 207, ../sass/screen.scss */
+/* line 272, ../sass/screen.scss */
 .chemistry h1 {
   color: #ffffff;
   line-height: 80px;
@@ -262,7 +330,7 @@ body {
   float: left;
 }
 
-/* line 215, ../sass/screen.scss */
+/* line 280, ../sass/screen.scss */
 .logistics .chemistry {
   background: #E30613;
   height: 80px;
@@ -270,52 +338,46 @@ body {
   position: absolue;
 }
 
-/* line 225, ../sass/screen.scss */
+/* line 290, ../sass/screen.scss */
 .pageContainer {
   height: 100vh;
 }
 
-/* line 228, ../sass/screen.scss */
+/* line 293, ../sass/screen.scss */
 .contentContainer {
-  height: 100%;
+  height: 100vh;
 }
 
-/* line 232, ../sass/screen.scss */
+/* line 297, ../sass/screen.scss */
 .logo {
   width: 60%;
   margin: 0 auto;
   margin-top: 10%;
 }
 
-/* line 238, ../sass/screen.scss */
+/* line 303, ../sass/screen.scss */
 .logo img {
   width: 100%;
 }
 
-/* line 241, ../sass/screen.scss */
-.loginContainer {
-  width: 50%;
-  margin: 0 auto;
-}
-
-/* line 247, ../sass/screen.scss */
+/* line 309, ../sass/screen.scss */
 .loginForm {
   width: 100%;
 }
 
-/* line 257, ../sass/screen.scss */
+/* line 319, ../sass/screen.scss */
 .mapContainer {
   width: 100%;
   position: relative;
 }
 
-/* line 262, ../sass/screen.scss */
+/* line 324, ../sass/screen.scss */
 .mapContainer img {
   width: 100%;
   z-index: 1;
 }
 
-/* line 267, ../sass/screen.scss */
+/* line 329, ../sass/screen.scss */
 .region {
   z-index: 2;
 }
