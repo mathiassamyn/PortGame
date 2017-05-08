@@ -61,7 +61,7 @@
         manifest = [
             { src: "../../img/container.png", id: "bird" },
             {
-                src: "http://www.appcycle.me/flappy/img/background.png",
+                src: "../../img/background.png",
                 id: "background"
             },
             { src: "http://www.appcycle.me/flappy/img/ground.png", id: "ground" },
