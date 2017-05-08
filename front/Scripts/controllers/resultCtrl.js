@@ -1,12 +1,17 @@
-﻿app.controller("resultCtrl", ["$scope", "$state", "$stateParams", "$http", function ($scope, $state, $stateParams, $http) {
+﻿app.controller("resultCtrl", ["$scope", "$state", "$stateParams", "$http", "socket", "$cookies", function ($scope, $state, $stateParams, $http, socket, $cookies) {
+
+    var game = $stateParams.game;
+    var region = $stateParams.region;
+    var guide = $cookies.get("guideID");
+
     $scope.playAgain = function () {
-        $state.go("game." + angular.lowercase($stateParams.game.replace(/[\s]/g, '')), { region: $stateParams.region });
+        $state.go("game." + angular.lowercase(game.replace(/[\s]/g, '')), { region: region });
     }
 
     $scope.score = $stateParams.score;
     $scope.topFive = [];
 
-    $http.get("/topFive/" + $stateParams.game).then(
+    $http.get("/topFive/" + game).then(
         function successCallback(response) {  
             for (var i = 0; i < response.data.length; i++) {
                 $scope.topFive[i] = {
@@ -18,5 +23,20 @@
         },
         function errorCallback(response) {
             console.log(response);
-        });     
+        });
+    //would be better if this was looked at on the server, but this requires changes on the server.
+    $http.get("/owner/" + region).then(
+        function successCallback(response) {
+            if (response.data.length > 0) {
+                console.log($scope[region].teamID);
+                if ($scope[region].teamID !== response.data[0][0]) {
+                    console.log("new team, guide: " + guide);
+                    socket.emit("region", { room: guide, region: region, teamID: response.data[0][0], team: response.data[0][1] });
+                }
+            }
+        },
+        function errorCallback(response) {
+            console.log(response);
+        });
+    
 }])

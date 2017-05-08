@@ -6,12 +6,11 @@
         $http.get("/owner/" + region).then(
             function successCallback(response) {
                 console.log(response);
-                for (var i = 0; i < response.data.length; i++) {
-                    var model = $parse(region);
-                    model.assign($scope, {
-                        teamID: response.data[i][0].value,
-                        team: response.data[i][1].value
-                    });
+                if (response.data.length > 0) {
+                    $scope[region] = {
+                        teamID: response.data[0][0].value,
+                        team: response.data[0][1].value
+                    };
                 }
             },
             function errorCallback(response) {
@@ -24,11 +23,11 @@
     getOwner("logistics");
 
     socket.on("region", function (msg) {
-        var model = $parse(msg.region);
-        model.assign($scope, {
+        console.log(msg);
+        $scope[msg.region] = {
             teamID: msg.teamID,
             team: msg.team
-        });
+        };
     })
 
 
