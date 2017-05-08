@@ -77,7 +77,6 @@ io.on("connection", function (socket) {
         socket.to(room).emit("resume");
     });
     socket.on("region", function (data) {
-        console.log(data);
         io.in(data.room).emit("region", data);
     });
 });
