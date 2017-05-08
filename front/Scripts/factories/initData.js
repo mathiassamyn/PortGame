@@ -1,6 +1,6 @@
 ﻿//factory used so we only have to get the initial data once.
 
-app.factory('initData', function ($http) {
+app.factory('initData', ["$http", function ($http) {
     var guideList = [];
     var teamList = [];
     var minigameList = [];
@@ -53,4 +53,4 @@ app.factory('initData', function ($http) {
         teams: teamList,
         minigames: minigameList
     };
-});
+}]);

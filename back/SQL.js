@@ -97,24 +97,28 @@ exports.setScore = function (playerID, game, score, response) {
     executeQuery(query, response);
 }
 
-//exports.getOwner = function (guideID, game, response) {
-//    var query = "declare @guide_id int, @minigame_id int, @game varchar(255); " +
-//                "set @guide_id = " + guideID + "; " +
-//                "set @game = '" + game + "'; " +
-//                "set @minigame_id = (select minigame_id from minigames where name = @game); " +
+exports.getOwner = function (guideID, region, response) {
+    var query = "declare @guide_id int, @minigame_id int, @region varchar(255), @region_id int; " +
+                "set @guide_id = " + guideID + "; " +
+                "set @region = '" + region + "'; " +
+                "set @region_id = (select region_id from regions where name = @region); " +
+                "set @minigame_id = (select minigame_id from minigames where basegame = 1 and region_id = @region_id); " +
 
-//                "select top 1 name, sum(score) score from ( " +
-//                      "select top 5 scores.player_id, score, teams.name from scores " +
-//                      "inner join players on scores.player_id = players.player_id " +      
-//                      "inner join teams on players.team_id = teams.team_id " +
-//                      "inner join minigames on minigames.minigame_id = scores.minigame_id " +
-//                      "where players.guide_id = @guide_id and minigames.minigame_id = @minigame_id " +
-//                      "order by score desc) as top5 " +
-//                "group by name " +
-//                "order by score desc; "
+                "select teams.team_id, teams.name from teams " +
+                "inner join ( " +
+                    "select top 1 name, sum(score) score from ( " +
+                        "select top 5 score, teams.name from scores " +
+                        "inner join players on scores.player_id = players.player_id " +      
+                        "inner join teams on players.team_id = teams.team_id " +
+                        "inner join minigames on minigames.minigame_id = scores.minigame_id " +
+                        "where players.guide_id = @guide_id and minigames.minigame_id = @minigame_id " +
+                        "order by score desc) as top5 " +
+                    "group by name " +
+                    "order by score desc) as winner " +
+                "on teams.name = winner.name; "
 
-//    executeQuery(query, response);
-//}
+    executeQuery(query, response);
+}
 
 exports.getTopFive = function (guideID, game, response) {
     var query = "declare @guide_id int, @minigame_id int, @game varchar(255); " +
