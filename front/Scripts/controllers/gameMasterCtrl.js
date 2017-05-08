@@ -23,10 +23,12 @@
     getOwner("logistics");
 
     socket.on("region", function (msg) {
-        $scope[msg.region] = {
-            teamID: msg.teamID,
-            team: msg.team
-        };
+        $scope.$apply(function () {
+            $scope[msg.region] = {
+                teamID: msg.teamID,
+                team: msg.team
+            };
+        });
     })
 
 
