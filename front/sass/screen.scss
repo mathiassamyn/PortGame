@@ -86,7 +86,6 @@ body{
 }
 
 
-
 // HEADER //
 .headerContainer{
 	height: 80px;
@@ -97,10 +96,6 @@ body{
 	text-align: center;
 }
 
-#login{
-	background-color: $blue;
-	color: $white;
-}
 #manufacturing{
 	background-color: $red;
 	color: $white;
@@ -123,6 +118,71 @@ body{
 	width: 100%;
 
 }
+
+////// LOGIN PAGE //////
+
+
+#login{
+	background-color: $blue;
+	color: $white;
+}
+.login{
+	background-color: $blue;
+}
+
+.headerImg{
+	width: 100%;
+}
+
+.headerImg img{
+	width: 100%;
+}
+
+.nextButton{
+	width: 60%;
+	height: 5%;
+	overflow:hidden;
+   -moz-border-radius: 4px 4px 4px 4px;
+   -webkit-border-radius: 4px 4px 4px 4px;
+   border-radius: 4px 4px 4px 4px;
+   box-shadow: $shadow ;
+   background: $green;
+	margin-top: 5%;
+	float: right;
+
+}
+
+
+// SELECTION //
+
+.mainselection {
+   overflow:hidden;
+   width:100%;
+   -moz-border-radius: 2px 2px 2px 2px;
+   -webkit-border-radius: 2px 2px 2px 2px;
+   border-radius: 2px 2px 2px 2px;
+   box-shadow: $shadow ;
+   background: $white url("http://i62.tinypic.com/15xvbd5.png") no-repeat scroll 98% center;
+}
+
+
+.inputLogin{
+	  overflow:hidden;
+   width:100%;
+   -moz-border-radius: 2px 2px 2px 2px;
+   -webkit-border-radius: 2px 2px 2px 2px;
+   border-radius: 2px 2px 2px 2px;
+   box-shadow: $shadow ;
+}
+
+.formHeader{
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+
+
+
 
 
 ///// REGION SPECIFIC ////
@@ -160,14 +220,7 @@ body{
 }
 }
 
-///// LOGIN PAGE /////
 
-
-
-.login{
-	background: $blue;
-	height: 100vh;
-}
 
 .pageContainer{
 	height: 100vh;

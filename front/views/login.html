@@ -1,8 +1,8 @@
 ﻿<div class="headerContainer" id="login">
     <h1>Port Control</h1>
 </div>
-<a href="/#!/manufacturing">MANUFACTURING</a>
-<a href="/#!/logistics">log</a>
+<!--<a href="/#!/manufacturing">MANUFACTURING</a>
+<a href="/#!/logistics">log</a>-->
 
 <div class="pageContainer login">  
     <div class="pure-g contentContainer">
@@ -13,20 +13,20 @@
         </div>
         <div class="pure-u-1-1 loginContainer">
             <form class="loginForm">
-                <p>Choose username</p>
-                <input ng-model="username"/>
+                <h2 class="formHeader">Choose username</h2>
+                <input class="inputLogin" ng-model="username"/>
 
-                <p>Choose team</p>
-                <select ng-options="item.id as item.name for item in teamList" ng-model="team">
+                <h2  class="formHeader">Choose team</h2>
+                <select class="mainselection" ng-options="item.id as item.name for item in teamList" ng-model="team">
                     <option value="">--Select Team--</option>
                 </select>
 
-                <p>Choose guide</p>
-                <select ng-options="item.id as item.name for item in guideList" ng-model="guide">
+                <h2  class="formHeader">Choose guide</h2>
+                <select class="mainselection" ng-options="item.id as item.name for item in guideList" ng-model="guide">
                     <option value="">--Select Guide--</option>
                 </select>
 
-                <button ng-click="toGame(guide, team, username)">next</button>
+                <button  class="nextButton" ng-click="toGame(guide, team, username)">next</button>
             </form>
         </div>
     </div>

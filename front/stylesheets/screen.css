@@ -135,7 +135,7 @@ body {
   height: 100vh;
 }
 
-/* line 91, ../sass/screen.scss */
+/* line 90, ../sass/screen.scss */
 .headerContainer {
   height: 80px;
   width: 100%;
@@ -145,40 +145,96 @@ body {
   text-align: center;
 }
 
-/* line 100, ../sass/screen.scss */
-#login {
-  background-color: #0086CD;
-  color: #ffffff;
-}
-
-/* line 104, ../sass/screen.scss */
+/* line 99, ../sass/screen.scss */
 #manufacturing {
   background-color: #E30613;
   color: #ffffff;
 }
 
-/* line 108, ../sass/screen.scss */
+/* line 103, ../sass/screen.scss */
 #logistics {
   background-color: #EF7D00;
   color: #ffffff;
 }
 
-/* line 113, ../sass/screen.scss */
+/* line 108, ../sass/screen.scss */
 .headerContainer h1 {
   line-height: 80px;
 }
 
-/* line 117, ../sass/screen.scss */
+/* line 112, ../sass/screen.scss */
 .headerImage {
   width: 100%;
 }
 
-/* line 122, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 .headerImage img {
   width: 100%;
 }
 
-/* line 130, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
+#login {
+  background-color: #0086CD;
+  color: #ffffff;
+}
+
+/* line 129, ../sass/screen.scss */
+.login {
+  background-color: #0086CD;
+}
+
+/* line 133, ../sass/screen.scss */
+.headerImg {
+  width: 100%;
+}
+
+/* line 137, ../sass/screen.scss */
+.headerImg img {
+  width: 100%;
+}
+
+/* line 141, ../sass/screen.scss */
+.nextButton {
+  width: 60%;
+  height: 5%;
+  overflow: hidden;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  background: #86BC25;
+  margin-top: 5%;
+  float: right;
+}
+
+/* line 158, ../sass/screen.scss */
+.mainselection {
+  overflow: hidden;
+  width: 100%;
+  -moz-border-radius: 2px 2px 2px 2px;
+  -webkit-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  background: #ffffff url("http://i62.tinypic.com/15xvbd5.png") no-repeat scroll 98% center;
+}
+
+/* line 169, ../sass/screen.scss */
+.inputLogin {
+  overflow: hidden;
+  width: 100%;
+  -moz-border-radius: 2px 2px 2px 2px;
+  -webkit-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+/* line 178, ../sass/screen.scss */
+.formHeader {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+/* line 190, ../sass/screen.scss */
 .regionHeaderChemistry {
   height: 80px;
   width: 100%;
@@ -190,7 +246,7 @@ body {
   background: #E30613;
 }
 
-/* line 141, ../sass/screen.scss */
+/* line 201, ../sass/screen.scss */
 .chemistry {
   background: #E30613;
   height: 80px;
@@ -198,7 +254,7 @@ body {
   position: absolue;
 }
 
-/* line 147, ../sass/screen.scss */
+/* line 207, ../sass/screen.scss */
 .chemistry h1 {
   color: #ffffff;
   line-height: 80px;
@@ -206,7 +262,7 @@ body {
   float: left;
 }
 
-/* line 155, ../sass/screen.scss */
+/* line 215, ../sass/screen.scss */
 .logistics .chemistry {
   background: #E30613;
   height: 80px;
@@ -214,58 +270,52 @@ body {
   position: absolue;
 }
 
-/* line 167, ../sass/screen.scss */
-.login {
-  background: #0086CD;
-  height: 100vh;
-}
-
-/* line 172, ../sass/screen.scss */
+/* line 225, ../sass/screen.scss */
 .pageContainer {
   height: 100vh;
 }
 
-/* line 175, ../sass/screen.scss */
+/* line 228, ../sass/screen.scss */
 .contentContainer {
   height: 100%;
 }
 
-/* line 179, ../sass/screen.scss */
+/* line 232, ../sass/screen.scss */
 .logo {
   width: 60%;
   margin: 0 auto;
   margin-top: 10%;
 }
 
-/* line 185, ../sass/screen.scss */
+/* line 238, ../sass/screen.scss */
 .logo img {
   width: 100%;
 }
 
-/* line 188, ../sass/screen.scss */
+/* line 241, ../sass/screen.scss */
 .loginContainer {
   width: 50%;
   margin: 0 auto;
 }
 
-/* line 194, ../sass/screen.scss */
+/* line 247, ../sass/screen.scss */
 .loginForm {
   width: 100%;
 }
 
-/* line 204, ../sass/screen.scss */
+/* line 257, ../sass/screen.scss */
 .mapContainer {
   width: 100%;
   position: relative;
 }
 
-/* line 209, ../sass/screen.scss */
+/* line 262, ../sass/screen.scss */
 .mapContainer img {
   width: 100%;
   z-index: 1;
 }
 
-/* line 214, ../sass/screen.scss */
+/* line 267, ../sass/screen.scss */
 .region {
   z-index: 2;
 }
