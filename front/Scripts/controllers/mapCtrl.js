@@ -1,8 +1,9 @@
-﻿app.controller("mapCtrl", ["$scope", "$cookies", "$state", function ($scope, $cookies, $state) {
+﻿app.controller("mapCtrl", ["$scope", "$cookies", "$state", "mapChanges", function ($scope, $cookies, $state, mapChanges) {
 
-    var room = $cookies.get("guideID");
-
-    $scope.region1 = $scope.region2 = $scope.region3 = "Unowned";
+    console.log(mapChanges.manu);
+    setTimeout(function () { console.log(mapChanges.manufacturing); }, 3000);
+    $scope.manufacturing = mapChanges.manufacturing;
+    $scope.logistics = mapChanges.logistics;
 
     $scope.regionView = function (region) {
         $state.go("region." + region, { region: region });
