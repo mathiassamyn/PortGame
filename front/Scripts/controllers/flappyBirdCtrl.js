@@ -59,6 +59,7 @@
         h = stage.canvas.height;
 
         manifest = [
+            { src: "../../img/container.png", id: "bird" },
             {
                 src: "http://www.appcycle.me/flappy/img/background.png",
                 id: "background"
@@ -294,6 +295,4 @@
 
         stage.update(event);
     }
-
-            { src: "../../img/container.png", id: "bird" },
 }]);
