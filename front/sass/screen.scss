@@ -6,6 +6,11 @@
 @import "compass/reset";
 
 
+
+.ng-scope{
+	width: 100%;
+}
+
 // COLOURS
 
 $blue: #0086CD;
@@ -16,6 +21,23 @@ $green: #86BC25;
 $brown: #53160A;
 $grey: #4E5051;
 $white: #ffffff;
+
+
+// OPACITY
+
+.alpha70red {
+    /* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(227, 6, 19);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(227, 6, 19, 0.7);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+
+
+
 // SHADOWS
 
 $shadow : 0 2px 5px 0 rgba(0, 0, 0, 0.26);
@@ -26,6 +48,8 @@ $shadow : 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 $logoCardPadding: 10px 10px 10px 10px;
 $cardPadding: 16px 16px 16px 16px;
 $h1Padding: 8px 8px 8px 8px;
+
+
 
 //FONTS
 
@@ -244,13 +268,151 @@ body{
 	font-weight: bold;
 }
 
+///// BUTTON STYLING //////
+.buttonContainer{
+	    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2%;
+
+}
+
+.startButton{
+	width: 90%;
+	float: right;
+	height: 10%;
+	overflow:hidden;
+   -moz-border-radius: 4px 4px 4px 4px;
+   -webkit-border-radius: 4px 4px 4px 4px;
+   border-radius: 4px 4px 4px 4px;
+   box-shadow: $shadow ;
+   border: 0px;
+   margin-left: auto;
+   margin-right: auto;
+   background: $green;
+	font-size: 2em;
+	font-family: "Futura", Helvetica, Arial, sans-serif;
+	color: $white;
+	font-weight: bold;
+	padding: $h1Padding;
+}
+.bonusButton{
+	width:90%;
+	float: left;
+	height: 10%;
+	overflow:hidden;
+	padding: $h1Padding;
+   -moz-border-radius: 4px 4px 4px 4px;
+   -webkit-border-radius: 4px 4px 4px 4px;
+   border-radius: 4px 4px 4px 4px;
+   box-shadow: $shadow ;
+   border: 0px;
+   margin-left: auto;
+   margin-right: auto;
+   background: $yellow;
+	font-size: 2em;
+	font-family: "Futura", Helvetica, Arial, sans-serif;
+	color: $white;
+	font-weight: bold;
+}
+///// LOADING PAGE /////
+
+
+.loadingContainer{
+	padding-top:10%;
+	width: 80%;
+	margin: auto;
+}
+.loadingContainer h1{
+	color: $white;
+	text-align: center;
+}
+.loadingImage{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.loadingImage img{
+	 width: 100%;
+	 margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+
+// LOADING ANIMATION
+.loading {
+  font-size: 30px;
+}
+
+.loading:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4,end) 900ms infinite;      
+  animation: ellipsis steps(4,end) 900ms infinite;
+  content: "\2026"; /* ascii code for the ellipsis character */
+  width: 0px;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 1.25em;    
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 1.25em;    
+  }
+}
+
+///// REGION GENERAL /////
+
+.regionTitleContainer{
+	margin-top: -80px;
+    position: absolute;
+    height: 80px;
+	width: 100%;
+}
+
+.regionTitle{
+	width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.regionTitle h1{
+	color: $white;
+	line-height: 80px;
+}
+
+.regionBackground{
+	width: 100%;
+	height: 80vh;
+}
+
+.regionContent{
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 2%;
+}
+.regionContent p{
+	color: $white;
+	padding: $h1Padding;
+	float: left;
+}
+.regionContent img{
+	width: 95%;
+}
 
 
 
 
 
-
-///// REGION SPECIFIC ////
+///// REGION SPECIFIC /////
 
 .regionHeaderChemistry{
 	height: 80px;
@@ -260,20 +422,14 @@ body{
 	text-align: left;
 	float: left;	
     bottom: 80px;
-    background: $red;
+
 }
 
- .chemistry{
-	background: $red;
-	height: 80px;
-	opacity: 0.7;
+ #chemistry{
 	position: absolue;
 }
-.chemistry h1{
-	color: $white;
-	line-height: 80px;
-	padding-left: 64px;
-	float: left;
+#chemistry h1{
+
 }
 
 .logistics{

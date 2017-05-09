@@ -59,13 +59,13 @@
         h = stage.canvas.height;
 
         manifest = [
-            { src: "../../games/flappy/img/container.png", id: "bird" },
+            { src: "../../img/games/flappy/container.png", id: "bird" },
             {
                 src: "../../img/games/flappy/background.png",
                 id: "background"
             },
-            { src: "http://www.appcycle.me/flappy/img/ground.png", id: "ground" },
-            { src: "http://www.appcycle.me/flappy/img/pipe.png", id: "pipe" },
+            { src: "../../img/games/flappy/ground.png", id: "ground" },
+            { src: "../../img/games/flappy/pipe.png", id: "pipe" },
             { src: "http://www.appcycle.me/flappy/img/restart.png", id: "start" },
             { src: "http://www.appcycle.me/flappy/img/share.png", id: "share" },
             { src: "http://www.appcycle.me/flappy/fonts/FB.eot" },
