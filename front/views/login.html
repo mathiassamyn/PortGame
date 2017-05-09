@@ -1,8 +1,8 @@
 ﻿<div class="headerContainer" id="login">
     <h1>Port Control</h1>
 </div>
-<a href="/#!/manufacturing">MANUFACTURING</a>
-<a href="/#!/logistics">log</a>
+<!--<a href="/#!/manufacturing">MANUFACTURING</a>
+<a href="/#!/logistics">log</a>-->
 
 <div class="pageContainer login">  
     <div class="pure-g contentContainer">
@@ -10,23 +10,29 @@
             <div class="headerImg">
                 <img src="img/portheader.png" alt="Header Image Port Control">
             </div>
+            <div class="textContainer">
+                <div class="introText">
+                    <h1>Welcome to Port Control</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam nesciunt sit ratione, dolores, culpa temporibus. Dolore facere obcaecati aliquam totam perspiciatis sunt, aliquid accusamus accusantium dicta sint, iste qui architecto! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui tempore ratione exercitationem minus at dolores minima culpa voluptas, quaerat voluptatem? Corrupti soluta consequuntur similique laboriosam, enim dicta in, provident ducimus?</p>
+                </div>
+            </div>
         </div>
         <div class="pure-u-1-1 loginContainer">
             <form class="loginForm">
-                <p>Choose username</p>
-                <input ng-model="username"/>
+                <h2 class="formHeader">Choose username</h2>
+                <input class="inputLogin" ng-model="username"/>
 
-                <p>Choose team</p>
-                <select ng-options="item.id as item.name for item in teamList" ng-model="team">
-                    <option value="">--Select Team--</option>
+                <h2  class="formHeader">Choose team</h2>
+                <select class="mainselection" ng-options="item.id as item.name for item in teamList" ng-model="team">
+                    <option value="">Select Team</option>
                 </select>
 
-                <p>Choose guide</p>
-                <select ng-options="item.id as item.name for item in guideList" ng-model="guide">
-                    <option value="">--Select Guide--</option>
+                <h2  class="formHeader">Choose guide</h2>
+                <select class="mainselection" ng-options="item.id as item.name for item in guideList" ng-model="guide">
+                    <option value="">Select Guide</option>
                 </select>
 
-                <button ng-click="toGame(guide, team, username)">next</button>
+                <button class="nextButton" ng-class="{undefined : (username === undefined || team === undefined || guide === undefined)}" ng-click="toGame(guide, team, username)">READY</button>
             </form>
         </div>
     </div>
