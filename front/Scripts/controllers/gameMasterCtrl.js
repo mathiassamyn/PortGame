@@ -1,5 +1,5 @@
 ﻿app.controller("gameMasterCtrl", ["$scope", "socket", "$cookies", "$state", "$http", "$parse", "$interval", "initData", function ($scope, socket, $cookies, $state, $http, $parse, $interval, initData) {
-
+    
     //This will be used for players that reload the page, it allows them to reconnect to the websocket.
     var guide = $cookies.get("guideID");
 

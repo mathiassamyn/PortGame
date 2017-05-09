@@ -1,11 +1,10 @@
 ﻿app.controller("breakoutCtrl", ["$scope", function ($scope) {
-
+    //stolen and modified from https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html
     if (window.DeviceMotionEvent) {
         window.addEventListener("devicemotion", deviceMotionHandler, true);
     } else {
         console.log("DeviceMotionEvent is not supported");
     }
-
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
     var ballRadius = 10;
