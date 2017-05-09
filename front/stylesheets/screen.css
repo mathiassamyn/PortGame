@@ -75,6 +75,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 28, ../sass/screen.scss */
 .alpha70red {
   /* Fallback for web browsers that don't support RGBa */
+  background-color: #ef7d00;
+  /* RGBa with 0.6 opacity */
+  background-color: rgba(239, 125, 0, 0.7);
+  /* For IE 5.5 - 7*/
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+  /* For IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+
+/* line 38, ../sass/screen.scss */
+.alpha70orange {
+  /* Fallback for web browsers that don't support RGBa */
   background-color: #e30613;
   /* RGBa with 0.6 opacity */
   background-color: rgba(227, 6, 19, 0.7);
@@ -84,7 +96,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
 
-/* line 56, ../sass/screen.scss */
+/* line 67, ../sass/screen.scss */
 h1 {
   font-family: "Futura", Helvetica, Arial, sans-serif;
   font-size: 23px;
@@ -94,7 +106,7 @@ h1 {
   line-height: 23px;
 }
 
-/* line 64, ../sass/screen.scss */
+/* line 75, ../sass/screen.scss */
 h3 {
   font-family: "Futura", Helvetica, Arial, sans-serif;
   font-size: 17px;
@@ -104,7 +116,7 @@ h3 {
   line-height: 23px;
 }
 
-/* line 72, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 p {
   font-family: "Futura", Helvetica, Arial, sans-serif;
   font-size: 1em;
@@ -114,7 +126,7 @@ p {
   line-height: 23px;
 }
 
-/* line 80, ../sass/screen.scss */
+/* line 91, ../sass/screen.scss */
 blockquote {
   font-family: "Futura", Helvetica, Arial, sans-serif;
   font-size: 17px;
@@ -124,7 +136,7 @@ blockquote {
   line-height: 23px;
 }
 
-/* line 88, ../sass/screen.scss */
+/* line 99, ../sass/screen.scss */
 pre {
   font-family: "Futura", Helvetica, Arial, sans-serif;
   font-size: 11px;
@@ -134,25 +146,25 @@ pre {
   line-height: 23px;
 }
 
-/* line 97, ../sass/screen.scss */
+/* line 108, ../sass/screen.scss */
 h2, h3, h4, h5, p, li {
   color: #ffffff;
   font-size: 1em;
 }
 
-/* line 102, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 h1 {
   font-size: 2em;
   font-weight: bold;
 }
 
-/* line 107, ../sass/screen.scss */
+/* line 118, ../sass/screen.scss */
 body {
   width: 100vw;
   height: 100vh;
 }
 
-/* line 114, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 .headerContainer {
   height: 80px;
   width: 100%;
@@ -162,84 +174,84 @@ body {
   text-align: center;
 }
 
-/* line 123, ../sass/screen.scss */
+/* line 134, ../sass/screen.scss */
 #manufacturing {
   background-color: #E30613;
   color: #ffffff;
 }
 
-/* line 127, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 #logistics {
   background-color: #EF7D00;
   color: #ffffff;
 }
 
-/* line 132, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
 .headerContainer h1 {
   line-height: 80px;
 }
 
-/* line 136, ../sass/screen.scss */
+/* line 147, ../sass/screen.scss */
 .headerImage {
   width: 100%;
 }
 
-/* line 141, ../sass/screen.scss */
+/* line 152, ../sass/screen.scss */
 .headerImage img {
   width: 100%;
 }
 
-/* line 149, ../sass/screen.scss */
+/* line 160, ../sass/screen.scss */
 #login {
   background-color: #0086CD;
   color: #ffffff;
 }
 
-/* line 153, ../sass/screen.scss */
+/* line 164, ../sass/screen.scss */
 .login {
   background-color: #0086CD;
 }
 
-/* line 157, ../sass/screen.scss */
+/* line 168, ../sass/screen.scss */
 .loginContainer {
   width: 75%;
   margin: 0 auto;
   padding: 8px 8px 8px 8px;
 }
 
-/* line 163, ../sass/screen.scss */
+/* line 174, ../sass/screen.scss */
 .headerImg {
   width: 100%;
 }
 
-/* line 167, ../sass/screen.scss */
+/* line 178, ../sass/screen.scss */
 .headerImg img {
   width: 100%;
 }
 
-/* line 171, ../sass/screen.scss */
+/* line 182, ../sass/screen.scss */
 .textContainer {
   width: 80%;
   margin: 0 auto;
 }
 
-/* line 177, ../sass/screen.scss */
+/* line 188, ../sass/screen.scss */
 .introText {
   padding: 16px 16px 16px 16px;
 }
 
-/* line 181, ../sass/screen.scss */
+/* line 192, ../sass/screen.scss */
 .introText h1 {
   padding: 8px 8px 8px 8px;
   color: #ffffff;
 }
 
-/* line 186, ../sass/screen.scss */
+/* line 197, ../sass/screen.scss */
 .introText p {
   padding: 8px 8px 8px 8px;
 }
 
-/* line 195, ../sass/screen.scss */
+/* line 206, ../sass/screen.scss */
 .mainselection {
   overflow: hidden;
   width: 100%;
@@ -255,7 +267,7 @@ body {
   padding-left: 2%;
 }
 
-/* line 211, ../sass/screen.scss */
+/* line 222, ../sass/screen.scss */
 .inputLogin {
   overflow: hidden;
   width: 100%;
@@ -270,7 +282,7 @@ body {
   padding-left: 2%;
 }
 
-/* line 225, ../sass/screen.scss */
+/* line 236, ../sass/screen.scss */
 .formHeader {
   padding-top: 2%;
   padding-bottom: 2%;
@@ -278,7 +290,7 @@ body {
   font-family: "Futura", Helvetica, Arial, sans-serif;
 }
 
-/* line 232, ../sass/screen.scss */
+/* line 243, ../sass/screen.scss */
 .nextButton {
   width: 60%;
   height: 5%;
@@ -296,9 +308,11 @@ body {
   color: #ffffff;
   margin-top: 10%;
   font-weight: bold;
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0.05s;
 }
 
-/* line 250, ../sass/screen.scss */
+/* line 263, ../sass/screen.scss */
 .undefined {
   width: 60%;
   height: 5%;
@@ -319,7 +333,21 @@ body {
   font-weight: bold;
 }
 
-/* line 272, ../sass/screen.scss */
+/* line 286, ../sass/screen.scss */
+button:active {
+  outline: none !important;
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0.05s;
+}
+
+/* line 289, ../sass/screen.scss */
+button:focus {
+  outline: 0 !important;
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0.05s;
+}
+
+/* line 294, ../sass/screen.scss */
 .buttonContainer {
   width: 90%;
   margin-left: auto;
@@ -327,7 +355,7 @@ body {
   padding-top: 2%;
 }
 
-/* line 280, ../sass/screen.scss */
+/* line 302, ../sass/screen.scss */
 .startButton {
   width: 90%;
   float: right;
@@ -346,9 +374,11 @@ body {
   color: #ffffff;
   font-weight: bold;
   padding: 8px 8px 8px 8px;
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0.05s;
 }
 
-/* line 299, ../sass/screen.scss */
+/* line 323, ../sass/screen.scss */
 .bonusButton {
   width: 90%;
   float: left;
@@ -367,41 +397,43 @@ body {
   font-family: "Futura", Helvetica, Arial, sans-serif;
   color: #ffffff;
   font-weight: bold;
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0.05s;
 }
 
-/* line 321, ../sass/screen.scss */
+/* line 347, ../sass/screen.scss */
 .loadingContainer {
   padding-top: 10%;
   width: 80%;
   margin: auto;
 }
 
-/* line 326, ../sass/screen.scss */
+/* line 352, ../sass/screen.scss */
 .loadingContainer h1 {
   color: #ffffff;
   text-align: center;
 }
 
-/* line 330, ../sass/screen.scss */
+/* line 356, ../sass/screen.scss */
 .loadingImage {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 335, ../sass/screen.scss */
+/* line 361, ../sass/screen.scss */
 .loadingImage img {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 345, ../sass/screen.scss */
+/* line 371, ../sass/screen.scss */
 .loading {
   font-size: 30px;
 }
 
-/* line 349, ../sass/screen.scss */
+/* line 375, ../sass/screen.scss */
 .loading:after {
   overflow: hidden;
   display: inline-block;
@@ -423,7 +455,7 @@ body {
     width: 1.25em;
   }
 }
-/* line 373, ../sass/screen.scss */
+/* line 399, ../sass/screen.scss */
 .regionTitleContainer {
   margin-top: -80px;
   position: absolute;
@@ -431,26 +463,26 @@ body {
   width: 100%;
 }
 
-/* line 380, ../sass/screen.scss */
+/* line 406, ../sass/screen.scss */
 .regionTitle {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 386, ../sass/screen.scss */
+/* line 412, ../sass/screen.scss */
 .regionTitle h1 {
   color: #ffffff;
   line-height: 80px;
 }
 
-/* line 391, ../sass/screen.scss */
+/* line 417, ../sass/screen.scss */
 .regionBackground {
   width: 100%;
   height: 80vh;
 }
 
-/* line 396, ../sass/screen.scss */
+/* line 422, ../sass/screen.scss */
 .regionContent {
   width: 90%;
   margin-left: auto;
@@ -458,19 +490,19 @@ body {
   padding-top: 2%;
 }
 
-/* line 402, ../sass/screen.scss */
+/* line 428, ../sass/screen.scss */
 .regionContent p {
   color: #ffffff;
   padding: 8px 8px 8px 8px;
   float: left;
 }
 
-/* line 407, ../sass/screen.scss */
+/* line 433, ../sass/screen.scss */
 .regionContent img {
   width: 95%;
 }
 
-/* line 417, ../sass/screen.scss */
+/* line 443, ../sass/screen.scss */
 .regionHeaderChemistry {
   height: 80px;
   width: 100%;
@@ -481,12 +513,12 @@ body {
   bottom: 80px;
 }
 
-/* line 428, ../sass/screen.scss */
+/* line 454, ../sass/screen.scss */
 #chemistry {
   position: absolue;
 }
 
-/* line 436, ../sass/screen.scss */
+/* line 462, ../sass/screen.scss */
 .logistics .chemistry {
   background: #E30613;
   height: 80px;
@@ -494,46 +526,59 @@ body {
   position: absolue;
 }
 
-/* line 446, ../sass/screen.scss */
+/* line 472, ../sass/screen.scss */
 .pageContainer {
   height: 100vh;
 }
 
-/* line 449, ../sass/screen.scss */
+/* line 475, ../sass/screen.scss */
 .contentContainer {
   height: 100vh;
 }
 
-/* line 453, ../sass/screen.scss */
+/* line 479, ../sass/screen.scss */
 .logo {
   width: 60%;
   margin: 0 auto;
   margin-top: 10%;
 }
 
-/* line 459, ../sass/screen.scss */
+/* line 485, ../sass/screen.scss */
 .logo img {
   width: 100%;
 }
 
-/* line 465, ../sass/screen.scss */
+/* line 491, ../sass/screen.scss */
 .loginForm {
   width: 100%;
 }
 
-/* line 475, ../sass/screen.scss */
+/* line 501, ../sass/screen.scss */
 .mapContainer {
   width: 100%;
-  position: relative;
+  position: absolut !important;
 }
 
-/* line 480, ../sass/screen.scss */
+/* line 506, ../sass/screen.scss */
 .mapContainer img {
   width: 100%;
   z-index: 1;
 }
 
-/* line 485, ../sass/screen.scss */
+/* line 511, ../sass/screen.scss */
 .region {
   z-index: 2;
+}
+
+/* line 516, ../sass/screen.scss */
+.menuContainer {
+  float: right;
+  position: fixed;
+  right: 5%;
+  top: 7%;
+}
+
+/* line 523, ../sass/screen.scss */
+.menuContainer li {
+  padding-bottom: 20%;
 }

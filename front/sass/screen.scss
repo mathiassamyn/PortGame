@@ -27,6 +27,16 @@ $white: #ffffff;
 
 .alpha70red {
     /* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(239, 125, 0);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(239, 125, 0, 0.7);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+.alpha70orange {
+    /* Fallback for web browsers that don't support RGBa */
     background-color: rgb(227, 6, 19);
     /* RGBa with 0.6 opacity */
     background-color: rgba(227, 6, 19, 0.7);
@@ -41,6 +51,7 @@ $white: #ffffff;
 // SHADOWS
 
 $shadow : 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+$shadowclick: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
 
 // PADDING
@@ -246,6 +257,8 @@ body{
 	color: $white;
 	margin-top: 10%;
 	font-weight: bold;
+	transition: $shadowclick;
+    transition-delay: 0.05s;
 }
 .undefined{
 	width: 60%;
@@ -269,6 +282,15 @@ body{
 }
 
 ///// BUTTON STYLING //////
+
+button:active { outline: none!important;
+	transition: $shadowclick;
+    transition-delay: 0.05s; } 
+button:focus {outline:0!important; 
+	transition: $shadowclick;
+    transition-delay: 0.05s;}
+
+
 .buttonContainer{
 	    width: 90%;
     margin-left: auto;
@@ -295,6 +317,8 @@ body{
 	color: $white;
 	font-weight: bold;
 	padding: $h1Padding;
+	transition: $shadowclick;
+    transition-delay: 0.05s;
 }
 .bonusButton{
 	width:90%;
@@ -314,6 +338,8 @@ body{
 	font-family: "Futura", Helvetica, Arial, sans-serif;
 	color: $white;
 	font-weight: bold;
+	transition: $shadowclick;
+    transition-delay: 0.05s;
 }
 ///// LOADING PAGE /////
 
@@ -474,7 +500,7 @@ body{
 
 .mapContainer{
 	width: 100%;
-	position: relative;
+	position: absolut!important;
 }
 
 .mapContainer img{
@@ -484,6 +510,18 @@ body{
 
 .region{
 	z-index: 2;	
+}
+
+
+.menuContainer{
+	float: right;
+    position: fixed;
+    right: 5%;
+    top: 7%;
+}
+
+.menuContainer li{
+	padding-bottom: 20%;
 }
 
 
