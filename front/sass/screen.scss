@@ -22,7 +22,7 @@ $white: #ffffff;
 
 // OPACITY
 
-.alpha70red {
+.alpha70orange {
     /* Fallback for web browsers that don't support RGBa */
     background-color: rgb(239, 125, 0);
     /* RGBa with 0.6 opacity */
@@ -32,7 +32,7 @@ $white: #ffffff;
     /* For IE 8*/
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
-.alpha70orange {
+.alpha70red {
     /* Fallback for web browsers that don't support RGBa */
     background-color: rgb(227, 6, 19);
     /* RGBa with 0.6 opacity */
@@ -449,20 +449,12 @@ button:focus {outline:0!important;
 }
 
  #chemistry{
-	position: absolue;
+	
 }
 #chemistry h1{
 
 }
 
-.logistics{
-	 .chemistry{
-	background: $red;
-	height: 80px;
-	opacity: 0.7;
-	position: absolue;
-}
-}
 
 
 
@@ -521,6 +513,20 @@ button:focus {outline:0!important;
 	padding-bottom: 20%;
 }
 
+.mapButton{
+	float: left;
+    position: absolute;
+    top: 7%;
+    left: 1%;
+}
+
+.regionButton{
+	float: right;
+	position: absolute;
+    top: 7%;
+    right: 1%;
+
+}
 
 // .carSVG{
 // 	position: absolute;

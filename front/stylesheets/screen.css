@@ -69,7 +69,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 25, ../sass/screen.scss */
-.alpha70red {
+.alpha70orange {
   /* Fallback for web browsers that don't support RGBa */
   background-color: #ef7d00;
   /* RGBa with 0.6 opacity */
@@ -81,7 +81,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 35, ../sass/screen.scss */
-.alpha70orange {
+.alpha70red {
   /* Fallback for web browsers that don't support RGBa */
   background-color: #e30613;
   /* RGBa with 0.6 opacity */
@@ -509,72 +509,75 @@ button:focus {
   bottom: 80px;
 }
 
-/* line 451, ../sass/screen.scss */
-#chemistry {
-  position: absolue;
-}
-
-/* line 459, ../sass/screen.scss */
-.logistics .chemistry {
-  background: #E30613;
-  height: 80px;
-  opacity: 0.7;
-  position: absolue;
-}
-
-/* line 469, ../sass/screen.scss */
+/* line 461, ../sass/screen.scss */
 .pageContainer {
   height: 100vh;
 }
 
-/* line 472, ../sass/screen.scss */
+/* line 464, ../sass/screen.scss */
 .contentContainer {
   height: 100vh;
 }
 
-/* line 476, ../sass/screen.scss */
+/* line 468, ../sass/screen.scss */
 .logo {
   width: 60%;
   margin: 0 auto;
   margin-top: 10%;
 }
 
-/* line 482, ../sass/screen.scss */
+/* line 474, ../sass/screen.scss */
 .logo img {
   width: 100%;
 }
 
-/* line 488, ../sass/screen.scss */
+/* line 480, ../sass/screen.scss */
 .loginForm {
   width: 100%;
 }
 
-/* line 498, ../sass/screen.scss */
+/* line 490, ../sass/screen.scss */
 .mapContainer {
   width: 100%;
   position: absolut !important;
 }
 
-/* line 503, ../sass/screen.scss */
+/* line 495, ../sass/screen.scss */
 .mapContainer img {
   width: 100%;
   z-index: 1;
 }
 
-/* line 508, ../sass/screen.scss */
+/* line 500, ../sass/screen.scss */
 .region {
   z-index: 2;
 }
 
-/* line 513, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .menuContainer {
   float: right;
   position: fixed;
   right: 5%;
-  top: 7%;
+  top: 12%;
 }
 
-/* line 520, ../sass/screen.scss */
+/* line 512, ../sass/screen.scss */
 .menuContainer li {
   padding-bottom: 20%;
+}
+
+/* line 516, ../sass/screen.scss */
+.mapButton {
+  float: left;
+  position: absolute;
+  top: 7%;
+  left: 1%;
+}
+
+/* line 523, ../sass/screen.scss */
+.regionButton {
+  float: right;
+  position: absolute;
+  top: 7%;
+  right: 1%;
 }
