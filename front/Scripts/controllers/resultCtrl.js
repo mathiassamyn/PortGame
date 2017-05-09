@@ -24,6 +24,7 @@
         function errorCallback(response) {
             console.log(response);
         });
+
     //would be better if this was looked at on the server, but this requires changes on the server.
     $http.get("/owner/" + region).then(
         function successCallback(response) {

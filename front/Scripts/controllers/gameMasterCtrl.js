@@ -1,6 +1,14 @@
-﻿app.controller("gameMasterCtrl", ["$scope", "socket", "$cookies", "$state", "$http", "$parse", function ($scope, socket, $cookies, $state, $http, $parse) {
+﻿app.controller("gameMasterCtrl", ["$scope", "socket", "$cookies", "$state", "$http", "$parse", "$interval", "initData", function ($scope, socket, $cookies, $state, $http, $parse, $interval, initData) {
+
+    //This will be used for players that reload the page, it allows them to reconnect to the websocket.
+    var guide = $cookies.get("guideID");
+
+    if (guide !== undefined) {
+        socket.emit("join", guide);
+    }
 
     //REGIONS
+
     //This will be used when the user reloads the page. This way he will have the right region owners from the start.
     var getOwner = function (region) {
         $http.get("/owner/" + region).then(
@@ -17,10 +25,18 @@
                 console.log(response);
             });
     }
+    
+    var regions = [];
 
-    $scope.manufacturing = $scope.logistics = "";
-    getOwner("manufacturing");
-    getOwner("logistics");
+    initData.then(function(response) {
+        regions = response.regions;
+
+        for (var i = 0; i < regions.length; i++) {
+            $cookies.put(regions[i].name, false);
+            getOwner(regions[i].name);
+
+        }
+    });
 
     socket.on("region", function (msg) {
         $scope.$apply(function () {
@@ -28,8 +44,19 @@
                 teamID: msg.teamID,
                 team: msg.team
             };
+            console.log(msg.teamID + " " + $cookies.get("teamID"));
+            if (msg.teamID == $cookies.get("teamID")) {
+                //getProducts(msg.region);
+
+            }
         });
     })
+
+    //var getProducts = function (region) {
+    //    $interval(function (region) {
+    //        console.log("added 1 product to: " + region);
+    //    }, 1000);
+    //}
 
 
     //Admin functions
