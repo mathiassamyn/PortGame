@@ -1,9 +1,17 @@
-﻿app.controller("adminCtrl", ["$scope", "socket", "$cookies", "$stateParams", "$http", function ($scope, socket, $cookies, $stateParams, $http) {
+﻿app.controller("adminCtrl", ["$scope", "socket", "$cookies", "$stateParams", "$http", "$interval", "initData", function ($scope, socket, $cookies, $stateParams, $http, $interval, initData) {
 
     var room = $stateParams.guide;
 
     $cookies.put("guideID", room);
     socket.emit("join", room);
+
+    //var regions = [];
+    //initData.then(function (response) {
+    //    regions = response.regions;
+    //    for (var i = 0; i < regions.length; i++) {
+    //        socket.emit("join", room + regions.name);
+    //    }
+    //});
 
     $scope.startGame = function () {       
         $http.post("/guideStarted", {started: 1}).then(
@@ -32,6 +40,26 @@
     $scope.resumeGame = function () {
         socket.emit("resume", room);
     };
+
+    //cases should somehow be defined by regions pulled from database
+    //whole timing should probably better be done on the server
+    socket.on("region", function (msg) {
+        var region = msg.region;
+        switch (region) {
+            case 'manufacturing':
+                $interval(function () {
+                    socket.emit("product", { region: region, guide: room})
+                }, 5000);
+                break;
+            case 'logistics':
+                $interval(function () {
+                    socket.emit("product", { region: region, guide: room })
+                }, 5000);
+                break;
+            default:
+                console.log("none of the above");
+        }
+    })
 
 
 }])

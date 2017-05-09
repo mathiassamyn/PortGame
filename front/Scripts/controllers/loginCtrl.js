@@ -15,7 +15,7 @@
 
     $scope.toGame = function (guide, team, username) {
         if (guide !== undefined && team !== undefined && username !== undefined) {
-            setFullscreen();
+            //setFullscreen();
             $cookies.put("guideID", guide);
             $cookies.put("teamID", team);          
             $http.post("/login", { username: username }).then(

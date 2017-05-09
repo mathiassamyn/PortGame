@@ -1,4 +1,4 @@
-﻿app.controller("gameMasterCtrl", ["$scope", "socket", "$cookies", "$state", "$http", "$parse", "$interval", "initData", function ($scope, socket, $cookies, $state, $http, $parse, $interval, initData) {
+﻿app.controller("gameMasterCtrl", ["$scope", "socket", "$cookies", "$state", "$http", "initData", function ($scope, socket, $cookies, $state, $http, initData) {
     
     //This will be used for players that reload the page, it allows them to reconnect to the websocket.
     var guide = $cookies.get("guideID");
@@ -13,12 +13,16 @@
     var getOwner = function (region) {
         $http.get("/owner/" + region).then(
             function successCallback(response) {
-                console.log(response);
                 if (response.data.length > 0) {
                     $scope[region] = {
                         teamID: response.data[0][0].value,
                         team: response.data[0][1].value
                     };
+                } else {
+                    $scope[region] = {
+                        teamID: null,
+                        team: null
+                    }
                 }
             },
             function errorCallback(response) {
@@ -30,11 +34,10 @@
 
     initData.then(function(response) {
         regions = response.regions;
-
         for (var i = 0; i < regions.length; i++) {
             $cookies.put(regions[i].name, false);
             getOwner(regions[i].name);
-
+            $scope[regions[i].name + "product"] = 0;
         }
     });
 
@@ -44,19 +47,17 @@
                 teamID: msg.teamID,
                 team: msg.team
             };
-            console.log(msg.teamID + " " + $cookies.get("teamID"));
             if (msg.teamID == $cookies.get("teamID")) {
-                //getProducts(msg.region);
-
-            }
+                socket.emit("join", guide + msg.region);
+            } else socket.emit("leave", guide + msg.region);
         });
     })
 
-    //var getProducts = function (region) {
-    //    $interval(function (region) {
-    //        console.log("added 1 product to: " + region);
-    //    }, 1000);
-    //}
+    socket.on("product", function (msg) {
+        $scope.$apply(function () {
+            $scope[msg + "product"] += 1;
+        });
+    })
 
 
     //Admin functions

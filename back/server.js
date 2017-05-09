@@ -68,6 +68,11 @@ io.on("connection", function (socket) {
         });
         
     });
+    socket.on("leave", function (room) {
+        socket.leave(room, function () {
+            console.log("client left room: " + room);
+        });
+    });
     socket.on("start", function (room) {
         socket.to(room).emit("start");
     });
@@ -82,6 +87,9 @@ io.on("connection", function (socket) {
     });
     socket.on("region", function (data) {
         io.in(data.room).emit("region", data);
+    });
+    socket.on("product", function (data) {
+        socket.to(data.guide + data.region).emit("product", data.region);
     });
 });
 
