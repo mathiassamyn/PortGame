@@ -85,6 +85,11 @@ exports.getMinigames = function (response) {
     executeQuery(query, response);
 }
 
+exports.getRegions = function (response) {
+    var query = "select REGION_ID, name from regions;";
+    executeQuery(query, response);
+}
+
 exports.setScore = function (playerID, game, score, response) {
     var query = "declare @minigame_id int; " +
         "set @minigame_id = (select minigame_id from minigames where name = '" + game + "'); " +

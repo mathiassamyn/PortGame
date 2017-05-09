@@ -16,6 +16,8 @@
         }
     }
 
-    $scope.guideList = initData.guides;
-    $scope.teamList = initData.teams;
+    initData.then(function (response) {
+        $scope.guideList = response.guides;
+        $scope.teamList = response.teams;
+    });
 }])

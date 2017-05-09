@@ -69,6 +69,14 @@
 
         })
 
+        .state("game.breakout", {
+
+            templateUrl: "../views/canvas.html",
+
+            controller: "breakoutCtrl"
+
+        })
+
         .state("bonusgames", {
 
             url: "/bonusgames/:region",

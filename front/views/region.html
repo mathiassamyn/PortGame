@@ -1,4 +1,12 @@
 ﻿<div ui-view></div>
-<button ng-click="bonusGameView()">BONUS</button>
-<button ng-click="standardGameView()">Start</button>
 
+<div class="buttonContainer">
+	<div class="pure-g">				
+		<div class="pure-u-1-2">
+			<button class="bonusButton" ng-click="bonusGameView()">BONUS</button>
+		</div>
+		<div class="pure-u-1-2">
+			<button class="startButton" ng-click="standardGameView()">Start</button>
+		</div>
+	</div>
+</div>

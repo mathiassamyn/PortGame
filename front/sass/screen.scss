@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
@@ -245,4 +246,562 @@ body{
 // }
 // .cars img{
 // 	width: 100%;
+=======
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+
+
+.ng-scope{
+	width: 100%;
+}
+
+// COLOURS
+
+$blue: #0086CD;
+$orange: #EF7D00;
+$red: #E30613;
+$yellow: #FFEC38;
+$green: #86BC25;
+$brown: #53160A;
+$grey: #4E5051;
+$white: #ffffff;
+
+
+// OPACITY
+
+.alpha70red {
+    /* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(239, 125, 0);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(239, 125, 0, 0.7);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+.alpha70orange {
+    /* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(227, 6, 19);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(227, 6, 19, 0.7);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+
+
+
+// SHADOWS
+
+$shadow : 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+$shadowclick: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+
+// PADDING
+
+$logoCardPadding: 10px 10px 10px 10px;
+$cardPadding: 16px 16px 16px 16px;
+$h1Padding: 8px 8px 8px 8px;
+
+
+
+//FONTS
+
+h1 {
+	font-family: "Futura", Helvetica, Arial, sans-serif;
+	font-size: 23px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 23px;
+}
+h3 {
+	font-family: "Futura", Helvetica, Arial, sans-serif;
+	font-size: 17px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 23px;
+}
+p {
+	font-family: "Futura", Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 23px;
+}
+blockquote {
+	font-family: "Futura", Helvetica, Arial, sans-serif;
+	font-size: 17px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 23px;
+}
+pre {
+	font-family: "Futura", Helvetica, Arial, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 23px;
+}
+
+ h2, h3, h4 ,h5, p, li,{
+    color: $white;
+    font-size: 1em
+}
+
+h1{
+	font-size: 2em;
+	font-weight: bold;
+}
+
+body{
+	width: 100vw;
+	height: 100vh;
+}
+
+
+// HEADER //
+.headerContainer{
+	height: 80px;
+	width: 100%;
+	text-transform: uppercase;
+	box-shadow: $shadow;
+	display:  block;
+	text-align: center;
+}
+
+#manufacturing{
+	background-color: $red;
+	color: $white;
+}
+#logistics{
+	background-color: $orange;
+	color: $white;
+}
+
+.headerContainer h1{
+	line-height: 80px;
+}
+
+.headerImage{
+	width: 100%;
+
+}
+
+.headerImage img{
+	width: 100%;
+
+}
+
+////// LOGIN PAGE //////
+
+
+#login{
+	background-color: $blue;
+	color: $white;
+}
+.login{
+	background-color: $blue;
+}
+
+.loginContainer{
+	width: 75%;
+	margin: 0 auto;
+	padding: $h1Padding;
+}
+
+.headerImg{
+	width: 100%;
+}
+
+.headerImg img{
+	width: 100%;
+}
+
+.textContainer{
+	width: 80%;
+	margin: 0 auto;
+}
+
+
+.introText{
+	padding: $cardPadding;
+}
+
+.introText h1{
+	padding: $h1Padding;
+	color: $white;
+}
+
+.introText p{
+	padding: $h1Padding;
+}
+// SELECTION //
+
+.loginForm{
+	
+}
+
+.mainselection {
+   overflow:hidden;
+   width:100%;
+   height: 5%;
+   -moz-border-radius: 4px 4px 4px 4px;
+   -webkit-border-radius: 4px 4px 4px 4px;
+   border-radius: 4px 4px 4px 4px;
+   border: 0px;
+   box-shadow: $shadow ;
+   background: $white url("http://i62.tinypic.com/15xvbd5.png") no-repeat scroll 98% center;
+   font-size: 2em;
+   font-family: "Futura", Helvetica, Arial, sans-serif;
+   padding-left: 2%;
+}
+
+
+.inputLogin{
+	  overflow:hidden;
+   width:100%;
+   height: 5%;
+   -moz-border-radius: 4px 4px 4px 4px;
+   -webkit-border-radius: 4px 4px 4px 4px;
+   border-radius: 4px 4px 4px 4px;
+   border: 0px;
+   box-shadow: $shadow ;
+   font-size: 2em;
+   font-family: "Futura", Helvetica, Arial, sans-serif;
+   padding-left: 2%;
+}
+
+.formHeader{
+	padding-top: 2%;
+	padding-bottom: 2%;
+	font-size: 2em;
+	font-family: "Futura", Helvetica, Arial, sans-serif;
+}
+
+.nextButton{
+	width: 60%;
+	height: 5%;
+	overflow:hidden;
+   -moz-border-radius: 4px 4px 4px 4px;
+   -webkit-border-radius: 4px 4px 4px 4px;
+   border-radius: 4px 4px 4px 4px;
+   box-shadow: $shadow ;
+   border: 0px;
+   background: $green;
+	margin-top: 5%;
+	float: right;
+	font-size: 2em;
+	font-family: "Futura", Helvetica, Arial, sans-serif;
+	color: $white;
+	margin-top: 10%;
+	font-weight: bold;
+	transition: $shadowclick;
+    transition-delay: 0.05s;
+}
+.undefined{
+	width: 60%;
+	height: 5%;
+	overflow:hidden;
+   -moz-border-radius: 4px 4px 4px 4px;
+   -webkit-border-radius: 4px 4px 4px 4px;
+   border-radius: 4px 4px 4px 4px;
+   box-shadow: $shadow ;
+   border: 0px;
+   background: $grey;
+   opacity: 0.5;
+
+	margin-top: 5%;
+	float: right;
+	font-size: 2em;
+	font-family: "Futura", Helvetica, Arial, sans-serif;
+	color: $white;
+	margin-top: 10%;
+	font-weight: bold;
+}
+
+///// BUTTON STYLING //////
+
+button:active { outline: none!important;
+	transition: $shadowclick;
+    transition-delay: 0.05s; } 
+button:focus {outline:0!important; 
+	transition: $shadowclick;
+    transition-delay: 0.05s;}
+
+
+.buttonContainer{
+	    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2%;
+
+}
+
+.startButton{
+	width: 90%;
+	float: right;
+	height: 10%;
+	overflow:hidden;
+   -moz-border-radius: 4px 4px 4px 4px;
+   -webkit-border-radius: 4px 4px 4px 4px;
+   border-radius: 4px 4px 4px 4px;
+   box-shadow: $shadow ;
+   border: 0px;
+   margin-left: auto;
+   margin-right: auto;
+   background: $green;
+	font-size: 2em;
+	font-family: "Futura", Helvetica, Arial, sans-serif;
+	color: $white;
+	font-weight: bold;
+	padding: $h1Padding;
+	transition: $shadowclick;
+    transition-delay: 0.05s;
+}
+.bonusButton{
+	width:90%;
+	float: left;
+	height: 10%;
+	overflow:hidden;
+	padding: $h1Padding;
+   -moz-border-radius: 4px 4px 4px 4px;
+   -webkit-border-radius: 4px 4px 4px 4px;
+   border-radius: 4px 4px 4px 4px;
+   box-shadow: $shadow ;
+   border: 0px;
+   margin-left: auto;
+   margin-right: auto;
+   background: $yellow;
+	font-size: 2em;
+	font-family: "Futura", Helvetica, Arial, sans-serif;
+	color: $white;
+	font-weight: bold;
+	transition: $shadowclick;
+    transition-delay: 0.05s;
+}
+///// LOADING PAGE /////
+
+
+.loadingContainer{
+	padding-top:10%;
+	width: 80%;
+	margin: auto;
+}
+.loadingContainer h1{
+	color: $white;
+	text-align: center;
+}
+.loadingImage{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.loadingImage img{
+	 width: 100%;
+	 margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+
+// LOADING ANIMATION
+.loading {
+  font-size: 30px;
+}
+
+.loading:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4,end) 900ms infinite;      
+  animation: ellipsis steps(4,end) 900ms infinite;
+  content: "\2026"; /* ascii code for the ellipsis character */
+  width: 0px;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 1.25em;    
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 1.25em;    
+  }
+}
+
+///// REGION GENERAL /////
+
+.regionTitleContainer{
+	margin-top: -80px;
+    position: absolute;
+    height: 80px;
+	width: 100%;
+}
+
+.regionTitle{
+	width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.regionTitle h1{
+	color: $white;
+	line-height: 80px;
+}
+
+.regionBackground{
+	width: 100%;
+	height: 80vh;
+}
+
+.regionContent{
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 2%;
+}
+.regionContent p{
+	color: $white;
+	padding: $h1Padding;
+	float: left;
+}
+.regionContent img{
+	width: 95%;
+}
+
+
+
+
+
+///// REGION SPECIFIC /////
+
+.regionHeaderChemistry{
+	height: 80px;
+	width: 100%;
+	box-shadow: $shadow;
+	display:  block;
+	text-align: left;
+	float: left;	
+    bottom: 80px;
+
+}
+
+ #chemistry{
+	position: absolue;
+}
+#chemistry h1{
+
+}
+
+.logistics{
+	 .chemistry{
+	background: $red;
+	height: 80px;
+	opacity: 0.7;
+	position: absolue;
+}
+}
+
+
+
+.pageContainer{
+	height: 100vh;
+}
+.contentContainer{
+	height: 100vh;
+}
+
+.logo{
+	width: 60%;
+	margin: 0 auto;
+	margin-top: 10%;
+}
+
+.logo img{
+	width: 100%;
+}
+
+
+
+.loginForm{
+	width: 100%;
+
+}
+
+
+
+
+///// MAP PAGE /////
+
+.mapContainer{
+	width: 100%;
+	position: absolut!important;
+}
+
+.mapContainer img{
+	width: 100%;
+	z-index: 1;
+}
+
+.region{
+	z-index: 2;	
+}
+
+
+.menuContainer{
+	float: right;
+    position: fixed;
+    right: 5%;
+    top: 7%;
+}
+
+.menuContainer li{
+	padding-bottom: 20%;
+}
+
+
+// .carSVG{
+// 	position: absolute;
+//     width: 100%;
+//     left: -39%;
+//     top: -3%;
+// }
+
+// .terminal5SVG{
+// 	position: absolute;
+//     width: 100%;
+//     left: -12%;
+//     top: 3%;
+// }
+
+// .manu1SVG{
+// 	position: absolute;
+//     width: 100%;
+//     left: -5%;
+//     top: 0%;
+// }
+// .cars{
+// 	position: absolute;
+// 	width:100%;
+// 	height: 100%;
+// 	left: -40%;
+//     top: -3.4%;
+// }
+// .cars img{
+// 	width: 100%;
+>>>>>>> StylingV2
 // }

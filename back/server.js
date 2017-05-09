@@ -27,6 +27,10 @@ app.get("/minigames", function (req, res) {
     SQL.getMinigames(res);
 })
 
+app.get("/regions", function (req, res) {
+    SQL.getRegions(res);
+})
+
 app.get("/guideStarted", function (req, res) {
     var cookies = cookie.parse(req.headers.cookie);
     SQL.getGuideStarted(cookies.guideID, res);
