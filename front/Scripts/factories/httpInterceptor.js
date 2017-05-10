@@ -1,7 +1,7 @@
 ﻿app.factory('httpInterceptor', ['$injector', '$q', '$timeout', function($injector, $q, $timeout) {
     return {
         'responseError': function(response) {
-            if (response.status === 0) {
+            if (response.status === -1) {
                 console.log("in http interceptor");
                 return $timeout(function() {
                     var $http = $injector.get('$http');

@@ -13,6 +13,10 @@
         }
     };
 
+    $cookies.remove("guideID");
+    $cookies.remove("teamID");
+    $cookies.remove("playerID");
+
     $scope.toGame = function (guide, team, username) {
         if (guide !== undefined && team !== undefined && username !== undefined) {
             //setFullscreen();
