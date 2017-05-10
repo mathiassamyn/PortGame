@@ -167,9 +167,9 @@
             templateUrl: "../views/r-manufacturing6.html"
 
         })
-        .state("region.terminal", {
+        .state("region.terminal1", {
 
-            templateUrl: "../views/r-terminal.html"
+            templateUrl: "../views/r-terminal1.html"
 
         })
         .state("region.terminal2", {
@@ -207,9 +207,9 @@
             templateUrl: "../views/r-management.html"
 
         })
-        .state("region.environment", {
+        .state("region.environment1", {
 
-            templateUrl: "../views/r-environment.html"
+            templateUrl: "../views/r-environment1.html"
 
         })
         .state("region.environment2", {
@@ -234,9 +234,9 @@
         })
 
 
-        .state("region.logistics", {
+        .state("region.logistics1", {
 
-            templateUrl: "../views/r-logistics.html"
+            templateUrl: "../views/r-logistics1.html"
 
         })
         .state("region.logistics2", {
