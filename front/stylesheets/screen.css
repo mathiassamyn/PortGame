@@ -68,8 +68,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 100%;
 }
 
-/* line 25, ../sass/screen.scss */
-.alpha70red {
+/* line 28, ../sass/screen.scss */
+.alpha70orange {
   /* Fallback for web browsers that don't support RGBa */
   background-color: #ef7d00;
   /* RGBa with 0.6 opacity */
@@ -80,8 +80,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
 
-/* line 35, ../sass/screen.scss */
-.alpha70orange {
+/* line 38, ../sass/screen.scss */
+.alpha70red {
   /* Fallback for web browsers that don't support RGBa */
   background-color: #e30613;
   /* RGBa with 0.6 opacity */
@@ -92,7 +92,67 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
 
-/* line 64, ../sass/screen.scss */
+/* line 48, ../sass/screen.scss */
+.alpha70blue {
+  /* Fallback for web browsers that don't support RGBa */
+  background-color: #0086cd;
+  /* RGBa with 0.6 opacity */
+  background-color: rgba(0, 134, 205, 0.7);
+  /* For IE 5.5 - 7*/
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+  /* For IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+
+/* line 58, ../sass/screen.scss */
+.alpha70yellow {
+  /* Fallback for web browsers that don't support RGBa */
+  background-color: #ffec38;
+  /* RGBa with 0.6 opacity */
+  background-color: rgba(255, 236, 56, 0.7);
+  /* For IE 5.5 - 7*/
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+  /* For IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+
+/* line 68, ../sass/screen.scss */
+.alpha70green {
+  /* Fallback for web browsers that don't support RGBa */
+  background-color: #307438;
+  /* RGBa with 0.6 opacity */
+  background-color: rgba(48, 116, 56, 0.7);
+  /* For IE 5.5 - 7*/
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+  /* For IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+
+/* line 78, ../sass/screen.scss */
+.alpha70lightGreen {
+  /* Fallback for web browsers that don't support RGBa */
+  background-color: #80c342;
+  /* RGBa with 0.6 opacity */
+  background-color: rgba(128, 195, 66, 0.7);
+  /* For IE 5.5 - 7*/
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+  /* For IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+
+/* line 88, ../sass/screen.scss */
+.alpha70lightBlue {
+  /* Fallback for web browsers that don't support RGBa */
+  background-color: #00aab5;
+  /* RGBa with 0.6 opacity */
+  background-color: rgba(0, 170, 181, 0.7);
+  /* For IE 5.5 - 7*/
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+  /* For IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+
+/* line 119, ../sass/screen.scss */
 h1 {
   font-family: "Futura", Helvetica, Arial, sans-serif;
   font-size: 23px;
@@ -102,7 +162,7 @@ h1 {
   line-height: 23px;
 }
 
-/* line 72, ../sass/screen.scss */
+/* line 127, ../sass/screen.scss */
 h3 {
   font-family: "Futura", Helvetica, Arial, sans-serif;
   font-size: 17px;
@@ -112,7 +172,7 @@ h3 {
   line-height: 23px;
 }
 
-/* line 80, ../sass/screen.scss */
+/* line 135, ../sass/screen.scss */
 p {
   font-family: "Futura", Helvetica, Arial, sans-serif;
   font-size: 1em;
@@ -122,7 +182,7 @@ p {
   line-height: 23px;
 }
 
-/* line 88, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
 blockquote {
   font-family: "Futura", Helvetica, Arial, sans-serif;
   font-size: 17px;
@@ -132,7 +192,7 @@ blockquote {
   line-height: 23px;
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 151, ../sass/screen.scss */
 pre {
   font-family: "Futura", Helvetica, Arial, sans-serif;
   font-size: 11px;
@@ -142,25 +202,25 @@ pre {
   line-height: 23px;
 }
 
-/* line 105, ../sass/screen.scss */
+/* line 160, ../sass/screen.scss */
 h2, h3, h4, h5, p, li {
   color: #ffffff;
   font-size: 1em;
 }
 
-/* line 110, ../sass/screen.scss */
+/* line 165, ../sass/screen.scss */
 h1 {
   font-size: 2em;
   font-weight: bold;
 }
 
-/* line 115, ../sass/screen.scss */
+/* line 170, ../sass/screen.scss */
 body {
   width: 100vw;
   height: 100vh;
 }
 
-/* line 122, ../sass/screen.scss */
+/* line 177, ../sass/screen.scss */
 .headerContainer {
   height: 80px;
   width: 100%;
@@ -170,84 +230,119 @@ body {
   text-align: center;
 }
 
-/* line 131, ../sass/screen.scss */
+/* line 186, ../sass/screen.scss */
 #manufacturing {
   background-color: #E30613;
   color: #ffffff;
 }
 
-/* line 135, ../sass/screen.scss */
+/* line 190, ../sass/screen.scss */
+#carsTop {
+  background-color: #FFEC38;
+  color: #333333;
+}
+
+/* line 194, ../sass/screen.scss */
+#foodTop {
+  background-color: #80C342;
+  color: #333333;
+}
+
+/* line 198, ../sass/screen.scss */
+#environmentTop {
+  background-color: #307438;
+  color: #ffffff;
+}
+
+/* line 203, ../sass/screen.scss */
+#terminalTOp {
+  background-color: #EF7D00;
+  color: #ffffff;
+}
+
+/* line 207, ../sass/screen.scss */
 #logistics {
   background-color: #EF7D00;
   color: #ffffff;
 }
 
-/* line 140, ../sass/screen.scss */
+/* line 211, ../sass/screen.scss */
+#food {
+  color: #333333;
+}
+
+/* line 215, ../sass/screen.scss */
+#logistics {
+  background-color: #00AAB5;
+  color: #ffffff;
+}
+
+/* line 220, ../sass/screen.scss */
 .headerContainer h1 {
   line-height: 80px;
 }
 
-/* line 144, ../sass/screen.scss */
+/* line 224, ../sass/screen.scss */
 .headerImage {
   width: 100%;
 }
 
-/* line 149, ../sass/screen.scss */
+/* line 229, ../sass/screen.scss */
 .headerImage img {
   width: 100%;
 }
 
-/* line 157, ../sass/screen.scss */
+/* line 237, ../sass/screen.scss */
 #login {
   background-color: #0086CD;
   color: #ffffff;
 }
 
-/* line 161, ../sass/screen.scss */
+/* line 241, ../sass/screen.scss */
 .login {
   background-color: #0086CD;
 }
 
-/* line 165, ../sass/screen.scss */
+/* line 245, ../sass/screen.scss */
 .loginContainer {
   width: 75%;
   margin: 0 auto;
   padding: 8px 8px 8px 8px;
 }
 
-/* line 171, ../sass/screen.scss */
+/* line 251, ../sass/screen.scss */
 .headerImg {
   width: 100%;
 }
 
-/* line 175, ../sass/screen.scss */
+/* line 255, ../sass/screen.scss */
 .headerImg img {
   width: 100%;
 }
 
-/* line 179, ../sass/screen.scss */
+/* line 259, ../sass/screen.scss */
 .textContainer {
   width: 80%;
   margin: 0 auto;
 }
 
-/* line 185, ../sass/screen.scss */
+/* line 265, ../sass/screen.scss */
 .introText {
   padding: 16px 16px 16px 16px;
 }
 
-/* line 189, ../sass/screen.scss */
+/* line 269, ../sass/screen.scss */
 .introText h1 {
   padding: 8px 8px 8px 8px;
   color: #ffffff;
 }
 
-/* line 194, ../sass/screen.scss */
+/* line 274, ../sass/screen.scss */
 .introText p {
   padding: 8px 8px 8px 8px;
 }
 
-/* line 203, ../sass/screen.scss */
+/* line 283, ../sass/screen.scss */
 .mainselection {
   overflow: hidden;
   width: 100%;
@@ -263,7 +358,7 @@ body {
   padding-left: 2%;
 }
 
-/* line 219, ../sass/screen.scss */
+/* line 299, ../sass/screen.scss */
 .inputLogin {
   overflow: hidden;
   width: 100%;
@@ -278,7 +373,7 @@ body {
   padding-left: 2%;
 }
 
-/* line 233, ../sass/screen.scss */
+/* line 313, ../sass/screen.scss */
 .formHeader {
   padding-top: 2%;
   padding-bottom: 2%;
@@ -286,7 +381,7 @@ body {
   font-family: "Futura", Helvetica, Arial, sans-serif;
 }
 
-/* line 240, ../sass/screen.scss */
+/* line 320, ../sass/screen.scss */
 .nextButton {
   width: 60%;
   height: 5%;
@@ -308,7 +403,7 @@ body {
   transition-delay: 0.05s;
 }
 
-/* line 260, ../sass/screen.scss */
+/* line 340, ../sass/screen.scss */
 .undefined {
   width: 60%;
   height: 5%;
@@ -329,21 +424,21 @@ body {
   font-weight: bold;
 }
 
-/* line 283, ../sass/screen.scss */
+/* line 363, ../sass/screen.scss */
 button:active {
   outline: none !important;
   transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0.05s;
 }
 
-/* line 286, ../sass/screen.scss */
+/* line 366, ../sass/screen.scss */
 button:focus {
   outline: 0 !important;
   transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0.05s;
 }
 
-/* line 291, ../sass/screen.scss */
+/* line 371, ../sass/screen.scss */
 .buttonContainer {
   width: 90%;
   margin-left: auto;
@@ -351,7 +446,7 @@ button:focus {
   padding-top: 2%;
 }
 
-/* line 299, ../sass/screen.scss */
+/* line 379, ../sass/screen.scss */
 .startButton {
   width: 90%;
   float: right;
@@ -374,7 +469,7 @@ button:focus {
   transition-delay: 0.05s;
 }
 
-/* line 320, ../sass/screen.scss */
+/* line 400, ../sass/screen.scss */
 .bonusButton {
   width: 90%;
   float: left;
@@ -397,39 +492,39 @@ button:focus {
   transition-delay: 0.05s;
 }
 
-/* line 344, ../sass/screen.scss */
+/* line 424, ../sass/screen.scss */
 .loadingContainer {
   padding-top: 10%;
   width: 80%;
   margin: auto;
 }
 
-/* line 349, ../sass/screen.scss */
+/* line 429, ../sass/screen.scss */
 .loadingContainer h1 {
   color: #ffffff;
   text-align: center;
 }
 
-/* line 353, ../sass/screen.scss */
+/* line 433, ../sass/screen.scss */
 .loadingImage {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 358, ../sass/screen.scss */
+/* line 438, ../sass/screen.scss */
 .loadingImage img {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 368, ../sass/screen.scss */
+/* line 448, ../sass/screen.scss */
 .loading {
   font-size: 30px;
 }
 
-/* line 372, ../sass/screen.scss */
+/* line 452, ../sass/screen.scss */
 .loading:after {
   overflow: hidden;
   display: inline-block;
@@ -451,7 +546,7 @@ button:focus {
     width: 1.25em;
   }
 }
-/* line 396, ../sass/screen.scss */
+/* line 476, ../sass/screen.scss */
 .regionTitleContainer {
   margin-top: -80px;
   position: absolute;
@@ -459,26 +554,26 @@ button:focus {
   width: 100%;
 }
 
-/* line 403, ../sass/screen.scss */
+/* line 483, ../sass/screen.scss */
 .regionTitle {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 409, ../sass/screen.scss */
+/* line 489, ../sass/screen.scss */
 .regionTitle h1 {
   color: #ffffff;
   line-height: 80px;
 }
 
-/* line 414, ../sass/screen.scss */
+/* line 494, ../sass/screen.scss */
 .regionBackground {
   width: 100%;
   height: 80vh;
 }
 
-/* line 419, ../sass/screen.scss */
+/* line 499, ../sass/screen.scss */
 .regionContent {
   width: 90%;
   margin-left: auto;
@@ -486,19 +581,45 @@ button:focus {
   padding-top: 2%;
 }
 
-/* line 425, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .regionContent p {
   color: #ffffff;
   padding: 8px 8px 8px 8px;
   float: left;
 }
 
-/* line 430, ../sass/screen.scss */
+/* line 510, ../sass/screen.scss */
 .regionContent img {
   width: 95%;
 }
 
-/* line 440, ../sass/screen.scss */
+/* line 514, ../sass/screen.scss */
+.regionContent.cars p {
+  color: #333333;
+  padding: 8px 8px 8px 8px;
+  float: left;
+}
+
+/* line 520, ../sass/screen.scss */
+#cars h1 {
+  color: #333333;
+  line-height: 80px;
+}
+
+/* line 524, ../sass/screen.scss */
+.regionContent.food p {
+  color: #333333;
+  padding: 8px 8px 8px 8px;
+  float: left;
+}
+
+/* line 529, ../sass/screen.scss */
+#food h1 {
+  color: #333333;
+  line-height: 80px;
+}
+
+/* line 540, ../sass/screen.scss */
 .regionHeaderChemistry {
   height: 80px;
   width: 100%;
@@ -509,72 +630,75 @@ button:focus {
   bottom: 80px;
 }
 
-/* line 451, ../sass/screen.scss */
-#chemistry {
-  position: absolue;
-}
-
-/* line 459, ../sass/screen.scss */
-.logistics .chemistry {
-  background: #E30613;
-  height: 80px;
-  opacity: 0.7;
-  position: absolue;
-}
-
-/* line 469, ../sass/screen.scss */
+/* line 561, ../sass/screen.scss */
 .pageContainer {
   height: 100vh;
 }
 
-/* line 472, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .contentContainer {
   height: 100vh;
 }
 
-/* line 476, ../sass/screen.scss */
+/* line 568, ../sass/screen.scss */
 .logo {
   width: 60%;
   margin: 0 auto;
   margin-top: 10%;
 }
 
-/* line 482, ../sass/screen.scss */
+/* line 574, ../sass/screen.scss */
 .logo img {
   width: 100%;
 }
 
-/* line 488, ../sass/screen.scss */
+/* line 580, ../sass/screen.scss */
 .loginForm {
   width: 100%;
 }
 
-/* line 498, ../sass/screen.scss */
+/* line 590, ../sass/screen.scss */
 .mapContainer {
   width: 100%;
   position: absolut !important;
 }
 
-/* line 503, ../sass/screen.scss */
+/* line 595, ../sass/screen.scss */
 .mapContainer img {
   width: 100%;
   z-index: 1;
 }
 
-/* line 508, ../sass/screen.scss */
+/* line 600, ../sass/screen.scss */
 .region {
   z-index: 2;
 }
 
-/* line 513, ../sass/screen.scss */
+/* line 605, ../sass/screen.scss */
 .menuContainer {
   float: right;
   position: fixed;
   right: 5%;
-  top: 7%;
+  top: 12%;
 }
 
-/* line 520, ../sass/screen.scss */
+/* line 612, ../sass/screen.scss */
 .menuContainer li {
   padding-bottom: 20%;
+}
+
+/* line 616, ../sass/screen.scss */
+.mapButton {
+  float: left;
+  position: absolute;
+  top: 7%;
+  left: 1%;
+}
+
+/* line 623, ../sass/screen.scss */
+.regionButton {
+  float: right;
+  position: absolute;
+  top: 7%;
+  right: 1%;
 }

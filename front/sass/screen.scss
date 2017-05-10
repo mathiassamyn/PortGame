@@ -9,20 +9,23 @@
 }
 
 // COLOURS
-
+$black: #333333;
 $blue: #0086CD;
 $orange: #EF7D00;
 $red: #E30613;
 $yellow: #FFEC38;
-$green: #86BC25;
+$green: #307438;
+$buttonGreen: #86BC25;
 $brown: #53160A;
 $grey: #4E5051;
 $white: #ffffff;
+$lightGreen: #80C342;
+$lightBlue: #00AAB5;
 
 
 // OPACITY
 
-.alpha70red {
+.alpha70orange {
     /* Fallback for web browsers that don't support RGBa */
     background-color: rgb(239, 125, 0);
     /* RGBa with 0.6 opacity */
@@ -32,7 +35,7 @@ $white: #ffffff;
     /* For IE 8*/
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
-.alpha70orange {
+.alpha70red {
     /* Fallback for web browsers that don't support RGBa */
     background-color: rgb(227, 6, 19);
     /* RGBa with 0.6 opacity */
@@ -42,6 +45,58 @@ $white: #ffffff;
     /* For IE 8*/
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
+.alpha70blue {
+    /* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(0, 134, 205);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(0, 134, 205, 0.7);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+.alpha70yellow {
+    /* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(255, 236, 56);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(255, 236, 56, 0.7);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+.alpha70green {
+    /* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(48, 116, 56);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(48, 116, 56, 0.7);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+.alpha70lightGreen {
+    /* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(128, 195, 66);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(128, 195, 66, 0.7);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+.alpha70lightBlue {
+    /* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(0,170,181);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(0,170,181, 0.7);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+
+
 
 
 
@@ -132,8 +187,33 @@ body{
 	background-color: $red;
 	color: $white;
 }
+#carsTop{
+	background-color: $yellow;
+	color: $black;
+}
+#foodTop{
+	background-color: $lightGreen;
+	color: $black;
+}
+#environmentTop{
+	background-color: $green;
+	color: $white;
+}
+
+#terminalTOp{
+	background-color: $orange;
+	color: $white;
+}
 #logistics{
 	background-color: $orange;
+	color: $white;
+}
+#food{
+	
+	color: $black;
+}
+#logistics{
+	background-color: $lightBlue;
 	color: $white;
 }
 
@@ -246,7 +326,7 @@ body{
    border-radius: 4px 4px 4px 4px;
    box-shadow: $shadow ;
    border: 0px;
-   background: $green;
+   background: $buttonGreen;
 	margin-top: 5%;
 	float: right;
 	font-size: 2em;
@@ -308,7 +388,7 @@ button:focus {outline:0!important;
    border: 0px;
    margin-left: auto;
    margin-right: auto;
-   background: $green;
+   background: $buttonGreen;
 	font-size: 2em;
 	font-family: "Futura", Helvetica, Arial, sans-serif;
 	color: $white;
@@ -431,6 +511,26 @@ button:focus {outline:0!important;
 	width: 95%;
 }
 
+.regionContent.cars p{
+	color: $black;
+	padding: $h1Padding;
+	float: left;
+}
+
+#cars h1{
+	color: $black;
+	line-height: 80px;
+}
+.regionContent.food p{
+	color: $black;
+	padding: $h1Padding;
+	float: left;
+}
+#food h1{
+	color: $black;
+	line-height: 80px;
+}
+
 
 
 
@@ -449,20 +549,12 @@ button:focus {outline:0!important;
 }
 
  #chemistry{
-	position: absolue;
+	
 }
 #chemistry h1{
 
 }
 
-.logistics{
-	 .chemistry{
-	background: $red;
-	height: 80px;
-	opacity: 0.7;
-	position: absolue;
-}
-}
 
 
 
@@ -514,42 +606,28 @@ button:focus {outline:0!important;
 	float: right;
     position: fixed;
     right: 5%;
-    top: 7%;
+    top: 12%;
 }
 
 .menuContainer li{
 	padding-bottom: 20%;
 }
 
+.mapButton{
+	float: left;
+    position: absolute;
+    top: 7%;
+    left: 1%;
+}
 
-// .carSVG{
-// 	position: absolute;
-//     width: 100%;
-//     left: -39%;
-//     top: -3%;
-// }
+.regionButton{
+	float: right;
+	position: absolute;
+    top: 7%;
+    right: 1%;
 
-// .terminal5SVG{
-// 	position: absolute;
-//     width: 100%;
-//     left: -12%;
-//     top: 3%;
-// }
+}
 
-// .manu1SVG{
-// 	position: absolute;
-//     width: 100%;
-//     left: -5%;
-//     top: 0%;
-// }
-// .cars{
-// 	position: absolute;
-// 	width:100%;
-// 	height: 100%;
-// 	left: -40%;
-//     top: -3.4%;
-// }
-// .cars img{
-// 	width: 100%;
+
 
  
