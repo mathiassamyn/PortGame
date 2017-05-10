@@ -127,9 +127,66 @@
 
         })
 
-        .state("region.manufacturing", {
+        .state("region.water", {
+
+            templateUrl: "../views/r-water.html"
+
+        })
+        .state("region.food", {
+
+            templateUrl: "../views/r-food.html"
+
+        })
+
+        .state("region.manufacturing1", {
 
             templateUrl: "../views/r-manufacturing.html"
+
+        })
+
+        .state("region.manufacturing2", {
+
+            templateUrl: "../views/r-manufacturing2.html"
+
+        })
+        .state("region.manufacturing3", {
+
+            templateUrl: "../views/r-manufacturing3.html"
+
+        })
+        .state("region.manufacturing4", {
+
+            templateUrl: "../views/r-manufacturing4.html"
+
+        })
+        .state("region.manufacturing5", {
+
+            templateUrl: "../views/r-manufacturing5.html"
+
+        })
+        .state("region.manufacturing6", {
+
+            templateUrl: "../views/r-manufacturing6.html"
+
+        })
+        .state("region.terminal", {
+
+            templateUrl: "../views/r-terminal.html"
+
+        })
+        .state("region.cars", {
+
+            templateUrl: "../views/r-cars.html"
+
+        })
+        .state("region.management", {
+
+            templateUrl: "../views/r-management.html"
+
+        })
+        .state("region.environment", {
+
+            templateUrl: "../views/r-environment.html"
 
         })
 
