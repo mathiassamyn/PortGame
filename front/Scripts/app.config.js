@@ -6,8 +6,6 @@
 
         .otherwise('/notfound');
 
-
-
     $stateProvider
 
         .state("login", {
