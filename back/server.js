@@ -87,13 +87,9 @@ io.on("connection", function (socket) {
     });
     socket.on("region", function (data) {
         io.in(data.room).emit("region", data);
-        console.log("new region owner");
-        setTimeout(function () {
-            socket.to(data.room + data.region).emit("product", data.region);
-        }, 3000)
     });
     socket.on("product", function (data) {
-        //socket.to(data.guide + data.region).emit("product", data.region);
+        socket.to(data.guide + data.region).emit("product", data.region);
     });
 });
 
