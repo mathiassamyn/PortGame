@@ -58,6 +58,7 @@
 
     socket.on("product", function (msg) {
         $scope.$apply(function () {
+            console.log("new product");
             $scope[msg + "product"] += 1;
         }); 
     })
