@@ -51,8 +51,8 @@
                 team: msg.team
             };
             if (msg.teamID == $cookies.get("teamID")) {
-                socket.emit("join", guide + msg.region);
-            } else socket.emit("leave", guide + msg.region);
+                socket.emit("join", $cookies.get("guideID") + msg.region);
+            } else socket.emit("leave", $cookies.get("guideID") + msg.region);
         });
     })
 
