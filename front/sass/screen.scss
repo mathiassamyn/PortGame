@@ -223,6 +223,10 @@ body{
 	background: $yellow;
 	color: $black;
 }
+#inventory{
+	background: $blue;
+	color: $white;
+}
 
 .headerContainer h1{
 	line-height: 80px;
@@ -635,6 +639,10 @@ button:focus {outline:0!important;
 
 }
 
+/// WALLET
+.menuButton{
+	height: 10%;
+}
 
 .coinIcon{
 	width: 100%;
@@ -654,8 +662,39 @@ button:focus {outline:0!important;
 }
 
 
+/// Inventory
+
+.inventoryList{
+	position: absolut;
+}
 
 
+ul.inventory {
+	background: $red;
+}
 
+li.manufacturing{
+	background: $red;
+}
+li.manufacturing-grey{
+	background: $grey;
+}
+
+li.terminal{
+	background: $orange;
+}
+li.cars{
+	background: $yellow;
+	color: $black;
+}
+li.environment{
+	background: $green;
+}
+li.logistic{
+	background: $lightBlue;
+}
+li.food{
+	background: $lightGreen;
+}
 
  
