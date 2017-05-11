@@ -228,6 +228,10 @@ body{
 	background: $blue;
 	color: $white;
 }
+#market{
+	background: $lightGreen;
+	color: $white;
+}
 
 .headerContainer h1{
 	line-height: 80px;
@@ -715,6 +719,42 @@ button:focus {outline:0!important;
 }
 .inventoryProducts img{
 	width: 6%;
+}
+
+
+// Marketplace
+
+.marketPlace{
+	width: 80%;
+	margin: auto;
+}
+
+.marketList h1, .yourInventory h1{
+	    margin-bottom: 5%;
+}
+
+.submit{
+	background: $brown ;
+}
+
+.yourInventory{
+	height: auto;
+	margin-bottom: 10%;
+}
+
+.productSquare{
+	width: 150px;
+	height: 150px;
+	margin: 2%;
+	display: inline-block;
+}
+
+.productIcon{
+	width: 100%;
+}
+
+.productIcon img{
+	width: 100%;
 }
 
  
