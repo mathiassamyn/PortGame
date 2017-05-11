@@ -56,6 +56,11 @@ app.get("/owner/:region", function (req, res) {
     SQL.getOwner(cookies.guideID, req.params.region, res);
 })
 
+app.get("/coins", function (req, res) {
+    var cookies = cookie.parse(req.headers.cookie);
+    SQL.getCoins(cookies.playerID, res);
+})
+
 //socket.io
 
 var server = require("http").Server(app);

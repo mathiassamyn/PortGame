@@ -144,3 +144,9 @@ exports.getTopFive = function (guideID, game, response) {
     executeQuery(query, response);
 }
 
+exports.getCoins = function (playerID, response) {
+    var query = "select Coins from Players where PLAYER_ID = " + playerID;
+
+    executeQuery(query, response);
+}
+
