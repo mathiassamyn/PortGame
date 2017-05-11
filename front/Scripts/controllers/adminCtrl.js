@@ -46,12 +46,12 @@
     socket.on("region", function (msg) {
         var region = msg.region;
         switch (region) {
-            case 'manufacturing':
+            case 'manufacturing1':
                 $interval(function () {
                     socket.emit("product", { region: region, guide: room})
                 }, 5000);
                 break;
-            case 'logistics':
+            case 'logistics1':
                 $interval(function () {
                     socket.emit("product", { region: region, guide: room })
                 }, 5000);
