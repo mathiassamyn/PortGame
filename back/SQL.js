@@ -144,3 +144,19 @@ exports.getTopFive = function (guideID, game, response) {
     executeQuery(query, response);
 }
 
+exports.getCoins = function (playerID, response) {
+    var query = "select Coins from Players where PLAYER_ID = " + playerID;
+    executeQuery(query, response);
+}
+
+exports.getEndResult = function (guideID, response) {
+    var query = "select Name, SUM(Coins) Coins from( " +
+                "select Teams.Name, Players.Coins from Players " +
+                "inner join Teams on Players.TEAM_ID = Teams.TEAM_ID " +
+                "where GUIDE_ID = " + guideID + ") as teamCoins " +
+                "group by Name " +
+                "order by Coins desc; ";
+
+    executeQuery(query, response);
+}
+

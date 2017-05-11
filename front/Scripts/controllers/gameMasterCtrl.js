@@ -1,4 +1,4 @@
-﻿app.controller("gameMasterCtrl", ["$scope", "socket", "$cookies", "$state", "$http", "initData", function ($scope, socket, $cookies, $state, $http, initData) {
+﻿app.controller("gameMasterCtrl", ["$scope", "socket", "$cookies", "$state", "$http", "initData", "$timeout", function ($scope, socket, $cookies, $state, $http, initData, $timeout) {
     
     //This will be used for players that reload the page, it allows them to reconnect to the websocket.
     var guide = $cookies.get("guideID");
@@ -65,7 +65,8 @@
 
 
     //Admin functions
-	$scope.viewEnabled = true;
+    $scope.viewEnabled = true;
+    $scope.endGame = false;
 
 	socket.on("pause", function () {
 		$scope.$apply(function () {
@@ -86,8 +87,16 @@
 	});
 
 	socket.on("stop", function () {
-		$scope.$apply(function () {
-			$state.go("endresult");
-		});
+	    $scope.$apply(function () {
+	        $scope.endTime = "1 minute";
+	        $scope.endGame = true;
+	        $timeout(function () {
+	            $scope.endTime = "30 seconds";
+	        }, 30000)
+	        $timeout(function () {
+	            $scope.endGame = false;
+	            $state.go("endresult");
+	        }, 60000)
+	    });
 	});
 }])
