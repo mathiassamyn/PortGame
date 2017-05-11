@@ -12,19 +12,19 @@
 							<a ui-sref="map"><img src="img/menu/mapButton.png"></a>
 						</div>
 						<div class="regionButton">
-							<img src="img/menu/wallet.png">
+							<img src="img/menu/product.png">
 						</div>
 					</div>
 					<div class="inventoryList">			
-						<ul class="inventory">
-							<li class="manufacturing">Manufacturing</li>
-							<li class="terminal">Terminal</li>
-							<li class="logistic">Logistic</li>
-							<li class="food">Food</li>
-							<li class="cars">Cars</li>
-							<li class="environment">Environment</li>
-							<li class="manufacturing-grey">Manufacturing II</li>
-						</ul>					
+						<div class="inventory">
+							<div class="listItem manufacturing">Manufacturing: <div class="inventoryProducts">{{product.manufacturing}} <img src="img/menu/wallet.png"></div></div>
+							<div class="listItem terminal">Terminal: <div class="inventoryProducts">{{product.termnial}}</div></div>
+							<div class="listItem logistic">Logistic: <div class="inventoryProducts">{{product.logistic}}</div></div>
+							<div class="listItem food">Food:<div class="inventoryProducts"> {{product.food}}</div></div>
+							<div class="listItem cars">Cars:<div class="inventoryProducts"> {{product.cars}}</div></div>
+							<div class="listItem environment">Environment: <div class="inventoryProducts"> {{product.environment}}</div></div>
+							<div class="listItem manufacturing-grey">Manufacturing II: <div class="inventoryProducts"> {{product.manufacturing2}}</div></div>
+						</div>					
 					</div>
 				</div>
 			</div>

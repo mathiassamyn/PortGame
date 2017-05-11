@@ -61,6 +61,11 @@ app.get("/coins", function (req, res) {
     SQL.getCoins(cookies.playerID, res);
 })
 
+app.get("/endResult", function (req, res) {
+    var cookies = cookie.parse(req.headers.cookie);
+    SQL.getEndResult(cookies.guideID, res);
+})
+
 //socket.io
 
 var server = require("http").Server(app);

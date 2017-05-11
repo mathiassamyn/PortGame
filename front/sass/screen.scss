@@ -160,7 +160,8 @@ pre {
 
  h2, h3, h4 ,h5, p, li,{
     color: $white;
-    font-size: 1em
+    font-size: 1em;
+    font-family: "Futura", Helvetica, Arial, sans-serif;
 }
 
 h1{
@@ -225,6 +226,10 @@ body{
 }
 #inventory{
 	background: $blue;
+	color: $white;
+}
+#market{
+	background: $lightGreen;
 	color: $white;
 }
 
@@ -669,32 +674,87 @@ button:focus {outline:0!important;
 }
 
 
-ul.inventory {
-	background: $red;
+.listItem{
+	height: 80px;
+    line-height: 80px;
+    color: $white;
+    padding-left: 3%;
+        margin-bottom: 2%;
+        font-weight: bold;
+	font-size: 2em;
+	font-family: "Futura", Helvetica, Arial, sans-serif;
 }
 
-li.manufacturing{
+
+
+.manufacturing{
 	background: $red;
 }
-li.manufacturing-grey{
+.manufacturing-grey{
 	background: $grey;
 }
 
-li.terminal{
+.terminal{
 	background: $orange;
 }
-li.cars{
+.cars{
 	background: $yellow;
 	color: $black;
 }
-li.environment{
+.environment{
 	background: $green;
 }
-li.logistic{
+.logistic{
 	background: $lightBlue;
 }
-li.food{
+.food{
 	background: $lightGreen;
+}
+
+.inventoryProducts{
+	display: inline;
+    position: relative;
+    top: 16%;
+    left: 2%;
+}
+.inventoryProducts img{
+	width: 6%;
+}
+
+
+// Marketplace
+
+.marketPlace{
+	width: 80%;
+	margin: auto;
+}
+
+.marketList h1, .yourInventory h1{
+	    margin-bottom: 5%;
+}
+
+.submit{
+	background: $brown ;
+}
+
+.yourInventory{
+	height: auto;
+	margin-bottom: 10%;
+}
+
+.productSquare{
+	width: 150px;
+	height: 150px;
+	margin: 2%;
+	display: inline-block;
+}
+
+.productIcon{
+	width: 100%;
+}
+
+.productIcon img{
+	width: 100%;
 }
 
  
