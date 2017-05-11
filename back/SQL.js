@@ -96,7 +96,10 @@ exports.setScore = function (playerID, game, score, response) {
         "declare @score int; " +
         "set @score = (select MAX(score) from scores where player_id = " + playerID + "); " +
         "if @score is NULL set @score = -1; " +
-        "if @score < " + score + " insert into scores (score, player_id, minigame_id) values (" + score + "," + playerID + ", @minigame_id); delete from scores where score_id <>(select MAX(score_id) from scores where player_id = " + playerID + ") and player_id = " + playerID + "; ";
+        "if @score < " + score + " insert into scores (score, player_id, minigame_id) values (" + score + "," + playerID + ", @minigame_id); delete from scores where score_id <>(select MAX(score_id) from scores where player_id = " + playerID + ") and player_id = " + playerID + "; " +
+        "update Players " +
+        "set Coins += " + score + " " +
+        "where PLAYER_ID = " + playerID;
 
 
     executeQuery(query, response);
