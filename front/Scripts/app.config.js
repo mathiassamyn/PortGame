@@ -95,6 +95,16 @@
 
         })
 
+        .state("achievements", {
+
+            url: "/achievements",
+
+            templateUrl: "../views/achievements.html",
+
+            controller: "achievementCtrl"
+
+        })
+
         .state("inventory", {
 
             url: "/inventory",
