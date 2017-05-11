@@ -160,3 +160,8 @@ exports.getEndResult = function (guideID, response) {
     executeQuery(query, response);
 }
 
+exports.getIndividualCoins = function (guideID, response) {
+    var query = "select Name, Coins from Players where GUIDE_ID = " + guideID + " order by Coins desc;";
+    executeQuery(query, response);
+}
+
