@@ -746,43 +746,48 @@ button:focus {
   position: absolut;
 }
 
-/* line 672, ../sass/screen.scss */
+/* line 670, ../sass/screen.scss */
+.inventory li {
+  padding: 10%;
+}
+
+/* line 674, ../sass/screen.scss */
 ul.inventory {
   background: #E30613;
 }
 
-/* line 676, ../sass/screen.scss */
+/* line 678, ../sass/screen.scss */
 li.manufacturing {
   background: #E30613;
 }
 
-/* line 679, ../sass/screen.scss */
+/* line 681, ../sass/screen.scss */
 li.manufacturing-grey {
   background: #4E5051;
 }
 
-/* line 683, ../sass/screen.scss */
+/* line 685, ../sass/screen.scss */
 li.terminal {
   background: #EF7D00;
 }
 
-/* line 686, ../sass/screen.scss */
+/* line 688, ../sass/screen.scss */
 li.cars {
   background: #FFEC38;
   color: #333333;
 }
 
-/* line 690, ../sass/screen.scss */
+/* line 692, ../sass/screen.scss */
 li.environment {
   background: #307438;
 }
 
-/* line 693, ../sass/screen.scss */
+/* line 695, ../sass/screen.scss */
 li.logistic {
   background: #00AAB5;
 }
 
-/* line 696, ../sass/screen.scss */
+/* line 698, ../sass/screen.scss */
 li.food {
   background: #80C342;
 }

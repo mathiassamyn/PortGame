@@ -667,7 +667,9 @@ button:focus {outline:0!important;
 .inventoryList{
 	position: absolut;
 }
-
+.inventory li{
+	padding: 10%;
+}
 
 ul.inventory {
 	background: $red;
