@@ -12,10 +12,15 @@
     //this function will give null if the user still has to log in, This means that if the game has already
     //started, then they won't see the region owners.
     //This will be used when the user reloads the page. This way he will have the right region owners from the start.
+    //Maybe also use this function after log in
     var getOwner = function (region) {
         $http.get("/owner/" + region).then(
             function successCallback(response) {
                 if (response.data.length > 0) {
+                    //$cookies.put(region, {
+                    //    teamID: response.data[0][0].value,
+                    //    team: response.data[0][1].value
+                    //})
                     $scope[region] = {
                         teamID: response.data[0][0].value,
                         team: response.data[0][1].value
@@ -37,7 +42,10 @@
         initData.then(function (response) {
             regions = response.regions;
             for (var i = 0; i < regions.length; i++) {
-                //$cookies.put(regions[i].name, false);
+                //$cookies.put(regions[i].name, {
+                //    teamID: null,
+                //    team: null
+                //});
                 getOwner(regions[i].name);
                 $scope[regions[i].name + "product"] = 0;
             }
@@ -50,6 +58,10 @@
                 teamID: msg.teamID,
                 team: msg.team
             };
+            //$cookies.put(msg.region, {
+            //    teamID: msg.teamID,
+            //    team: msg.team
+            //});
             if (msg.teamID == $cookies.get("teamID")) {
                 socket.emit("join", $cookies.get("guideID") + msg.region);
             } else socket.emit("leave", $cookies.get("guideID") + msg.region);

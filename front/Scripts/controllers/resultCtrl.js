@@ -29,7 +29,8 @@
     $http.get("/owner/" + region).then(
         function successCallback(response) {
             if (response.data.length > 0) {
-                if ($scope[region].teamID !== response.data[0][0].value) {
+                if ($scope[region].teamid !== response.data[0][0].value) {
+                //if ($cookies.get(region).teamID !== response.data[0][0].value) {
                     socket.emit("region", { room: guide, region: region, teamID: response.data[0][0].value, team: response.data[0][1].value });
                 }
             }
