@@ -11,7 +11,7 @@
     $scope.score = $stateParams.score;
     $scope.topFive = [];
 
-    $http.get("/topFive/" + game).then(
+    $http.get("/topFive/" + region + "/" + game).then(
         function successCallback(response) {  
             for (var i = 0; i < response.data.length; i++) {
                 $scope.topFive[i] = {

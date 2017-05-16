@@ -58,6 +58,7 @@
                 teamID: msg.teamID,
                 team: msg.team
             };
+            console.log($scope[msg.region]);
             //$cookies.put(msg.region, {
             //    teamID: msg.teamID,
             //    team: msg.team

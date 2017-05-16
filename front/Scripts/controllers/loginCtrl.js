@@ -23,7 +23,65 @@
             $cookies.put("guideID", guide);
             $cookies.put("teamID", team);          
             $http.post("/login", { username: username }).then(
-                function successCallback(response) {                     
+                function successCallback(response) {
+
+
+
+
+
+                    //needs to be put into factory, because duplicate of gamemasterctrl function
+                    //REGIONS
+                    //TODO: use cookies to track ownership, instead of doing http call at every reload
+                    //this function will give null if the user still has to log in, This means that if the game has already
+                    //started, then they won't see the region owners.
+                    //This will be used when the user reloads the page. This way he will have the right region owners from the start.
+                    //Maybe also use this function after log in
+                    var getOwner = function (region) {
+                        $http.get("/owner/" + region).then(
+                            function successCallback(response) {
+                                if (response.data.length > 0) {
+                                    //$cookies.put(region, {
+                                    //    teamID: response.data[0][0].value,
+                                    //    team: response.data[0][1].value
+                                    //})
+                                    $scope[region] = {
+                                        teamID: response.data[0][0].value,
+                                        team: response.data[0][1].value
+                                    };
+                                    console.log($scope[region]);
+                                };
+                            },
+                            function errorCallback(response) {
+                                $scope[region] = {
+                                    teamID: null,
+                                    team: null
+                                };
+                                console.log(response);
+                            });
+                    }
+
+                    var regions = [];
+                    //in the end this can be added to the same if statement at the top of the doc
+                    //if (guide !== undefined) {
+                    initData.then(function (response) {
+                        regions = response.regions;
+                        for (var i = 0; i < regions.length; i++) {
+                            //$cookies.put(regions[i].name, {
+                            //    teamID: null,
+                            //    team: null
+                            //});
+                            getOwner(regions[i].name);
+                            $scope[regions[i].name + "product"] = 0;
+                        }
+                    });
+                    //}
+
+
+
+
+
+
+
                     $cookies.put("playerID", response.data[0][0].value);
                     socket.emit("join", guide);
                     $state.go("wait");

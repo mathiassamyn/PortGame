@@ -90,9 +90,10 @@ exports.getRegions = function (response) {
     executeQuery(query, response);
 }
 
-exports.setScore = function (playerID, game, score, response) {
-    var query = "declare @minigame_id int; " +
-        "set @minigame_id = (select minigame_id from minigames where name = '" + game + "'); " +
+exports.setScore = function (playerID, game, score, region, response) {
+    var query = "declare @minigame_id int, @region_id int; " +
+        "set @region_id = (select region_id from regions where name = '" + region + "'); " +
+        "set @minigame_id = (select minigame_id from minigames where name = '" + game + "' and REGION_ID = @region_id); " +
         "declare @score int; " +
         "set @score = (select MAX(score) from scores where player_id = " + playerID + "); " +
         "if @score is NULL set @score = -1; " +
@@ -128,11 +129,12 @@ exports.getOwner = function (guideID, region, response) {
     executeQuery(query, response);
 }
 
-exports.getTopFive = function (guideID, game, response) {
-    var query = "declare @guide_id int, @minigame_id int, @game varchar(255); " +
+exports.getTopFive = function (guideID, game, region, response) {
+    var query = "declare @guide_id int, @minigame_id int, @region_id int, @game varchar(255); " +
                 "set @guide_id = " + guideID + "; " +
                 "set @game = '" + game + "'; " +
-                "set @minigame_id = (select minigame_id from minigames where name = @game); " +
+                "set @region_id = (select region_id from regions where name = '" + region + "'); " +
+                "set @minigame_id = (select minigame_id from minigames where name = @game and region_id = @region_id); " +
 
                 "select top 5 players.name, teams.name, score from scores " +
                 "inner join players on scores.player_id = players.player_id " +
