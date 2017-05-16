@@ -765,38 +765,51 @@ button:focus {
   font-family: "Futura", Helvetica, Arial, sans-serif;
 }
 
-/* line 693, ../sass/screen.scss */
-.manufacturing-grey {
+/* line 688, ../sass/screen.scss */
+.productSquareInventory {
+  width: 227px;
+  height: 227px;
+  margin: 2%;
+  display: inline-block;
+}
+
+/* line 695, ../sass/screen.scss */
+.manufacturingProduct {
+  background: #E30613;
+}
+
+/* line 698, ../sass/screen.scss */
+.manufacturing-greyProduct {
   background: #4E5051;
 }
 
-/* line 697, ../sass/screen.scss */
-.terminal {
+/* line 702, ../sass/screen.scss */
+.terminalProduct {
   background: #EF7D00;
 }
 
-/* line 700, ../sass/screen.scss */
-.cars {
+/* line 705, ../sass/screen.scss */
+.carsProduct {
   background: #FFEC38;
   color: #333333;
 }
 
-/* line 704, ../sass/screen.scss */
-.environment {
+/* line 709, ../sass/screen.scss */
+.environmentProduct {
   background: #307438;
 }
 
-/* line 707, ../sass/screen.scss */
-.logistic {
+/* line 712, ../sass/screen.scss */
+.logisticProduct {
   background: #00AAB5;
 }
 
-/* line 710, ../sass/screen.scss */
-.food {
+/* line 715, ../sass/screen.scss */
+.foodProduct {
   background: #80C342;
 }
 
-/* line 714, ../sass/screen.scss */
+/* line 719, ../sass/screen.scss */
 .inventoryProducts {
   display: inline;
   position: relative;
@@ -804,34 +817,34 @@ button:focus {
   left: 2%;
 }
 
-/* line 720, ../sass/screen.scss */
+/* line 725, ../sass/screen.scss */
 .inventoryProducts img {
   width: 6%;
 }
 
-/* line 727, ../sass/screen.scss */
+/* line 732, ../sass/screen.scss */
 .marketPlace {
   width: 80%;
   margin: auto;
 }
 
-/* line 732, ../sass/screen.scss */
+/* line 737, ../sass/screen.scss */
 .marketList h1, .yourInventory h1 {
   margin-bottom: 5%;
 }
 
-/* line 736, ../sass/screen.scss */
+/* line 741, ../sass/screen.scss */
 .submit {
   background: #53160A;
 }
 
-/* line 740, ../sass/screen.scss */
+/* line 745, ../sass/screen.scss */
 .yourInventory {
   height: auto;
   margin-bottom: 10%;
 }
 
-/* line 745, ../sass/screen.scss */
+/* line 750, ../sass/screen.scss */
 .productSquare {
   width: 150px;
   height: 150px;
@@ -839,24 +852,37 @@ button:focus {
   display: inline-block;
 }
 
-/* line 752, ../sass/screen.scss */
+/* line 757, ../sass/screen.scss */
 .productIcon {
   width: 100%;
 }
 
-/* line 756, ../sass/screen.scss */
+/* line 761, ../sass/screen.scss */
 .productIcon img {
   width: 100%;
 }
 
-/* line 760, ../sass/screen.scss */
+/* line 765, ../sass/screen.scss */
 .productAmount {
   width: 100%;
+  position: relative;
 }
 
-/* line 763, ../sass/screen.scss */
+/* line 769, ../sass/screen.scss */
 .productAmountCircle {
   border: 1px red;
   border-radius: 50%;
-  background: green;
+  background: #9E1981;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -35px;
+  right: -16px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+/* line 781, ../sass/screen.scss */
+.productAmountNumber {
+  text-align: center;
+  line-height: 50px;
 }
