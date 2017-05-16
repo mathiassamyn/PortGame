@@ -64,11 +64,11 @@
 
         })
 
-        .state("game.flappybird", {
+        .state("game.flappycontainer", {
 
             templateUrl: "../views/canvas.html",
 
-            controller: "flappyBirdCtrl"
+            controller: "flappyContainerCtrl"
 
         })
 

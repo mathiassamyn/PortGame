@@ -1,4 +1,4 @@
-﻿app.controller("flappyBirdCtrl", ["$scope", function ($scope) {
+﻿app.controller("flappyContainerCtrl", ["$scope", function ($scope) {
     //whole game is copy pasta from http://codepen.io/anon/pen/JsHok
     //all code is in javascript (except some of my own additions) and needs to be modified to angularjs
 
@@ -182,7 +182,7 @@
             .to({ y: ground.y - 30 }, (h - (bird.y + 200)) / 1.5, createjs.Ease.linear); //drop to the bedrock
         createjs.Tween.get(stage).to({ alpha: 0 }, 100).to({ alpha: 1 }, 100);
         setTimeout(function () {
-            $scope.$emit('gameFinished', { game: "Flappy Bird", score: counter.text });
+            $scope.$emit('gameFinished', { game: "Flappy Container", score: counter.text });
         }, 1000);
     }
     function removeStart() {
