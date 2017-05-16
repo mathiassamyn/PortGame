@@ -955,3 +955,37 @@ button:focus {
   text-align: center;
   line-height: 50px;
 }
+
+/* line 858, ../sass/screen.scss */
+.adminPanel {
+  width: 100%;
+}
+
+/* line 863, ../sass/screen.scss */
+.adminButtonContainer {
+  width: 80%;
+  margin: auto;
+}
+
+/* line 868, ../sass/screen.scss */
+.adminButton {
+  width: 100%;
+  height: 5%;
+  overflow: hidden;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  border: 0px;
+  background: #86BC25;
+  margin-top: 5%;
+  font-size: 2em;
+  font-family: "Futura", Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0.05s;
+}
