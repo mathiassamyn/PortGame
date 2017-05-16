@@ -138,7 +138,7 @@
 
         .state("region.manufacturing1", {
 
-            templateUrl: "../views/r-manufacturing.html"
+            templateUrl: "../views/r-manufacturing1.html"
 
         })
 
