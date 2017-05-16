@@ -853,3 +853,15 @@ button:focus {
 .productIcon img {
   width: 100%;
 }
+
+/* line 760, ../sass/screen.scss */
+.productAmount {
+  width: 100%;
+}
+
+/* line 763, ../sass/screen.scss */
+.productAmountCircle {
+  border: 1px red;
+  border-radius: 50%;
+  background: green;
+}
