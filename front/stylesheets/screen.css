@@ -765,11 +765,6 @@ button:focus {
   font-family: "Futura", Helvetica, Arial, sans-serif;
 }
 
-/* line 690, ../sass/screen.scss */
-.manufacturing {
-  background: #E30613;
-}
-
 /* line 693, ../sass/screen.scss */
 .manufacturing-grey {
   background: #4E5051;
