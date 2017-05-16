@@ -96,6 +96,16 @@ $lightBlue: #00AAB5;
     /* For IE 8*/
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
+.alpha70grey {
+    /* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(78,80,81);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(78,80,81, 0.7);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
 
 
 
@@ -190,6 +200,10 @@ body{
 	background-color: $red;
 	color: $white;
 }
+#grey-manufacturing{
+	background-color: $grey;
+	color: $white;
+}
 #carsTop{
 	background-color: $yellow;
 	color: $black;
@@ -216,6 +230,10 @@ body{
 }
 #logistics{
 	background-color: $lightBlue;
+	color: $white;
+}
+#endResult{
+	background-color: $blue;
 	color: $white;
 }
 // MENU HEADERS //
@@ -608,10 +626,14 @@ button:focus {outline:0!important;
 	position: absolut!important;
 }
 
-.mapContainer img{
+.mapContainer svg{
 	width: 100%;
+	max-height: 94vh;
 	z-index: 1;
+
 }
+
+
 
 .region{
 	z-index: 2;	
@@ -630,23 +652,70 @@ button:focus {outline:0!important;
 }
 
 .mapButton{
-	float: left;
-    position: absolute;
+	float: right;
+    
     top: 7%;
     left: 1%;
 }
 
 .regionButton{
 	float: right;
-	position: absolute;
+	//position: absolute;
     top: 7%;
     right: 1%;
 
 }
 
+
+/// ENDGAME
+
+.endGameContainer{
+    height: 80px;
+    width: 50%;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    
+}
+.endGameContent{
+	background:$red;
+    height: 80px;
+    width: 50%;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+	line-height: 80px;
+    font-family: "Futura", Helvetica, Arial, sans-serif;
+    font-size: 2em;
+    text-align: center;
+    color: $white;
+}
+
+.resultTableContainer{
+	    width: 80%;
+    margin: auto;
+}
+.resultTable{
+	    font-size: 2em;
+    text-align: center;
+    padding: 10%;
+}
+
+.resultList{
+	
+}
+
+.resultList:nth-child(1) {
+    background: $blue;
+    border: 10px solid $yellow;
+    colour: white;    
+}
+
 /// WALLET
 .menuButton{
 	height: 10%;
+	position: absolute;
+	right: 10%;
 }
 
 .coinIcon{

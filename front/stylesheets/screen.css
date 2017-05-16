@@ -152,7 +152,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
 
-/* line 120, ../sass/screen.scss */
+/* line 99, ../sass/screen.scss */
+.alpha70grey {
+  /* Fallback for web browsers that don't support RGBa */
+  background-color: #4e5051;
+  /* RGBa with 0.6 opacity */
+  background-color: rgba(78, 80, 81, 0.7);
+  /* For IE 5.5 - 7*/
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+  /* For IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+
+/* line 130, ../sass/screen.scss */
 h1 {
   font-family: "Futura", Helvetica, Arial, sans-serif;
   font-size: 23px;
@@ -162,7 +174,7 @@ h1 {
   line-height: 23px;
 }
 
-/* line 128, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 h3 {
   font-family: "Futura", Helvetica, Arial, sans-serif;
   font-size: 17px;
@@ -172,7 +184,7 @@ h3 {
   line-height: 23px;
 }
 
-/* line 136, ../sass/screen.scss */
+/* line 146, ../sass/screen.scss */
 p {
   font-family: "Futura", Helvetica, Arial, sans-serif;
   font-size: 1em;
@@ -182,7 +194,7 @@ p {
   line-height: 23px;
 }
 
-/* line 144, ../sass/screen.scss */
+/* line 154, ../sass/screen.scss */
 blockquote {
   font-family: "Futura", Helvetica, Arial, sans-serif;
   font-size: 17px;
@@ -192,7 +204,7 @@ blockquote {
   line-height: 23px;
 }
 
-/* line 152, ../sass/screen.scss */
+/* line 162, ../sass/screen.scss */
 pre {
   font-family: "Futura", Helvetica, Arial, sans-serif;
   font-size: 11px;
@@ -202,26 +214,26 @@ pre {
   line-height: 23px;
 }
 
-/* line 161, ../sass/screen.scss */
+/* line 171, ../sass/screen.scss */
 h2, h3, h4, h5, p, li {
   color: #ffffff;
   font-size: 1em;
   font-family: "Futura", Helvetica, Arial, sans-serif;
 }
 
-/* line 167, ../sass/screen.scss */
+/* line 177, ../sass/screen.scss */
 h1 {
   font-size: 2em;
   font-weight: bold;
 }
 
-/* line 172, ../sass/screen.scss */
+/* line 182, ../sass/screen.scss */
 body {
   width: 100vw;
   height: 100vh;
 }
 
-/* line 179, ../sass/screen.scss */
+/* line 189, ../sass/screen.scss */
 .headerContainer {
   height: 80px;
   width: 100%;
@@ -231,137 +243,149 @@ body {
   text-align: center;
 }
 
-/* line 189, ../sass/screen.scss */
+/* line 199, ../sass/screen.scss */
 #manufacturing {
   background-color: #E30613;
   color: #ffffff;
 }
 
-/* line 193, ../sass/screen.scss */
+/* line 203, ../sass/screen.scss */
+#grey-manufacturing {
+  background-color: #4E5051;
+  color: #ffffff;
+}
+
+/* line 207, ../sass/screen.scss */
 #carsTop {
   background-color: #FFEC38;
   color: #333333;
 }
 
-/* line 197, ../sass/screen.scss */
+/* line 211, ../sass/screen.scss */
 #foodTop {
   background-color: #80C342;
   color: #333333;
 }
 
-/* line 201, ../sass/screen.scss */
+/* line 215, ../sass/screen.scss */
 #environmentTop {
   background-color: #307438;
   color: #ffffff;
 }
 
-/* line 206, ../sass/screen.scss */
+/* line 220, ../sass/screen.scss */
 #terminalTOp {
   background-color: #EF7D00;
   color: #ffffff;
 }
 
-/* line 210, ../sass/screen.scss */
+/* line 224, ../sass/screen.scss */
 #logistics {
   background-color: #EF7D00;
   color: #ffffff;
 }
 
-/* line 214, ../sass/screen.scss */
+/* line 228, ../sass/screen.scss */
 #food {
   color: #333333;
 }
 
-/* line 217, ../sass/screen.scss */
+/* line 231, ../sass/screen.scss */
 #logistics {
   background-color: #00AAB5;
   color: #ffffff;
 }
 
-/* line 223, ../sass/screen.scss */
+/* line 235, ../sass/screen.scss */
+#endResult {
+  background-color: #0086CD;
+  color: #ffffff;
+}
+
+/* line 241, ../sass/screen.scss */
 #wallet {
   background: #FFEC38;
   color: #333333;
 }
 
-/* line 227, ../sass/screen.scss */
+/* line 245, ../sass/screen.scss */
 #inventory {
   background: #0086CD;
   color: #ffffff;
 }
 
-/* line 231, ../sass/screen.scss */
+/* line 249, ../sass/screen.scss */
 #market {
   background: #80C342;
   color: #ffffff;
 }
 
-/* line 236, ../sass/screen.scss */
+/* line 254, ../sass/screen.scss */
 .headerContainer h1 {
   line-height: 80px;
 }
 
-/* line 240, ../sass/screen.scss */
+/* line 258, ../sass/screen.scss */
 .headerImage {
   width: 100%;
 }
 
-/* line 245, ../sass/screen.scss */
+/* line 263, ../sass/screen.scss */
 .headerImage img {
   width: 100%;
 }
 
-/* line 253, ../sass/screen.scss */
+/* line 271, ../sass/screen.scss */
 #login {
   background-color: #0086CD;
   color: #ffffff;
 }
 
-/* line 257, ../sass/screen.scss */
+/* line 275, ../sass/screen.scss */
 .login {
   background-color: #0086CD;
 }
 
-/* line 261, ../sass/screen.scss */
+/* line 279, ../sass/screen.scss */
 .loginContainer {
   width: 75%;
   margin: 0 auto;
   padding: 8px 8px 8px 8px;
 }
 
-/* line 267, ../sass/screen.scss */
+/* line 285, ../sass/screen.scss */
 .headerImg {
   width: 100%;
 }
 
-/* line 271, ../sass/screen.scss */
+/* line 289, ../sass/screen.scss */
 .headerImg img {
   width: 100%;
 }
 
-/* line 275, ../sass/screen.scss */
+/* line 293, ../sass/screen.scss */
 .textContainer {
   width: 80%;
   margin: 0 auto;
 }
 
-/* line 281, ../sass/screen.scss */
+/* line 299, ../sass/screen.scss */
 .introText {
   padding: 16px 16px 16px 16px;
 }
 
-/* line 285, ../sass/screen.scss */
+/* line 303, ../sass/screen.scss */
 .introText h1 {
   padding: 8px 8px 8px 8px;
   color: #ffffff;
 }
 
-/* line 290, ../sass/screen.scss */
+/* line 308, ../sass/screen.scss */
 .introText p {
   padding: 8px 8px 8px 8px;
 }
 
-/* line 299, ../sass/screen.scss */
+/* line 317, ../sass/screen.scss */
 .mainselection {
   overflow: hidden;
   width: 100%;
@@ -377,7 +401,7 @@ body {
   padding-left: 2%;
 }
 
-/* line 315, ../sass/screen.scss */
+/* line 333, ../sass/screen.scss */
 .inputLogin {
   overflow: hidden;
   width: 100%;
@@ -392,7 +416,7 @@ body {
   padding-left: 2%;
 }
 
-/* line 329, ../sass/screen.scss */
+/* line 347, ../sass/screen.scss */
 .formHeader {
   padding-top: 2%;
   padding-bottom: 2%;
@@ -400,7 +424,7 @@ body {
   font-family: "Futura", Helvetica, Arial, sans-serif;
 }
 
-/* line 336, ../sass/screen.scss */
+/* line 354, ../sass/screen.scss */
 .nextButton {
   width: 60%;
   height: 5%;
@@ -422,7 +446,7 @@ body {
   transition-delay: 0.05s;
 }
 
-/* line 356, ../sass/screen.scss */
+/* line 374, ../sass/screen.scss */
 .undefined {
   width: 60%;
   height: 5%;
@@ -443,21 +467,21 @@ body {
   font-weight: bold;
 }
 
-/* line 379, ../sass/screen.scss */
+/* line 397, ../sass/screen.scss */
 button:active {
   outline: none !important;
   transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0.05s;
 }
 
-/* line 382, ../sass/screen.scss */
+/* line 400, ../sass/screen.scss */
 button:focus {
   outline: 0 !important;
   transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0.05s;
 }
 
-/* line 387, ../sass/screen.scss */
+/* line 405, ../sass/screen.scss */
 .buttonContainer {
   width: 90%;
   margin-left: auto;
@@ -465,7 +489,7 @@ button:focus {
   padding-top: 2%;
 }
 
-/* line 395, ../sass/screen.scss */
+/* line 413, ../sass/screen.scss */
 .startButton {
   width: 90%;
   float: right;
@@ -488,7 +512,7 @@ button:focus {
   transition-delay: 0.05s;
 }
 
-/* line 416, ../sass/screen.scss */
+/* line 434, ../sass/screen.scss */
 .bonusButton {
   width: 90%;
   float: left;
@@ -511,39 +535,39 @@ button:focus {
   transition-delay: 0.05s;
 }
 
-/* line 440, ../sass/screen.scss */
+/* line 458, ../sass/screen.scss */
 .loadingContainer {
   padding-top: 10%;
   width: 80%;
   margin: auto;
 }
 
-/* line 445, ../sass/screen.scss */
+/* line 463, ../sass/screen.scss */
 .loadingContainer h1 {
   color: #ffffff;
   text-align: center;
 }
 
-/* line 449, ../sass/screen.scss */
+/* line 467, ../sass/screen.scss */
 .loadingImage {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 454, ../sass/screen.scss */
+/* line 472, ../sass/screen.scss */
 .loadingImage img {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 464, ../sass/screen.scss */
+/* line 482, ../sass/screen.scss */
 .loading {
   font-size: 30px;
 }
 
-/* line 468, ../sass/screen.scss */
+/* line 486, ../sass/screen.scss */
 .loading:after {
   overflow: hidden;
   display: inline-block;
@@ -565,7 +589,7 @@ button:focus {
     width: 1.25em;
   }
 }
-/* line 492, ../sass/screen.scss */
+/* line 510, ../sass/screen.scss */
 .regionTitleContainer {
   margin-top: -80px;
   position: absolute;
@@ -573,26 +597,26 @@ button:focus {
   width: 100%;
 }
 
-/* line 499, ../sass/screen.scss */
+/* line 517, ../sass/screen.scss */
 .regionTitle {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 505, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .regionTitle h1 {
   color: #ffffff;
   line-height: 80px;
 }
 
-/* line 510, ../sass/screen.scss */
+/* line 528, ../sass/screen.scss */
 .regionBackground {
   width: 100%;
   height: 80vh;
 }
 
-/* line 515, ../sass/screen.scss */
+/* line 533, ../sass/screen.scss */
 .regionContent {
   width: 90%;
   margin-left: auto;
@@ -600,45 +624,45 @@ button:focus {
   padding-top: 2%;
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 539, ../sass/screen.scss */
 .regionContent p {
   color: #ffffff;
   padding: 8px 8px 8px 8px;
   float: left;
 }
 
-/* line 526, ../sass/screen.scss */
+/* line 544, ../sass/screen.scss */
 .regionContent img {
   width: 95%;
 }
 
-/* line 530, ../sass/screen.scss */
+/* line 548, ../sass/screen.scss */
 .regionContent.cars p {
   color: #333333;
   padding: 8px 8px 8px 8px;
   float: left;
 }
 
-/* line 536, ../sass/screen.scss */
+/* line 554, ../sass/screen.scss */
 #cars h1 {
   color: #333333;
   line-height: 80px;
 }
 
-/* line 540, ../sass/screen.scss */
+/* line 558, ../sass/screen.scss */
 .regionContent.food p {
   color: #333333;
   padding: 8px 8px 8px 8px;
   float: left;
 }
 
-/* line 545, ../sass/screen.scss */
+/* line 563, ../sass/screen.scss */
 #food h1 {
   color: #333333;
   line-height: 80px;
 }
 
-/* line 556, ../sass/screen.scss */
+/* line 574, ../sass/screen.scss */
 .regionHeaderChemistry {
   height: 80px;
   width: 100%;
@@ -649,51 +673,52 @@ button:focus {
   bottom: 80px;
 }
 
-/* line 577, ../sass/screen.scss */
+/* line 595, ../sass/screen.scss */
 .pageContainer {
   height: 100vh;
 }
 
-/* line 580, ../sass/screen.scss */
+/* line 598, ../sass/screen.scss */
 .contentContainer {
   height: 100vh;
 }
 
-/* line 584, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 .logo {
   width: 60%;
   margin: 0 auto;
   margin-top: 10%;
 }
 
-/* line 590, ../sass/screen.scss */
+/* line 608, ../sass/screen.scss */
 .logo img {
   width: 100%;
 }
 
-/* line 596, ../sass/screen.scss */
+/* line 614, ../sass/screen.scss */
 .loginForm {
   width: 100%;
 }
 
-/* line 606, ../sass/screen.scss */
+/* line 624, ../sass/screen.scss */
 .mapContainer {
   width: 100%;
   position: absolut !important;
 }
 
-/* line 611, ../sass/screen.scss */
-.mapContainer img {
+/* line 629, ../sass/screen.scss */
+.mapContainer svg {
   width: 100%;
+  max-height: 94vh;
   z-index: 1;
 }
 
-/* line 616, ../sass/screen.scss */
+/* line 638, ../sass/screen.scss */
 .region {
   z-index: 2;
 }
 
-/* line 621, ../sass/screen.scss */
+/* line 643, ../sass/screen.scss */
 .menuContainer {
   float: right;
   position: fixed;
@@ -701,44 +726,88 @@ button:focus {
   top: 12%;
 }
 
-/* line 628, ../sass/screen.scss */
+/* line 650, ../sass/screen.scss */
 .menuContainer li {
   padding-bottom: 20%;
 }
 
-/* line 632, ../sass/screen.scss */
+/* line 654, ../sass/screen.scss */
 .mapButton {
-  float: left;
-  position: absolute;
+  float: right;
   top: 7%;
   left: 1%;
 }
 
-/* line 639, ../sass/screen.scss */
+/* line 661, ../sass/screen.scss */
 .regionButton {
   float: right;
-  position: absolute;
   top: 7%;
   right: 1%;
 }
 
-/* line 648, ../sass/screen.scss */
-.menuButton {
-  height: 10%;
+/* line 672, ../sass/screen.scss */
+.endGameContainer {
+  height: 80px;
+  width: 50%;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
 }
 
-/* line 652, ../sass/screen.scss */
+/* line 680, ../sass/screen.scss */
+.endGameContent {
+  background: #E30613;
+  height: 80px;
+  width: 50%;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  line-height: 80px;
+  font-family: "Futura", Helvetica, Arial, sans-serif;
+  font-size: 2em;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* line 694, ../sass/screen.scss */
+.resultTableContainer {
+  width: 80%;
+  margin: auto;
+}
+
+/* line 698, ../sass/screen.scss */
+.resultTable {
+  font-size: 2em;
+  text-align: center;
+  padding: 10%;
+}
+
+/* line 708, ../sass/screen.scss */
+.resultList:nth-child(1) {
+  background: #0086CD;
+  border: 10px solid #FFEC38;
+  colour: white;
+}
+
+/* line 715, ../sass/screen.scss */
+.menuButton {
+  height: 10%;
+  position: absolute;
+  right: 10%;
+}
+
+/* line 721, ../sass/screen.scss */
 .coinIcon {
   width: 100%;
   position: relativ;
 }
 
-/* line 656, ../sass/screen.scss */
+/* line 725, ../sass/screen.scss */
 .coinIcon img {
   width: 100%;
 }
 
-/* line 660, ../sass/screen.scss */
+/* line 729, ../sass/screen.scss */
 .text-overlay {
   position: absolute;
   bottom: 57%;
@@ -748,12 +817,12 @@ button:focus {
   text-align: center;
 }
 
-/* line 672, ../sass/screen.scss */
+/* line 741, ../sass/screen.scss */
 .inventoryList {
   position: absolut;
 }
 
-/* line 677, ../sass/screen.scss */
+/* line 746, ../sass/screen.scss */
 .listItem {
   height: 80px;
   line-height: 80px;
@@ -765,7 +834,7 @@ button:focus {
   font-family: "Futura", Helvetica, Arial, sans-serif;
 }
 
-/* line 688, ../sass/screen.scss */
+/* line 757, ../sass/screen.scss */
 .productSquareInventory {
   width: 227px;
   height: 227px;
@@ -773,43 +842,43 @@ button:focus {
   display: inline-block;
 }
 
-/* line 695, ../sass/screen.scss */
+/* line 764, ../sass/screen.scss */
 .manufacturingProduct {
   background: #E30613;
 }
 
-/* line 698, ../sass/screen.scss */
+/* line 767, ../sass/screen.scss */
 .manufacturing-greyProduct {
   background: #4E5051;
 }
 
-/* line 702, ../sass/screen.scss */
+/* line 771, ../sass/screen.scss */
 .terminalProduct {
   background: #EF7D00;
 }
 
-/* line 705, ../sass/screen.scss */
+/* line 774, ../sass/screen.scss */
 .carsProduct {
   background: #FFEC38;
   color: #333333;
 }
 
-/* line 709, ../sass/screen.scss */
+/* line 778, ../sass/screen.scss */
 .environmentProduct {
   background: #307438;
 }
 
-/* line 712, ../sass/screen.scss */
+/* line 781, ../sass/screen.scss */
 .logisticProduct {
   background: #00AAB5;
 }
 
-/* line 715, ../sass/screen.scss */
+/* line 784, ../sass/screen.scss */
 .foodProduct {
   background: #80C342;
 }
 
-/* line 719, ../sass/screen.scss */
+/* line 788, ../sass/screen.scss */
 .inventoryProducts {
   display: inline;
   position: relative;
@@ -817,34 +886,34 @@ button:focus {
   left: 2%;
 }
 
-/* line 725, ../sass/screen.scss */
+/* line 794, ../sass/screen.scss */
 .inventoryProducts img {
   width: 6%;
 }
 
-/* line 732, ../sass/screen.scss */
+/* line 801, ../sass/screen.scss */
 .marketPlace {
   width: 80%;
   margin: auto;
 }
 
-/* line 737, ../sass/screen.scss */
+/* line 806, ../sass/screen.scss */
 .marketList h1, .yourInventory h1 {
   margin-bottom: 5%;
 }
 
-/* line 741, ../sass/screen.scss */
+/* line 810, ../sass/screen.scss */
 .submit {
   background: #53160A;
 }
 
-/* line 745, ../sass/screen.scss */
+/* line 814, ../sass/screen.scss */
 .yourInventory {
   height: auto;
   margin-bottom: 10%;
 }
 
-/* line 750, ../sass/screen.scss */
+/* line 819, ../sass/screen.scss */
 .productSquare {
   width: 150px;
   height: 150px;
@@ -852,23 +921,23 @@ button:focus {
   display: inline-block;
 }
 
-/* line 757, ../sass/screen.scss */
+/* line 826, ../sass/screen.scss */
 .productIcon {
   width: 100%;
 }
 
-/* line 761, ../sass/screen.scss */
+/* line 830, ../sass/screen.scss */
 .productIcon img {
   width: 100%;
 }
 
-/* line 765, ../sass/screen.scss */
+/* line 834, ../sass/screen.scss */
 .productAmount {
   width: 100%;
   position: relative;
 }
 
-/* line 769, ../sass/screen.scss */
+/* line 838, ../sass/screen.scss */
 .productAmountCircle {
   border: 1px red;
   border-radius: 50%;
@@ -881,7 +950,7 @@ button:focus {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 }
 
-/* line 781, ../sass/screen.scss */
+/* line 850, ../sass/screen.scss */
 .productAmountNumber {
   text-align: center;
   line-height: 50px;
