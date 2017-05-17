@@ -95,9 +95,9 @@ exports.setScore = function (playerID, game, score, region, response) {
         "set @region_id = (select region_id from regions where name = '" + region + "'); " +
         "set @minigame_id = (select minigame_id from minigames where name = '" + game + "' and REGION_ID = @region_id); " +
         "declare @score int; " +
-        "set @score = (select MAX(score) from scores where player_id = " + playerID + "); " +
+        "set @score = (select MAX(score) from scores where player_id = " + playerID + " and minigame_id = @minigame_id); " +
         "if @score is NULL set @score = -1; " +
-        "if @score < " + score + " insert into scores (score, player_id, minigame_id) values (" + score + "," + playerID + ", @minigame_id); delete from scores where score_id <>(select MAX(score_id) from scores where player_id = " + playerID + ") and player_id = " + playerID + "; " +
+        "if @score < " + score + " insert into scores (score, player_id, minigame_id) values (" + score + "," + playerID + ", @minigame_id); delete from scores where score_id <>(select MAX(score_id) from scores where player_id = " + playerID + " and minigame_id = @minigame_id) and player_id = " + playerID + " and minigame_id = @minigame_id; " +
         "update Players " +
         "set Coins += " + score + " " +
         "where PLAYER_ID = " + playerID;

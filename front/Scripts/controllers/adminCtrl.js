@@ -60,6 +60,7 @@
         var region = msg.region;
         switch (region) {
             case 'manufacturing1':
+                $interval.cancel();
                 $interval(function () {
                     socket.emit("product", { region: region, guide: room})
                 }, 5000);

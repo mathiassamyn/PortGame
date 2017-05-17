@@ -43,12 +43,13 @@ app.post("/guideStarted", function (req, res) {
 
 app.post("/score", function (req, res) {
     var cookies = cookie.parse(req.headers.cookie);
-    console.log(req.body.data.game + " " + req.body.region);
+    console.log(req.body.data.game + " " + req.body.region + " " + req.body.data.score + " " + cookies.playerID);
     SQL.setScore(cookies.playerID, req.body.data.game, req.body.data.score, req.body.region, res);
 })
 
 app.get("/topFive/:region/:game", function (req, res) {
     var cookies = cookie.parse(req.headers.cookie);
+    console.log(req.params.region + " " + req.params.game);
     SQL.getTopFive(cookies.guideID, req.params.game, req.params.region, res);
 })
 
