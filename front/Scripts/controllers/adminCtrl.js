@@ -54,30 +54,31 @@
         $scope.state.startStop = "The Game is running";
     };
 
-    //cases should somehow be defined by regions pulled from database
     //whole timing should probably better be done on the server
     socket.on("region", function (msg) {
         var region = msg.region;
-        switch (region) {
-            case 'manufacturing1':
-                $interval.cancel();
-                $interval(function () {
-                    socket.emit("product", { region: region, guide: room})
-                }, 5000);
-                break;
-            case 'logistics1':
-                $interval(function () {
-                    socket.emit("product", { region: region, guide: room })
-                }, 5000);
-                break;
-            default:
-                console.log("none of the above");
-        }
+        //switch (region) {
+        //    case 'manufacturing1':
+        //        $interval.cancel();
+        //        console.log($interval(function () {
+        //            socket.emit("product", { region: region, guide: room})
+        //        }, 5000));
+        //        break;
+        //    case 'logistics1':
+        //        $interval(function () {
+        //            socket.emit("product", { region: region, guide: room })
+        //        }, 5000);
+        //        break;
+        //    default:
+        //        console.log("none of the above");
+        //}
         //console.log("new highscore");
-        //$interval(function () {
-        //    console.log(region);
-        //    socket.emit("product", { region: region, guide: room })
-        //}, 5000);
+        console.log($scope[region + "interval"]);
+        $interval.cancel($scope[region + "interval"]);
+        $scope[region + "interval"] = $interval(function () {
+            console.log(region);
+            socket.emit("product", { region: region, guide: room })
+        }, 30000);
     })
 
 
