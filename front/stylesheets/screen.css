@@ -989,3 +989,36 @@ button:focus {
   transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0.05s;
 }
+
+/* line 890, ../sass/screen.scss */
+.pause {
+  width: 100vw;
+  z-index: 5;
+  height: 100vh;
+  position: absolute;
+  background: rgba(0, 134, 205, 0.75);
+  top: 0;
+}
+
+/* line 899, ../sass/screen.scss */
+.pauseContainer {
+  width: 80%;
+  margin: auto;
+}
+
+/* line 904, ../sass/screen.scss */
+.pauseContainer img {
+  display: block;
+  margin: auto;
+  margin-top: 20%;
+  margin-bottom: 10%;
+}
+
+/* line 911, ../sass/screen.scss */
+.pauseContainer h1 {
+  font-weight: initial;
+  color: white;
+  text-align: center;
+  font-size: 3em;
+  line-height: 80px;
+}
