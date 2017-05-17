@@ -53,20 +53,20 @@
     //whole timing should probably better be done on the server
     socket.on("region", function (msg) {
         var region = msg.region;
-        //switch (region) {
-        //    case 'manufacturing1':
-                //$interval(function () {
-                //    socket.emit("product", { region: region, guide: room})
-                //}, 5000);
-        //        break;
-        //    case 'logistics1':
-        //        $interval(function () {
-        //            socket.emit("product", { region: region, guide: room })
-        //        }, 5000);
-        //        break;
-        //    default:
-        //        console.log("none of the above");
-        //}
+        switch (region) {
+            case 'manufacturing1':
+                $interval(function () {
+                    socket.emit("product", { region: region, guide: room})
+                }, 5000);
+                break;
+            case 'logistics1':
+                $interval(function () {
+                    socket.emit("product", { region: region, guide: room })
+                }, 5000);
+                break;
+            default:
+                console.log("none of the above");
+        }
         //console.log("new highscore");
         //$interval(function () {
         //    console.log(region);

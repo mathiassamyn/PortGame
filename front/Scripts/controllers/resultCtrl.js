@@ -12,7 +12,8 @@
     $scope.topFive = [];
 
     $http.get("/topFive/" + region + "/" + game).then(
-        function successCallback(response) {  
+        function successCallback(response) {
+            console.log(response.data);
             for (var i = 0; i < response.data.length; i++) {
                 $scope.topFive[i] = {
                     player: response.data[i][0].value,
