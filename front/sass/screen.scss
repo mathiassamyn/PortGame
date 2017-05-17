@@ -887,6 +887,15 @@ button:focus {outline:0!important;
     transition-delay: 0.05s;
 }
 
+.adminStatus{
+	margin-top: 5%;
+	width: 100%;
+	text-align: center;
+}
+
+.adminStatus h1{
+	color: $black;
+}
 .pause{
 	width: 100vw;
     z-index: 5;

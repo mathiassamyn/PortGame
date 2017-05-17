@@ -1,10 +1,24 @@
-﻿<div class="adminPanel">
-	<div class="adminButtonContainer">
-    <button class="adminButton" ng-click="startGame()">Start</button>
-    <button class="adminButton" ng-click="stopGame()">Stop</button>
-    <button class="adminButton" ng-click="pauseGame()">Pause</button>
-    <button class="adminButton" ng-click="resumeGame()">Resume</button>
-    </div>
-    <p>{{state.startStop}}</p>
-    <p>{{state.pauseResume}}</p>
+﻿<div class="adminPanel">
+
+	<div class="adminButtonContainer">
+
+    <button class="adminButton" ng-click="startGame()">Start</button>
+
+    <button class="adminButton" ng-click="stopGame()">Stop</button>
+
+    <button class="adminButton" ng-click="pauseGame()">Pause</button>
+
+    <button class="adminButton" ng-click="resumeGame()">Resume</button>
+
+    </div>
+
+    <div class="adminStatus">
+    	<!--<p>{{state.startStop}}</p>-->
+
+    	<h1>{{state.pauseResume}}</h1>
+    </div>
+    <div class="endGameContainer">
+        <div ng-show="endGame" class="endGameContent">The game will end in {{endTime}}!</div>
+    </div>
+
 </div>

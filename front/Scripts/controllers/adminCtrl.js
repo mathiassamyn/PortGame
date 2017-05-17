@@ -13,15 +13,17 @@
     //    }
     //});
     $scope.state = {
-        startStop: "stop",
-        pauseResume: "resume"
+        startStop: "The Game needs to be started",
+        pauseResume: "The Game needs to be started"
     }
 
     $scope.startGame = function () {       
         $http.post("/guideStarted", {started: 1}).then(
             function successCallback(response) {
                 socket.emit("start", room);
-                $scope.state.startStop = "start";
+                $scope.state.startStop = "The Game is running";
+                $scope.state.pauseResume = "The Game is running.";
+                
             },
             function errorCallback(response) {
                 console.log(response);
@@ -32,7 +34,8 @@
         $http.post("/guideStarted", { started: 0 }).then(
             function successCallback(response) {
                 socket.emit("stop", room);
-                $scope.state.startStop = "stop";
+                $scope.state.startStop = "The game has been stopped";
+                $scope.state.pauseResume ="The Game has been stopped"
             },
             function errorCallback(response) {
                 console.log(response);
@@ -41,12 +44,14 @@
 
     $scope.pauseGame = function () {
         socket.emit("pause", room);
-        $scope.state.pauseResume = "pause";
+        $scope.state.pauseResume = "The Game has been paused. Click Resume to resume the game for the students.";
+        $scope.state.startStop = "The Game is running";
     };
 
     $scope.resumeGame = function () {
         socket.emit("resume", room);
-        $scope.state.pauseResume = "resume";
+        $scope.state.pauseResume = "The Game is running";
+        $scope.state.startStop = "The Game is running";
     };
 
     //cases should somehow be defined by regions pulled from database
