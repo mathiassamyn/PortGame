@@ -1,10 +1,12 @@
-﻿app.controller("gameMasterCtrl", ["$scope", "socket", "$cookies", "$state", "$http", "initData", "$timeout", function ($scope, socket, $cookies, $state, $http, initData, $timeout) {
+﻿app.controller("gameMasterCtrl", ["$scope", "socket", "$cookies", "$state", "$http", "initData", "$timeout","$stateParams", function ($scope, socket, $cookies, $state, $http, initData, $timeout, $stateParams) {
     
     //This will be used for players that reload the page, it allows them to reconnect to the websocket.
     var guide = $cookies.get("guideID");
 
     if (guide !== undefined) {
         socket.emit("join", guide);
+    }else{
+        socket.emit("join", $stateParams.guide);
     }
 
     //REGIONS
@@ -100,6 +102,7 @@
 	});
 
 	socket.on("stop", function () {
+        console.log("STOP LOG");
 	    $scope.$apply(function () {
 	        $scope.endTime = "1 minute";
 	        $scope.endGame = true;

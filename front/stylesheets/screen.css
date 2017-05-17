@@ -991,6 +991,18 @@ button:focus {
 }
 
 /* line 890, ../sass/screen.scss */
+.adminStatus {
+  margin-top: 5%;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 896, ../sass/screen.scss */
+.adminStatus h1 {
+  color: #333333;
+}
+
+/* line 899, ../sass/screen.scss */
 .pause {
   width: 100vw;
   z-index: 5;
@@ -1000,13 +1012,13 @@ button:focus {
   top: 0;
 }
 
-/* line 899, ../sass/screen.scss */
+/* line 908, ../sass/screen.scss */
 .pauseContainer {
   width: 80%;
   margin: auto;
 }
 
-/* line 904, ../sass/screen.scss */
+/* line 913, ../sass/screen.scss */
 .pauseContainer img {
   display: block;
   margin: auto;
@@ -1014,7 +1026,7 @@ button:focus {
   margin-bottom: 10%;
 }
 
-/* line 911, ../sass/screen.scss */
+/* line 920, ../sass/screen.scss */
 .pauseContainer h1 {
   font-weight: initial;
   color: white;
