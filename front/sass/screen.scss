@@ -886,3 +886,32 @@ button:focus {outline:0!important;
 	transition: $shadowclick;
     transition-delay: 0.05s;
 }
+
+.pause{
+	width: 100vw;
+    z-index: 5;
+    height: 100vh;
+    position: absolute;
+    background: rgba(0,134,205,0.75);
+    top: 0;
+}
+
+.pauseContainer{
+	    width: 80%;
+    margin: auto;
+}
+
+.pauseContainer img{
+	display:block;
+    margin:auto;
+        margin-top: 20%;
+    margin-bottom: 10%;
+}
+
+.pauseContainer h1{
+	font-weight: initial;
+    color: white;
+    text-align: center;
+    font-size: 3em;
+	line-height: 80px;
+}

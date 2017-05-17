@@ -52,9 +52,16 @@
 <body ng-controller="gameMasterCtrl">
         
         <div ui-view autoscroll="true"></div>
-        <!--inline styling just for demo purposes-->
-        <!-- style="position: absolute;top:0;left:0;width: 100%;height:100vh;background-color: #237cea;z-index:2;opacity:0.8;"-->
-        <div class="endGameContainer"><div ng-show="endGame" class="endGameContent">The game will end in {{endTime}}!</div></div>
-        <div  ng-hide="viewEnabled"></div>
+
+        <div class="endGameContainer">
+            <div ng-show="endGame" class="endGameContent">The game will end in {{endTime}}!</div></div>
+        
+        <div class="pause" ng-hide="viewEnabled">
+            <div class="pauseContainer">
+                <img src="img/paused.png">
+                <h1>The guide has paused the game.<br/>Listen up!</h1>
+            </div>
+        </div>
+
 </body>
 </html>
