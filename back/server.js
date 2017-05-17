@@ -93,7 +93,7 @@ io.on("connection", function (socket) {
         socket.to(room).emit("start");
     });
     socket.on("stop", function (room) {
-        socket.to(room).emit("stop");
+        io.in(room).emit("stop");
     });
     socket.on("pause", function (room) {
         socket.to(room).emit("pause");

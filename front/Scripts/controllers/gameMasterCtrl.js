@@ -5,7 +5,7 @@
 
     if (guide !== undefined) {
         socket.emit("join", guide);
-    }
+    } 
 
     //REGIONS
     //TODO: use cookies to track ownership, instead of doing http call at every reload
