@@ -29,6 +29,8 @@
     //would be better if this was looked at on the server, but this requires changes on the server.
     $http.get("/owner/" + region).then(
         function successCallback(response) {
+            console.log(response.data);
+            console.log($scope[region]);
             if (response.data.length > 0) {
                 if ($scope[region].teamid !== response.data[0][0].value) {
                 //if ($cookies.get(region).teamID !== response.data[0][0].value) {

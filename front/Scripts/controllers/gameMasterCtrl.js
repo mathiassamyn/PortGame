@@ -21,17 +21,23 @@
                     //    teamID: response.data[0][0].value,
                     //    team: response.data[0][1].value
                     //})
-                    $scope[region] = {
+                    $scope[region] = {
+
                         teamID: response.data[0][0].value,
-                        team: response.data[0][1].value
-                    };
-                };
+                        team: response.data[0][1].value
+
+                    };
+                } else {
+
+                    $scope[region] = {
+
+                        teamID: null,
+                        team: null
+
+                    };                };                console.log($scope[region]);
             },
-            function errorCallback(response) {
-                $scope[region] = {
-                    teamID: null,
-                    team: null
-                };
+            function errorCallback(response) {
+
                 console.log(response);
             });
     }
@@ -46,7 +52,7 @@
                 //    teamID: null,
                 //    team: null
                 //});
-                getOwner(regions[i].name);
+                getOwner(regions[i].name);                console.log("getting owners");
                 $scope[regions[i].name + "product"] = 0;
             }
         });
