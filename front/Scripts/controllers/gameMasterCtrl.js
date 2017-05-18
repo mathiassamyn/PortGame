@@ -53,7 +53,7 @@
                 //    team: null
                 //});
                 getOwner(regions[i].name);                console.log("getting owners");
-                $scope[regions[i].name + "product"] = 0;
+                $scope[regions[i].name] = {};
             }
         });
     //}
@@ -75,10 +75,18 @@
         });
     })
 
-    socket.on("product", function (msg) {
+    socket.on("product", function (msg) {        console.log(msg.replace(/[^a-zA-Z ]/g, ""));        $http.post("/addProduct", { region: msg.replace(/[^a-zA-Z ]/g, "") }).then(
+            function successCallback(response) {
+                console.log(response);
+            },
+            function errorCallback(response) {
+                console.log(response);
+            }
+        );
+
         $scope.$apply(function () {
-            console.log("new product");
-            $scope[msg + "product"] += 1;
+            console.log("new product: " + msg);
+            //$scope[msg + "product"] += 1;
         }); 
     })
 

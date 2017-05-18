@@ -73,6 +73,11 @@ app.get("/individualCoins", function (req, res) {
     SQL.getIndividualCoins(cookies.guideID, res);
 })
 
+app.post("/addProduct", function (req, res) {
+    var cookies = cookie.parse(req.headers.cookie);
+    SQL.addProduct(cookies.teamID, cookies.guideID, req.body.region, res);
+})
+
 //socket.io
 
 var server = require("http").Server(app);
@@ -106,7 +111,8 @@ io.on("connection", function (socket) {
         io.in(data.room).emit("region", data);
     });
     socket.on("product", function (data) {
-        socket.to(data.guide + data.region).emit("product", data.region);
+        socketID = Object.keys(io.sockets.adapter.rooms[data.guide + data.region].sockets)[0]; 
+        socket.to(socketID).emit("product", data.region);
     });
 });
 

@@ -48,14 +48,22 @@
                                         teamID: response.data[0][0].value,
                                         team: response.data[0][1].value
                                     };
+                                } else {
+                                    console.log("in else");
+                                    console.log(region);
                                     console.log($scope[region]);
-                                };
+                                    $scope[region] = {
+
+                                        teamID: null,
+                                        team: null
+
+                                    };
+                                };
+                                console.log(region);
+                                console.log($scope[region]);
+
                             },
                             function errorCallback(response) {
-                                $scope[region] = {
-                                    teamID: null,
-                                    team: null
-                                };
                                 console.log(response);
                             });
                     }

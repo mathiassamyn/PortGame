@@ -49,9 +49,15 @@ function executeQuery(query, response) {
 }
 
 exports.addUser = function (username, teamID, guideID, response) {
-    var query = "insert into Players (Name, GUIDE_ID, TEAM_ID) " +
+    var query = "declare @guide_id int, @team_id int, @username varchar(255); " +
+                "set @guide_id = " + guideID + "; " +
+                "set @team_id = " + teamID + "; " +
+                "set @username = '" + username + "'; " +
+                "insert into Players (Name, GUIDE_ID, TEAM_ID) " +
                 "output inserted.PLAYER_ID " +
-                "values ('" + username + "', '" + guideID + "', '" + teamID + "');";
+                "values (@username, @guide_id, @team_id); " +
+                "if not exists (select * from inventory where guide_id = @guide_id and team_id = @team_id) " +
+                "insert into inventory (team_id, guide_id) values (@team_id, @guide_id); ";
 
     executeQuery(query, response);
 }
@@ -167,3 +173,10 @@ exports.getIndividualCoins = function (guideID, response) {
     executeQuery(query, response);
 }
 
+exports.addProduct = function (teamID, guideID, region, response) {
+    var query = "update Inventory " +
+                "set " + region + " += 1 " +
+                "where guide_id = " + guideID + " and team_id = " + teamID + "; ";
+
+    executeQuery(query, response);
+}
