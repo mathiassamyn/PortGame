@@ -232,6 +232,11 @@ body{
 	background-color: $lightBlue;
 	color: $white;
 }
+#water{
+	background-color: $blue;
+	color: $white;
+}
+
 #endResult{
 	background-color: $blue;
 	color: $white;
@@ -452,6 +457,29 @@ button:focus {outline:0!important;
 	transition: $shadowclick;
     transition-delay: 0.05s;
 }
+
+
+.redoButton{
+	width: 50%;
+	margin: auto;
+	height: 10%;
+	overflow:hidden;
+   -moz-border-radius: 4px 4px 4px 4px;
+   -webkit-border-radius: 4px 4px 4px 4px;
+   border-radius: 4px 4px 4px 4px;
+   box-shadow: $shadow ;
+   border: 0px;
+   margin-left: auto;
+   margin-right: auto;
+   background: $buttonGreen;
+	font-size: 2em;
+	font-family: "Futura", Helvetica, Arial, sans-serif;
+	color: $white;
+	font-weight: bold;
+	padding: $h1Padding;
+	transition: $shadowclick;
+    transition-delay: 0.05s;
+}
 ///// LOADING PAGE /////
 
 
@@ -663,6 +691,7 @@ button:focus {outline:0!important;
 	//position: absolute;
     top: 7%;
     right: 1%;
+    display: none;
 
 }
 
@@ -715,7 +744,8 @@ button:focus {outline:0!important;
 .menuButton{
 	height: 10%;
 	position: absolute;
-	right: 10%;
+	right: 5%;
+    top: 10%;
 }
 
 .coinIcon{
@@ -728,7 +758,7 @@ button:focus {outline:0!important;
 
 .text-overlay{
 	position:absolute; 
-	bottom: 57%;
+	bottom: 54%;
 	font-size: 10em!important;
 	color: $purple;
 	width:100%; 
@@ -755,8 +785,8 @@ button:focus {outline:0!important;
 }
 
 .productSquareInventory{
-	width: 227px;
-	height: 227px;
+	width: 173px;
+    height: 173px;
 	margin: 2%;
 	display: inline-block;
 }
@@ -801,6 +831,7 @@ button:focus {outline:0!important;
 .marketPlace{
 	width: 80%;
 	margin: auto;
+	margin-top: 10%;
 }
 
 .marketList h1, .yourInventory h1{
@@ -817,8 +848,8 @@ button:focus {outline:0!important;
 }
 
 .productSquare{
-	width: 150px;
-	height: 150px;
+	width: 173px;
+    height: 173px;
 	margin: 2%;
 	display: inline-block;
 }
@@ -863,6 +894,7 @@ button:focus {outline:0!important;
  .adminButtonContainer{
  	width: 80%;
  	margin: auto;
+ 	margin-bottom: 10%;
  }
 
  .adminButton{
@@ -889,12 +921,16 @@ button:focus {outline:0!important;
 
 .adminStatus{
 	margin-top: 5%;
-	width: 100%;
+	width: 80%;
+	margin: 0 auto;
+	display:block;
 	text-align: center;
 }
 
 .adminStatus h1{
 	color: $black;
+	line-height: 50px;
+	margin-top: 10%;
 }
 .pause{
 	width: 100vw;
@@ -923,4 +959,50 @@ button:focus {outline:0!important;
     text-align: center;
     font-size: 3em;
 	line-height: 80px;
+}
+
+
+
+/** GAME RESULT **/
+
+.result{
+	margin-top: 10%;
+}
+
+.yourScore{
+	text-align: center;
+	line-height: 80px;
+	margin-bottom: 5%;
+}
+
+.top5{
+	
+	line-height: 80px;
+	width: 80%;
+	margin:auto;
+}
+
+
+.top5ListHeader{
+	display: table;
+	width: 100%; /*Optional*/
+    table-layout: fixed; /*Optional*/
+    border-spacing: 1%; /*Optional*/
+}
+
+.top5list{
+	display: table;
+	width: 100%; /*Optional*/
+    table-layout: fixed; /*Optional*/
+    border-spacing: 1%; /*Optional*/
+}
+
+.top5listContent{
+	width: 25%;
+	display: table-cell;
+	    min-width: 158px;
+}
+.top5listContent h2{
+	color: $black;
+	    font-size: 2em;
 }
