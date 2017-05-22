@@ -180,3 +180,8 @@ exports.addProduct = function (teamID, guideID, region, response) {
 
     executeQuery(query, response);
 }
+
+exports.getProducts = function (teamID, guideID, response) {
+    var query = "select * from Inventory where team_id = " + teamID + " and guide_id = " + guideID + "; ";
+    executeQuery(query, response);
+}

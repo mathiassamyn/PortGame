@@ -20,7 +20,7 @@
         <div class="pure-u-1-1 loginContainer">
             <form class="loginForm">
                 <h2 class="formHeader">Choose username</h2>
-                <input class="inputLogin" ng-model="username"/>
+                <input class="inputLogin" ng-model="username" maxlength="18"/>
 
                 <h2  class="formHeader">Choose team</h2>
                 <select class="mainselection" ng-options="item.id as item.name for item in teamList" ng-model="team">

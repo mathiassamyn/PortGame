@@ -78,6 +78,11 @@ app.post("/addProduct", function (req, res) {
     SQL.addProduct(cookies.teamID, cookies.guideID, req.body.region, res);
 })
 
+app.get("/products", function (req, res) {
+    var cookies = cookie.parse(req.headers.cookie);
+    SQL.getProducts(cookies.teamID, cookies.guideID, res);
+})
+
 //socket.io
 
 var server = require("http").Server(app);
@@ -114,6 +119,9 @@ io.on("connection", function (socket) {
         socketID = Object.keys(io.sockets.adapter.rooms[data.guide + data.region].sockets)[0]; 
         socket.to(socketID).emit("product", data.region);
     });
+    //socket.on("newProduct", function (room) {
+    //    io.in(room).emit("newProduct");
+    //});
 });
 
 server.listen(3000, function () {

@@ -54,11 +54,13 @@
                                     console.log($scope[region]);
                                     $scope[region] = {
 
-                                        teamID: null,
+                                        teamID: null,
+
                                         team: null
 
                                     };
-                                };
+
+                                };
                                 console.log(region);
                                 console.log($scope[region]);
 
