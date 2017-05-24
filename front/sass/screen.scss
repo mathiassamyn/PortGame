@@ -20,6 +20,7 @@ $brown: #53160A;
 $grey: #4E5051;
 $purple: #9E1981;
 $white: #ffffff;
+$cloud: #ecf0f1;
 $lightGreen: #80C342;
 $lightBlue: #00AAB5;
 
@@ -839,7 +840,7 @@ button:focus {outline:0!important;
 }
 
 .submit{
-	background: $brown ;
+	background: $cloud ;
 }
 
 .yourInventory{
