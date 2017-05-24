@@ -68,7 +68,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 100%;
 }
 
-/* line 29, ../sass/screen.scss */
+/* line 30, ../sass/screen.scss */
 .alpha70orange {
   /* Fallback for web browsers that don't support RGBa */
   background-color: #ef7d00;
@@ -80,7 +80,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
 
-/* line 39, ../sass/screen.scss */
+/* line 40, ../sass/screen.scss */
 .alpha70red {
   /* Fallback for web browsers that don't support RGBa */
   background-color: #e30613;
@@ -92,7 +92,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
 
-/* line 49, ../sass/screen.scss */
+/* line 50, ../sass/screen.scss */
 .alpha70blue {
   /* Fallback for web browsers that don't support RGBa */
   background-color: #0086cd;
@@ -104,7 +104,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
 
-/* line 59, ../sass/screen.scss */
+/* line 60, ../sass/screen.scss */
 .alpha70yellow {
   /* Fallback for web browsers that don't support RGBa */
   background-color: #ffec38;
@@ -116,7 +116,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
 
-/* line 69, ../sass/screen.scss */
+/* line 70, ../sass/screen.scss */
 .alpha70green {
   /* Fallback for web browsers that don't support RGBa */
   background-color: #307438;
@@ -128,7 +128,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
 
-/* line 79, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
 .alpha70lightGreen {
   /* Fallback for web browsers that don't support RGBa */
   background-color: #80c342;
@@ -140,7 +140,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
 
-/* line 89, ../sass/screen.scss */
+/* line 90, ../sass/screen.scss */
 .alpha70lightBlue {
   /* Fallback for web browsers that don't support RGBa */
   background-color: #00aab5;
@@ -152,7 +152,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
 
-/* line 99, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 .alpha70grey {
   /* Fallback for web browsers that don't support RGBa */
   background-color: #4e5051;
@@ -164,7 +164,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
 
-/* line 130, ../sass/screen.scss */
+/* line 131, ../sass/screen.scss */
 h1 {
   font-family: "Futura", Helvetica, Arial, sans-serif;
   font-size: 23px;
@@ -174,7 +174,7 @@ h1 {
   line-height: 23px;
 }
 
-/* line 138, ../sass/screen.scss */
+/* line 139, ../sass/screen.scss */
 h3 {
   font-family: "Futura", Helvetica, Arial, sans-serif;
   font-size: 17px;
@@ -184,7 +184,7 @@ h3 {
   line-height: 23px;
 }
 
-/* line 146, ../sass/screen.scss */
+/* line 147, ../sass/screen.scss */
 p {
   font-family: "Futura", Helvetica, Arial, sans-serif;
   font-size: 1em;
@@ -194,7 +194,7 @@ p {
   line-height: 23px;
 }
 
-/* line 154, ../sass/screen.scss */
+/* line 155, ../sass/screen.scss */
 blockquote {
   font-family: "Futura", Helvetica, Arial, sans-serif;
   font-size: 17px;
@@ -204,7 +204,7 @@ blockquote {
   line-height: 23px;
 }
 
-/* line 162, ../sass/screen.scss */
+/* line 163, ../sass/screen.scss */
 pre {
   font-family: "Futura", Helvetica, Arial, sans-serif;
   font-size: 11px;
@@ -214,26 +214,26 @@ pre {
   line-height: 23px;
 }
 
-/* line 171, ../sass/screen.scss */
+/* line 172, ../sass/screen.scss */
 h2, h3, h4, h5, p, li {
   color: #ffffff;
   font-size: 1em;
   font-family: "Futura", Helvetica, Arial, sans-serif;
 }
 
-/* line 177, ../sass/screen.scss */
+/* line 178, ../sass/screen.scss */
 h1 {
   font-size: 2em;
   font-weight: bold;
 }
 
-/* line 182, ../sass/screen.scss */
+/* line 183, ../sass/screen.scss */
 body {
   width: 100vw;
   height: 100vh;
 }
 
-/* line 189, ../sass/screen.scss */
+/* line 190, ../sass/screen.scss */
 .headerContainer {
   height: 80px;
   width: 100%;
@@ -243,155 +243,155 @@ body {
   text-align: center;
 }
 
-/* line 199, ../sass/screen.scss */
+/* line 200, ../sass/screen.scss */
 #manufacturing {
   background-color: #E30613;
   color: #ffffff;
 }
 
-/* line 203, ../sass/screen.scss */
+/* line 204, ../sass/screen.scss */
 #grey-manufacturing {
   background-color: #4E5051;
   color: #ffffff;
 }
 
-/* line 207, ../sass/screen.scss */
+/* line 208, ../sass/screen.scss */
 #carsTop {
   background-color: #FFEC38;
   color: #333333;
 }
 
-/* line 211, ../sass/screen.scss */
+/* line 212, ../sass/screen.scss */
 #foodTop {
   background-color: #80C342;
   color: #333333;
 }
 
-/* line 215, ../sass/screen.scss */
+/* line 216, ../sass/screen.scss */
 #environmentTop {
   background-color: #307438;
   color: #ffffff;
 }
 
-/* line 220, ../sass/screen.scss */
+/* line 221, ../sass/screen.scss */
 #terminalTOp {
   background-color: #EF7D00;
   color: #ffffff;
 }
 
-/* line 224, ../sass/screen.scss */
+/* line 225, ../sass/screen.scss */
 #logistics {
   background-color: #EF7D00;
   color: #ffffff;
 }
 
-/* line 228, ../sass/screen.scss */
+/* line 229, ../sass/screen.scss */
 #food {
   color: #333333;
 }
 
-/* line 231, ../sass/screen.scss */
+/* line 232, ../sass/screen.scss */
 #logistics {
   background-color: #00AAB5;
   color: #ffffff;
 }
 
-/* line 235, ../sass/screen.scss */
+/* line 236, ../sass/screen.scss */
 #water {
   background-color: #0086CD;
   color: #ffffff;
 }
 
-/* line 240, ../sass/screen.scss */
+/* line 241, ../sass/screen.scss */
 #endResult {
   background-color: #0086CD;
   color: #ffffff;
 }
 
-/* line 246, ../sass/screen.scss */
+/* line 247, ../sass/screen.scss */
 #wallet {
   background: #FFEC38;
   color: #333333;
 }
 
-/* line 250, ../sass/screen.scss */
+/* line 251, ../sass/screen.scss */
 #inventory {
   background: #0086CD;
   color: #ffffff;
 }
 
-/* line 254, ../sass/screen.scss */
+/* line 255, ../sass/screen.scss */
 #market {
   background: #80C342;
   color: #ffffff;
 }
 
-/* line 259, ../sass/screen.scss */
+/* line 260, ../sass/screen.scss */
 .headerContainer h1 {
   line-height: 80px;
 }
 
-/* line 263, ../sass/screen.scss */
+/* line 264, ../sass/screen.scss */
 .headerImage {
   width: 100%;
 }
 
-/* line 268, ../sass/screen.scss */
+/* line 269, ../sass/screen.scss */
 .headerImage img {
   width: 100%;
 }
 
-/* line 276, ../sass/screen.scss */
+/* line 277, ../sass/screen.scss */
 #login {
   background-color: #0086CD;
   color: #ffffff;
 }
 
-/* line 280, ../sass/screen.scss */
+/* line 281, ../sass/screen.scss */
 .login {
   background-color: #0086CD;
 }
 
-/* line 284, ../sass/screen.scss */
+/* line 285, ../sass/screen.scss */
 .loginContainer {
   width: 75%;
   margin: 0 auto;
   padding: 8px 8px 8px 8px;
 }
 
-/* line 290, ../sass/screen.scss */
+/* line 291, ../sass/screen.scss */
 .headerImg {
   width: 100%;
 }
 
-/* line 294, ../sass/screen.scss */
+/* line 295, ../sass/screen.scss */
 .headerImg img {
   width: 100%;
 }
 
-/* line 298, ../sass/screen.scss */
+/* line 299, ../sass/screen.scss */
 .textContainer {
   width: 80%;
   margin: 0 auto;
 }
 
-/* line 304, ../sass/screen.scss */
+/* line 305, ../sass/screen.scss */
 .introText {
   padding: 16px 16px 16px 16px;
 }
 
-/* line 308, ../sass/screen.scss */
+/* line 309, ../sass/screen.scss */
 .introText h1 {
   padding: 8px 8px 8px 8px;
   color: #ffffff;
 }
 
-/* line 313, ../sass/screen.scss */
+/* line 314, ../sass/screen.scss */
 .introText p {
   padding: 8px 8px 8px 8px;
 }
 
-/* line 322, ../sass/screen.scss */
+/* line 323, ../sass/screen.scss */
 .mainselection {
   overflow: hidden;
   width: 100%;
@@ -407,7 +407,7 @@ body {
   padding-left: 2%;
 }
 
-/* line 338, ../sass/screen.scss */
+/* line 339, ../sass/screen.scss */
 .inputLogin {
   overflow: hidden;
   width: 100%;
@@ -422,7 +422,7 @@ body {
   padding-left: 2%;
 }
 
-/* line 352, ../sass/screen.scss */
+/* line 353, ../sass/screen.scss */
 .formHeader {
   padding-top: 2%;
   padding-bottom: 2%;
@@ -430,7 +430,7 @@ body {
   font-family: "Futura", Helvetica, Arial, sans-serif;
 }
 
-/* line 359, ../sass/screen.scss */
+/* line 360, ../sass/screen.scss */
 .nextButton {
   width: 60%;
   height: 5%;
@@ -452,7 +452,7 @@ body {
   transition-delay: 0.05s;
 }
 
-/* line 379, ../sass/screen.scss */
+/* line 380, ../sass/screen.scss */
 .undefined {
   width: 60%;
   height: 5%;
@@ -473,21 +473,21 @@ body {
   font-weight: bold;
 }
 
-/* line 402, ../sass/screen.scss */
+/* line 403, ../sass/screen.scss */
 button:active {
   outline: none !important;
   transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0.05s;
 }
 
-/* line 405, ../sass/screen.scss */
+/* line 406, ../sass/screen.scss */
 button:focus {
   outline: 0 !important;
   transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0.05s;
 }
 
-/* line 410, ../sass/screen.scss */
+/* line 411, ../sass/screen.scss */
 .buttonContainer {
   width: 90%;
   margin-left: auto;
@@ -495,7 +495,7 @@ button:focus {
   padding-top: 2%;
 }
 
-/* line 418, ../sass/screen.scss */
+/* line 419, ../sass/screen.scss */
 .startButton {
   width: 90%;
   float: right;
@@ -518,7 +518,7 @@ button:focus {
   transition-delay: 0.05s;
 }
 
-/* line 439, ../sass/screen.scss */
+/* line 440, ../sass/screen.scss */
 .bonusButton {
   width: 90%;
   float: left;
@@ -541,7 +541,7 @@ button:focus {
   transition-delay: 0.05s;
 }
 
-/* line 462, ../sass/screen.scss */
+/* line 463, ../sass/screen.scss */
 .redoButton {
   width: 50%;
   margin: auto;
@@ -564,39 +564,39 @@ button:focus {
   transition-delay: 0.05s;
 }
 
-/* line 486, ../sass/screen.scss */
+/* line 487, ../sass/screen.scss */
 .loadingContainer {
   padding-top: 10%;
   width: 80%;
   margin: auto;
 }
 
-/* line 491, ../sass/screen.scss */
+/* line 492, ../sass/screen.scss */
 .loadingContainer h1 {
   color: #ffffff;
   text-align: center;
 }
 
-/* line 495, ../sass/screen.scss */
+/* line 496, ../sass/screen.scss */
 .loadingImage {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 500, ../sass/screen.scss */
+/* line 501, ../sass/screen.scss */
 .loadingImage img {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 510, ../sass/screen.scss */
+/* line 511, ../sass/screen.scss */
 .loading {
   font-size: 30px;
 }
 
-/* line 514, ../sass/screen.scss */
+/* line 515, ../sass/screen.scss */
 .loading:after {
   overflow: hidden;
   display: inline-block;
@@ -618,7 +618,7 @@ button:focus {
     width: 1.25em;
   }
 }
-/* line 538, ../sass/screen.scss */
+/* line 539, ../sass/screen.scss */
 .regionTitleContainer {
   margin-top: -80px;
   position: absolute;
@@ -626,26 +626,26 @@ button:focus {
   width: 100%;
 }
 
-/* line 545, ../sass/screen.scss */
+/* line 546, ../sass/screen.scss */
 .regionTitle {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 551, ../sass/screen.scss */
+/* line 552, ../sass/screen.scss */
 .regionTitle h1 {
   color: #ffffff;
   line-height: 80px;
 }
 
-/* line 556, ../sass/screen.scss */
+/* line 557, ../sass/screen.scss */
 .regionBackground {
   width: 100%;
   height: 80vh;
 }
 
-/* line 561, ../sass/screen.scss */
+/* line 562, ../sass/screen.scss */
 .regionContent {
   width: 90%;
   margin-left: auto;
@@ -653,45 +653,45 @@ button:focus {
   padding-top: 2%;
 }
 
-/* line 567, ../sass/screen.scss */
+/* line 568, ../sass/screen.scss */
 .regionContent p {
   color: #ffffff;
   padding: 8px 8px 8px 8px;
   float: left;
 }
 
-/* line 572, ../sass/screen.scss */
+/* line 573, ../sass/screen.scss */
 .regionContent img {
   width: 95%;
 }
 
-/* line 576, ../sass/screen.scss */
+/* line 577, ../sass/screen.scss */
 .regionContent.cars p {
   color: #333333;
   padding: 8px 8px 8px 8px;
   float: left;
 }
 
-/* line 582, ../sass/screen.scss */
+/* line 583, ../sass/screen.scss */
 #cars h1 {
   color: #333333;
   line-height: 80px;
 }
 
-/* line 586, ../sass/screen.scss */
+/* line 587, ../sass/screen.scss */
 .regionContent.food p {
   color: #333333;
   padding: 8px 8px 8px 8px;
   float: left;
 }
 
-/* line 591, ../sass/screen.scss */
+/* line 592, ../sass/screen.scss */
 #food h1 {
   color: #333333;
   line-height: 80px;
 }
 
-/* line 602, ../sass/screen.scss */
+/* line 603, ../sass/screen.scss */
 .regionHeaderChemistry {
   height: 80px;
   width: 100%;
@@ -702,52 +702,52 @@ button:focus {
   bottom: 80px;
 }
 
-/* line 623, ../sass/screen.scss */
+/* line 624, ../sass/screen.scss */
 .pageContainer {
   height: 100vh;
 }
 
-/* line 626, ../sass/screen.scss */
+/* line 627, ../sass/screen.scss */
 .contentContainer {
   height: 100vh;
 }
 
-/* line 630, ../sass/screen.scss */
+/* line 631, ../sass/screen.scss */
 .logo {
   width: 60%;
   margin: 0 auto;
   margin-top: 10%;
 }
 
-/* line 636, ../sass/screen.scss */
+/* line 637, ../sass/screen.scss */
 .logo img {
   width: 100%;
 }
 
-/* line 642, ../sass/screen.scss */
+/* line 643, ../sass/screen.scss */
 .loginForm {
   width: 100%;
 }
 
-/* line 652, ../sass/screen.scss */
+/* line 653, ../sass/screen.scss */
 .mapContainer {
   width: 100%;
   position: absolut !important;
 }
 
-/* line 657, ../sass/screen.scss */
+/* line 658, ../sass/screen.scss */
 .mapContainer svg {
   width: 100%;
   max-height: 94vh;
   z-index: 1;
 }
 
-/* line 666, ../sass/screen.scss */
+/* line 667, ../sass/screen.scss */
 .region {
   z-index: 2;
 }
 
-/* line 671, ../sass/screen.scss */
+/* line 672, ../sass/screen.scss */
 .menuContainer {
   float: right;
   position: fixed;
@@ -755,19 +755,19 @@ button:focus {
   top: 12%;
 }
 
-/* line 678, ../sass/screen.scss */
+/* line 679, ../sass/screen.scss */
 .menuContainer li {
   padding-bottom: 20%;
 }
 
-/* line 682, ../sass/screen.scss */
+/* line 683, ../sass/screen.scss */
 .mapButton {
   float: right;
   top: 7%;
   left: 1%;
 }
 
-/* line 689, ../sass/screen.scss */
+/* line 690, ../sass/screen.scss */
 .regionButton {
   float: right;
   top: 7%;
@@ -775,7 +775,7 @@ button:focus {
   display: none;
 }
 
-/* line 701, ../sass/screen.scss */
+/* line 702, ../sass/screen.scss */
 .endGameContainer {
   height: 80px;
   width: 50%;
@@ -784,7 +784,7 @@ button:focus {
   right: 0px;
 }
 
-/* line 709, ../sass/screen.scss */
+/* line 710, ../sass/screen.scss */
 .endGameContent {
   background: #E30613;
   height: 80px;
@@ -799,27 +799,27 @@ button:focus {
   color: #ffffff;
 }
 
-/* line 723, ../sass/screen.scss */
+/* line 724, ../sass/screen.scss */
 .resultTableContainer {
   width: 80%;
   margin: auto;
 }
 
-/* line 727, ../sass/screen.scss */
+/* line 728, ../sass/screen.scss */
 .resultTable {
   font-size: 2em;
   text-align: center;
   padding: 10%;
 }
 
-/* line 737, ../sass/screen.scss */
+/* line 738, ../sass/screen.scss */
 .resultList:nth-child(1) {
   background: #0086CD;
   border: 10px solid #FFEC38;
   colour: white;
 }
 
-/* line 744, ../sass/screen.scss */
+/* line 745, ../sass/screen.scss */
 .menuButton {
   height: 10%;
   position: absolute;
@@ -827,18 +827,18 @@ button:focus {
   top: 10%;
 }
 
-/* line 751, ../sass/screen.scss */
+/* line 752, ../sass/screen.scss */
 .coinIcon {
   width: 100%;
   position: relativ;
 }
 
-/* line 755, ../sass/screen.scss */
+/* line 756, ../sass/screen.scss */
 .coinIcon img {
   width: 100%;
 }
 
-/* line 759, ../sass/screen.scss */
+/* line 760, ../sass/screen.scss */
 .text-overlay {
   position: absolute;
   bottom: 54%;
@@ -848,12 +848,12 @@ button:focus {
   text-align: center;
 }
 
-/* line 771, ../sass/screen.scss */
+/* line 772, ../sass/screen.scss */
 .inventoryList {
   position: absolut;
 }
 
-/* line 776, ../sass/screen.scss */
+/* line 777, ../sass/screen.scss */
 .listItem {
   height: 80px;
   line-height: 80px;
@@ -865,7 +865,7 @@ button:focus {
   font-family: "Futura", Helvetica, Arial, sans-serif;
 }
 
-/* line 787, ../sass/screen.scss */
+/* line 788, ../sass/screen.scss */
 .productSquareInventory {
   width: 173px;
   height: 173px;
@@ -873,43 +873,43 @@ button:focus {
   display: inline-block;
 }
 
-/* line 794, ../sass/screen.scss */
+/* line 795, ../sass/screen.scss */
 .manufacturingProduct {
   background: #E30613;
 }
 
-/* line 797, ../sass/screen.scss */
+/* line 798, ../sass/screen.scss */
 .manufacturing-greyProduct {
   background: #4E5051;
 }
 
-/* line 801, ../sass/screen.scss */
+/* line 802, ../sass/screen.scss */
 .terminalProduct {
   background: #EF7D00;
 }
 
-/* line 804, ../sass/screen.scss */
+/* line 805, ../sass/screen.scss */
 .carsProduct {
   background: #FFEC38;
   color: #333333;
 }
 
-/* line 808, ../sass/screen.scss */
+/* line 809, ../sass/screen.scss */
 .environmentProduct {
   background: #307438;
 }
 
-/* line 811, ../sass/screen.scss */
+/* line 812, ../sass/screen.scss */
 .logisticProduct {
   background: #00AAB5;
 }
 
-/* line 814, ../sass/screen.scss */
+/* line 815, ../sass/screen.scss */
 .foodProduct {
   background: #80C342;
 }
 
-/* line 818, ../sass/screen.scss */
+/* line 819, ../sass/screen.scss */
 .inventoryProducts {
   display: inline;
   position: relative;
@@ -917,35 +917,35 @@ button:focus {
   left: 2%;
 }
 
-/* line 824, ../sass/screen.scss */
+/* line 825, ../sass/screen.scss */
 .inventoryProducts img {
   width: 6%;
 }
 
-/* line 831, ../sass/screen.scss */
+/* line 832, ../sass/screen.scss */
 .marketPlace {
   width: 80%;
   margin: auto;
   margin-top: 10%;
 }
 
-/* line 837, ../sass/screen.scss */
+/* line 838, ../sass/screen.scss */
 .marketList h1, .yourInventory h1 {
   margin-bottom: 5%;
 }
 
-/* line 841, ../sass/screen.scss */
+/* line 842, ../sass/screen.scss */
 .submit {
-  background: #53160A;
+  background: #ecf0f1;
 }
 
-/* line 845, ../sass/screen.scss */
+/* line 846, ../sass/screen.scss */
 .yourInventory {
   height: auto;
   margin-bottom: 10%;
 }
 
-/* line 850, ../sass/screen.scss */
+/* line 851, ../sass/screen.scss */
 .productSquare {
   width: 173px;
   height: 173px;
@@ -953,23 +953,23 @@ button:focus {
   display: inline-block;
 }
 
-/* line 857, ../sass/screen.scss */
+/* line 858, ../sass/screen.scss */
 .productIcon {
   width: 100%;
 }
 
-/* line 861, ../sass/screen.scss */
+/* line 862, ../sass/screen.scss */
 .productIcon img {
   width: 100%;
 }
 
-/* line 865, ../sass/screen.scss */
+/* line 866, ../sass/screen.scss */
 .productAmount {
   width: 100%;
   position: relative;
 }
 
-/* line 869, ../sass/screen.scss */
+/* line 870, ../sass/screen.scss */
 .productAmountCircle {
   border: 1px red;
   border-radius: 50%;
@@ -982,25 +982,25 @@ button:focus {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 }
 
-/* line 881, ../sass/screen.scss */
+/* line 882, ../sass/screen.scss */
 .productAmountNumber {
   text-align: center;
   line-height: 50px;
 }
 
-/* line 889, ../sass/screen.scss */
+/* line 890, ../sass/screen.scss */
 .adminPanel {
   width: 100%;
 }
 
-/* line 894, ../sass/screen.scss */
+/* line 895, ../sass/screen.scss */
 .adminButtonContainer {
   width: 80%;
   margin: auto;
   margin-bottom: 10%;
 }
 
-/* line 900, ../sass/screen.scss */
+/* line 901, ../sass/screen.scss */
 .adminButton {
   width: 100%;
   height: 5%;
@@ -1023,7 +1023,7 @@ button:focus {
   transition-delay: 0.05s;
 }
 
-/* line 922, ../sass/screen.scss */
+/* line 923, ../sass/screen.scss */
 .adminStatus {
   margin-top: 5%;
   width: 80%;
@@ -1032,14 +1032,14 @@ button:focus {
   text-align: center;
 }
 
-/* line 930, ../sass/screen.scss */
+/* line 931, ../sass/screen.scss */
 .adminStatus h1 {
   color: #333333;
   line-height: 50px;
   margin-top: 10%;
 }
 
-/* line 935, ../sass/screen.scss */
+/* line 936, ../sass/screen.scss */
 .pause {
   width: 100vw;
   z-index: 5;
@@ -1049,13 +1049,13 @@ button:focus {
   top: 0;
 }
 
-/* line 944, ../sass/screen.scss */
+/* line 945, ../sass/screen.scss */
 .pauseContainer {
   width: 80%;
   margin: auto;
 }
 
-/* line 949, ../sass/screen.scss */
+/* line 950, ../sass/screen.scss */
 .pauseContainer img {
   display: block;
   margin: auto;
@@ -1063,7 +1063,7 @@ button:focus {
   margin-bottom: 10%;
 }
 
-/* line 956, ../sass/screen.scss */
+/* line 957, ../sass/screen.scss */
 .pauseContainer h1 {
   font-weight: initial;
   color: white;
@@ -1073,26 +1073,26 @@ button:focus {
 }
 
 /** GAME RESULT **/
-/* line 968, ../sass/screen.scss */
+/* line 969, ../sass/screen.scss */
 .result {
   margin-top: 10%;
 }
 
-/* line 972, ../sass/screen.scss */
+/* line 973, ../sass/screen.scss */
 .yourScore {
   text-align: center;
   line-height: 80px;
   margin-bottom: 5%;
 }
 
-/* line 978, ../sass/screen.scss */
+/* line 979, ../sass/screen.scss */
 .top5 {
   line-height: 80px;
   width: 80%;
   margin: auto;
 }
 
-/* line 986, ../sass/screen.scss */
+/* line 987, ../sass/screen.scss */
 .top5ListHeader {
   display: table;
   width: 100%;
@@ -1103,7 +1103,7 @@ button:focus {
   /*Optional*/
 }
 
-/* line 993, ../sass/screen.scss */
+/* line 994, ../sass/screen.scss */
 .top5list {
   display: table;
   width: 100%;
@@ -1114,14 +1114,14 @@ button:focus {
   /*Optional*/
 }
 
-/* line 1000, ../sass/screen.scss */
+/* line 1001, ../sass/screen.scss */
 .top5listContent {
   width: 25%;
   display: table-cell;
   min-width: 158px;
 }
 
-/* line 1005, ../sass/screen.scss */
+/* line 1006, ../sass/screen.scss */
 .top5listContent h2 {
   color: #333333;
   font-size: 2em;
