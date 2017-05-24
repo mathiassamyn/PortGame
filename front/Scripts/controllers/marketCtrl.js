@@ -4,4 +4,20 @@
         $scope.productAmount = response;
     })
 
+    $scope.productSelected = $scope.marketSelected = {
+        manufacturing: false,
+        terminal: false,
+        logistics: false,
+        greyManufacturing: false,
+        food: false,
+        cars: false,
+        environment: false
+    }
+
+    $scope.marketSubmit = function () {
+        console.log($scope.productSelected);
+        console.log($scope.marketSelected);
+
+    }
+
 }])
