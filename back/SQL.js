@@ -185,3 +185,11 @@ exports.getProducts = function (teamID, guideID, response) {
     var query = "select * from Inventory where team_id = " + teamID + " and guide_id = " + guideID + "; ";
     executeQuery(query, response);
 }
+
+exports.tradeProduct = function (teamID, guideID, playerProduct, marketProduct, response) {
+    var query = "update inventory " +
+                "set " + playerProduct + " -= 1, " + marketProduct + " += 1 " +
+                "where guide_id = " + guideID + " and team_id = " + teamID + "; ";
+
+    executeQuery(query, response);
+}
