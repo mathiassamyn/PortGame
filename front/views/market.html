@@ -18,72 +18,82 @@
 					<div class="marketPlace">
 						<div class="yourInventory">
 							<h1>Your Inventory</h1>
-							<div class="yourProducts">
-								<div class="productSquare manufacturingProduct">
+							<div class="yourProducts">								
+								<div class="productSquare manufacturingProduct" ng-click="!productSelected.manufacturing">
 									<div class="productIcon">
 										<img src="img/regions/manufacturing-icon.png">
 									</div>
+								
 									<div class="productAmount">
 										<div class="productAmountCircle">
 											<p class="productAmountNumber">{{productAmount.manufacturing}}</p>
 										</div>			
-									</div>
-								</div>
-								<div class="productSquare terminalProduct">
+									</div>									
+								</div>							
+								<div class="productSquare terminalProduct" ng-click="!productSelected.terminal">
 									<div class="productIcon">
 										<img src="img/regions/terminal-icon.png">
 									</div>	
+								
 									<div class="productAmount">
 										<div class="productAmountCircle">
 											<p class="productAmountNumber">{{productAmount.terminal}}</p>
 										</div>			
 									</div>								
-								</div>
-								
-								<div class="productSquare logisticProduct">
+								</div>							
+								<div class="productSquare logisticProduct" ng-click="!productSelected.logistics">
 									<div class="productIcon">
 										<img src="img/regions/logistics-icon.png">
 									</div>
+								
 									<div class="productAmount">
 										<div class="productAmountCircle">
 											<p class="productAmountNumber">{{productAmount.logistics}}</p>
 										</div>			
 									</div>
 								</div>
-								<div class="productSquare foodProduct">
+								
+								<div class="productSquare foodProduct" ng-click="!productSelected.food">
 									<div class="productIcon">
 										<img src="img/regions/food-icon.png">
 									</div>
+								
 									<div class="productAmount">
 										<div class="productAmountCircle food">
 											<p class="productAmountNumber">{{productAmount.food}}</p>
 										</div>			
 									</div>
 								</div>
-								<div class="productSquare carsProduct">
+								
+								<div class="productSquare carsProduct" ng-click="!productSelected.cars">
 									<div class="productIcon">
 										<img src="img/regions/car-icon.png">
 									</div>
+								
 									<div class="productAmount">
 										<div class="productAmountCircle cars">
 											<p class="productAmountNumber">{{productAmount.cars}}</p>
 										</div>			
 									</div>
 								</div>
-								<div class="productSquare environmentProduct">
+								
+								<div class="productSquare environmentProduct" ng-click="!productSelected.environment">
 									<div class="productIcon">
 										<img src="img/regions/environment-icon.png">
 									</div>
+								</button>
 									<div class="productAmount">
 										<div class="productAmountCircle">
 											<p class="productAmountNumber">{{productAmount.environment}}</p>
 										</div>			
 									</div>
 								</div>
-								<div class="productSquare manufacturing-greyProduct">
+								
+								<div class="productSquare manufacturing-greyProduct" ng-click="!productSelected.greyManufacturing">
 									<div class="productIcon">
 										<img src="img/regions/manufacturing2-icon.png">
 									</div>
+								
 									<div class="productAmount">
 										<div class="productAmountCircle">
 											<p class="productAmountNumber">{{productAmount.greyManufacturing}}</p>
@@ -95,42 +105,42 @@
 						<div class="marketList">
 							<h1>The Market</h1>
 							<div class="marketProducts">
-								<div class="productSquare manufacturingProduct">
+								<div class="productSquare manufacturingProduct" ng-click="!marketSelected.manufacturing">
 									<div class="productIcon">
 										<img src="img/regions/manufacturing-icon.png">
 									</div>
 								</div>
-								<div class="productSquare terminalProduct">
+								<div class="productSquare terminalProduct" ng-click="!marketSelected.terminal">
 									<div class="productIcon">
 										<img src="img/regions/terminal-icon.png">
 									</div>
 								</div>
-								<div class="productSquare logisticProduct">
+								<div class="productSquare logisticProduct" ng-click="!marketSelected.logistics">
 									<div class="productIcon">
 										<img src="img/regions/logistics-icon.png">
 									</div>
 								</div>
-								<div class="productSquare foodProduct">
+								<div class="productSquare foodProduct" ng-click="!marketSelected.food">
 									<div class="productIcon">
 										<img src="img/regions/food-icon.png">
 									</div>
 								</div>
-								<div class="productSquare carsProduct">
+								<div class="productSquare carsProduct" ng-click="!marketSelected.cars">
 									<div class="productIcon">
 										<img src="img/regions/car-icon.png">
 									</div>
 								</div>
-								<div class="productSquare environmentProduct">
+								<div class="productSquare environmentProduct" ng-click="!marketSelected.environment">
 									<div class="productIcon">
 										<img src="img/regions/environment-icon.png">
 									</div>
 								</div>
-								<div class="productSquare manufacturing-greyProduct">
+								<div class="productSquare manufacturing-greyProduct" ng-click="!marketSelected.greyManufacturing">
 									<div class="productIcon">
 										<img src="img/regions/manufacturing2-icon.png">
 									</div>
 								</div>
-								<div class="productSquare submit">
+								<div class="productSquare submit" ng-click="((marketSubmit))">
 									<div class="productIcon">
 									</div>
 								</div>
