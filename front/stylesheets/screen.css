@@ -492,7 +492,7 @@ button:focus {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 2%;
+  margin-top: 10%;
 }
 
 /* line 419, ../sass/screen.scss */
@@ -542,6 +542,20 @@ button:focus {
 }
 
 /* line 463, ../sass/screen.scss */
+.infoText {
+  width: 80%;
+  text-align: center;
+  line-height: 128px;
+  margin: auto;
+  margin-top: 22%;
+}
+
+/* line 471, ../sass/screen.scss */
+.infoText h1 {
+  line-height: 70px;
+}
+
+/* line 475, ../sass/screen.scss */
 .redoButton {
   width: 50%;
   margin: auto;
@@ -552,7 +566,7 @@ button:focus {
   border-radius: 4px 4px 4px 4px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   border: 0px;
-  margin-left: auto;
+  margin-left: 10%;
   margin-right: auto;
   background: #86BC25;
   font-size: 2em;
@@ -564,39 +578,39 @@ button:focus {
   transition-delay: 0.05s;
 }
 
-/* line 487, ../sass/screen.scss */
+/* line 499, ../sass/screen.scss */
 .loadingContainer {
   padding-top: 10%;
   width: 80%;
   margin: auto;
 }
 
-/* line 492, ../sass/screen.scss */
+/* line 504, ../sass/screen.scss */
 .loadingContainer h1 {
   color: #ffffff;
   text-align: center;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 508, ../sass/screen.scss */
 .loadingImage {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 501, ../sass/screen.scss */
+/* line 513, ../sass/screen.scss */
 .loadingImage img {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 511, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .loading {
   font-size: 30px;
 }
 
-/* line 515, ../sass/screen.scss */
+/* line 527, ../sass/screen.scss */
 .loading:after {
   overflow: hidden;
   display: inline-block;
@@ -618,7 +632,7 @@ button:focus {
     width: 1.25em;
   }
 }
-/* line 539, ../sass/screen.scss */
+/* line 551, ../sass/screen.scss */
 .regionTitleContainer {
   margin-top: -80px;
   position: absolute;
@@ -626,26 +640,26 @@ button:focus {
   width: 100%;
 }
 
-/* line 546, ../sass/screen.scss */
+/* line 558, ../sass/screen.scss */
 .regionTitle {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 552, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .regionTitle h1 {
   color: #ffffff;
   line-height: 80px;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 569, ../sass/screen.scss */
 .regionBackground {
   width: 100%;
   height: 80vh;
 }
 
-/* line 562, ../sass/screen.scss */
+/* line 574, ../sass/screen.scss */
 .regionContent {
   width: 90%;
   margin-left: auto;
@@ -653,45 +667,45 @@ button:focus {
   padding-top: 2%;
 }
 
-/* line 568, ../sass/screen.scss */
+/* line 580, ../sass/screen.scss */
 .regionContent p {
   color: #ffffff;
   padding: 8px 8px 8px 8px;
   float: left;
 }
 
-/* line 573, ../sass/screen.scss */
+/* line 585, ../sass/screen.scss */
 .regionContent img {
   width: 95%;
 }
 
-/* line 577, ../sass/screen.scss */
+/* line 589, ../sass/screen.scss */
 .regionContent.cars p {
   color: #333333;
   padding: 8px 8px 8px 8px;
   float: left;
 }
 
-/* line 583, ../sass/screen.scss */
+/* line 595, ../sass/screen.scss */
 #cars h1 {
   color: #333333;
   line-height: 80px;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 599, ../sass/screen.scss */
 .regionContent.food p {
   color: #333333;
   padding: 8px 8px 8px 8px;
   float: left;
 }
 
-/* line 592, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 #food h1 {
   color: #333333;
   line-height: 80px;
 }
 
-/* line 603, ../sass/screen.scss */
+/* line 615, ../sass/screen.scss */
 .regionHeaderChemistry {
   height: 80px;
   width: 100%;
@@ -702,52 +716,52 @@ button:focus {
   bottom: 80px;
 }
 
-/* line 624, ../sass/screen.scss */
+/* line 636, ../sass/screen.scss */
 .pageContainer {
   height: 100vh;
 }
 
-/* line 627, ../sass/screen.scss */
+/* line 639, ../sass/screen.scss */
 .contentContainer {
   height: 100vh;
 }
 
-/* line 631, ../sass/screen.scss */
+/* line 643, ../sass/screen.scss */
 .logo {
   width: 60%;
   margin: 0 auto;
   margin-top: 10%;
 }
 
-/* line 637, ../sass/screen.scss */
+/* line 649, ../sass/screen.scss */
 .logo img {
   width: 100%;
 }
 
-/* line 643, ../sass/screen.scss */
+/* line 655, ../sass/screen.scss */
 .loginForm {
   width: 100%;
 }
 
-/* line 653, ../sass/screen.scss */
+/* line 665, ../sass/screen.scss */
 .mapContainer {
   width: 100%;
   position: absolut !important;
 }
 
-/* line 658, ../sass/screen.scss */
+/* line 671, ../sass/screen.scss */
 .mapContainer svg {
   width: 100%;
   max-height: 94vh;
   z-index: 1;
 }
 
-/* line 667, ../sass/screen.scss */
+/* line 683, ../sass/screen.scss */
 .region {
   z-index: 2;
 }
 
-/* line 672, ../sass/screen.scss */
+/* line 688, ../sass/screen.scss */
 .menuContainer {
   float: right;
   position: fixed;
@@ -755,19 +769,19 @@ button:focus {
   top: 12%;
 }
 
-/* line 679, ../sass/screen.scss */
+/* line 695, ../sass/screen.scss */
 .menuContainer li {
   padding-bottom: 20%;
 }
 
-/* line 683, ../sass/screen.scss */
+/* line 699, ../sass/screen.scss */
 .mapButton {
   float: right;
   top: 7%;
   left: 1%;
 }
 
-/* line 690, ../sass/screen.scss */
+/* line 706, ../sass/screen.scss */
 .regionButton {
   float: right;
   top: 7%;
@@ -775,7 +789,7 @@ button:focus {
   display: none;
 }
 
-/* line 702, ../sass/screen.scss */
+/* line 718, ../sass/screen.scss */
 .endGameContainer {
   height: 80px;
   width: 50%;
@@ -784,7 +798,7 @@ button:focus {
   right: 0px;
 }
 
-/* line 710, ../sass/screen.scss */
+/* line 726, ../sass/screen.scss */
 .endGameContent {
   background: #E30613;
   height: 80px;
@@ -799,27 +813,27 @@ button:focus {
   color: #ffffff;
 }
 
-/* line 724, ../sass/screen.scss */
+/* line 740, ../sass/screen.scss */
 .resultTableContainer {
   width: 80%;
   margin: auto;
 }
 
-/* line 728, ../sass/screen.scss */
+/* line 744, ../sass/screen.scss */
 .resultTable {
   font-size: 2em;
   text-align: center;
   padding: 10%;
 }
 
-/* line 738, ../sass/screen.scss */
+/* line 754, ../sass/screen.scss */
 .resultList:nth-child(1) {
   background: #0086CD;
   border: 10px solid #FFEC38;
   colour: white;
 }
 
-/* line 745, ../sass/screen.scss */
+/* line 761, ../sass/screen.scss */
 .menuButton {
   height: 10%;
   position: absolute;
@@ -827,18 +841,18 @@ button:focus {
   top: 10%;
 }
 
-/* line 752, ../sass/screen.scss */
+/* line 768, ../sass/screen.scss */
 .coinIcon {
   width: 100%;
   position: relativ;
 }
 
-/* line 756, ../sass/screen.scss */
+/* line 772, ../sass/screen.scss */
 .coinIcon img {
   width: 100%;
 }
 
-/* line 760, ../sass/screen.scss */
+/* line 776, ../sass/screen.scss */
 .text-overlay {
   position: absolute;
   bottom: 54%;
@@ -848,12 +862,12 @@ button:focus {
   text-align: center;
 }
 
-/* line 772, ../sass/screen.scss */
+/* line 788, ../sass/screen.scss */
 .inventoryList {
   position: absolut;
 }
 
-/* line 777, ../sass/screen.scss */
+/* line 793, ../sass/screen.scss */
 .listItem {
   height: 80px;
   line-height: 80px;
@@ -865,7 +879,7 @@ button:focus {
   font-family: "Futura", Helvetica, Arial, sans-serif;
 }
 
-/* line 788, ../sass/screen.scss */
+/* line 804, ../sass/screen.scss */
 .productSquareInventory {
   width: 173px;
   height: 173px;
@@ -873,43 +887,43 @@ button:focus {
   display: inline-block;
 }
 
-/* line 795, ../sass/screen.scss */
+/* line 811, ../sass/screen.scss */
 .manufacturingProduct {
   background: #E30613;
 }
 
-/* line 798, ../sass/screen.scss */
+/* line 814, ../sass/screen.scss */
 .manufacturing-greyProduct {
   background: #4E5051;
 }
 
-/* line 802, ../sass/screen.scss */
+/* line 818, ../sass/screen.scss */
 .terminalProduct {
   background: #EF7D00;
 }
 
-/* line 805, ../sass/screen.scss */
+/* line 821, ../sass/screen.scss */
 .carsProduct {
   background: #FFEC38;
   color: #333333;
 }
 
-/* line 809, ../sass/screen.scss */
+/* line 825, ../sass/screen.scss */
 .environmentProduct {
   background: #307438;
 }
 
-/* line 812, ../sass/screen.scss */
+/* line 828, ../sass/screen.scss */
 .logisticProduct {
   background: #00AAB5;
 }
 
-/* line 815, ../sass/screen.scss */
+/* line 831, ../sass/screen.scss */
 .foodProduct {
   background: #80C342;
 }
 
-/* line 819, ../sass/screen.scss */
+/* line 835, ../sass/screen.scss */
 .inventoryProducts {
   display: inline;
   position: relative;
@@ -917,35 +931,41 @@ button:focus {
   left: 2%;
 }
 
-/* line 825, ../sass/screen.scss */
+/* line 841, ../sass/screen.scss */
 .inventoryProducts img {
   width: 6%;
 }
 
-/* line 832, ../sass/screen.scss */
+/* line 848, ../sass/screen.scss */
 .marketPlace {
   width: 80%;
   margin: auto;
   margin-top: 10%;
 }
 
-/* line 838, ../sass/screen.scss */
+/* line 854, ../sass/screen.scss */
 .marketList h1, .yourInventory h1 {
   margin-bottom: 5%;
 }
 
-/* line 842, ../sass/screen.scss */
+/* line 858, ../sass/screen.scss */
 .submit {
   background: #ecf0f1;
 }
 
-/* line 846, ../sass/screen.scss */
+/* line 862, ../sass/screen.scss */
 .yourInventory {
   height: auto;
   margin-bottom: 10%;
 }
 
-/* line 851, ../sass/screen.scss */
+/* line 868, ../sass/screen.scss */
+.disabled {
+  opacity: 0.2;
+  grayscale: 0.3;
+}
+
+/* line 872, ../sass/screen.scss */
 .productSquare {
   width: 173px;
   height: 173px;
@@ -953,23 +973,23 @@ button:focus {
   display: inline-block;
 }
 
-/* line 858, ../sass/screen.scss */
+/* line 879, ../sass/screen.scss */
 .productIcon {
   width: 100%;
 }
 
-/* line 862, ../sass/screen.scss */
+/* line 883, ../sass/screen.scss */
 .productIcon img {
   width: 100%;
 }
 
-/* line 866, ../sass/screen.scss */
+/* line 887, ../sass/screen.scss */
 .productAmount {
   width: 100%;
   position: relative;
 }
 
-/* line 870, ../sass/screen.scss */
+/* line 891, ../sass/screen.scss */
 .productAmountCircle {
   border: 1px red;
   border-radius: 50%;
@@ -982,25 +1002,25 @@ button:focus {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 }
 
-/* line 882, ../sass/screen.scss */
+/* line 903, ../sass/screen.scss */
 .productAmountNumber {
   text-align: center;
   line-height: 50px;
 }
 
-/* line 890, ../sass/screen.scss */
+/* line 911, ../sass/screen.scss */
 .adminPanel {
   width: 100%;
 }
 
-/* line 895, ../sass/screen.scss */
+/* line 916, ../sass/screen.scss */
 .adminButtonContainer {
   width: 80%;
   margin: auto;
   margin-bottom: 10%;
 }
 
-/* line 901, ../sass/screen.scss */
+/* line 922, ../sass/screen.scss */
 .adminButton {
   width: 100%;
   height: 5%;
@@ -1023,7 +1043,7 @@ button:focus {
   transition-delay: 0.05s;
 }
 
-/* line 923, ../sass/screen.scss */
+/* line 944, ../sass/screen.scss */
 .adminStatus {
   margin-top: 5%;
   width: 80%;
@@ -1032,14 +1052,14 @@ button:focus {
   text-align: center;
 }
 
-/* line 931, ../sass/screen.scss */
+/* line 952, ../sass/screen.scss */
 .adminStatus h1 {
   color: #333333;
   line-height: 50px;
   margin-top: 10%;
 }
 
-/* line 936, ../sass/screen.scss */
+/* line 957, ../sass/screen.scss */
 .pause {
   width: 100vw;
   z-index: 5;
@@ -1049,13 +1069,13 @@ button:focus {
   top: 0;
 }
 
-/* line 945, ../sass/screen.scss */
+/* line 966, ../sass/screen.scss */
 .pauseContainer {
   width: 80%;
   margin: auto;
 }
 
-/* line 950, ../sass/screen.scss */
+/* line 971, ../sass/screen.scss */
 .pauseContainer img {
   display: block;
   margin: auto;
@@ -1063,7 +1083,7 @@ button:focus {
   margin-bottom: 10%;
 }
 
-/* line 957, ../sass/screen.scss */
+/* line 978, ../sass/screen.scss */
 .pauseContainer h1 {
   font-weight: initial;
   color: white;
@@ -1073,26 +1093,26 @@ button:focus {
 }
 
 /** GAME RESULT **/
-/* line 969, ../sass/screen.scss */
+/* line 990, ../sass/screen.scss */
 .result {
   margin-top: 10%;
 }
 
-/* line 973, ../sass/screen.scss */
+/* line 994, ../sass/screen.scss */
 .yourScore {
   text-align: center;
   line-height: 80px;
   margin-bottom: 5%;
 }
 
-/* line 979, ../sass/screen.scss */
+/* line 1000, ../sass/screen.scss */
 .top5 {
   line-height: 80px;
   width: 80%;
   margin: auto;
 }
 
-/* line 987, ../sass/screen.scss */
+/* line 1008, ../sass/screen.scss */
 .top5ListHeader {
   display: table;
   width: 100%;
@@ -1103,7 +1123,7 @@ button:focus {
   /*Optional*/
 }
 
-/* line 994, ../sass/screen.scss */
+/* line 1015, ../sass/screen.scss */
 .top5list {
   display: table;
   width: 100%;
@@ -1114,14 +1134,14 @@ button:focus {
   /*Optional*/
 }
 
-/* line 1001, ../sass/screen.scss */
+/* line 1022, ../sass/screen.scss */
 .top5listContent {
   width: 25%;
   display: table-cell;
   min-width: 158px;
 }
 
-/* line 1006, ../sass/screen.scss */
+/* line 1027, ../sass/screen.scss */
 .top5listContent h2 {
   color: #333333;
   font-size: 2em;

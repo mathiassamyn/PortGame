@@ -412,7 +412,7 @@ button:focus {outline:0!important;
 	    width: 90%;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 2%;
+        margin-top: 10%;
 
 }
 
@@ -460,6 +460,18 @@ button:focus {outline:0!important;
 }
 
 
+.infoText{
+	width: 80%;
+    text-align: center;
+    line-height: 128px;
+    margin: auto;
+    margin-top: 22%;
+}
+
+.infoText h1{
+	line-height: 70px;
+}
+
 .redoButton{
 	width: 50%;
 	margin: auto;
@@ -470,7 +482,7 @@ button:focus {outline:0!important;
    border-radius: 4px 4px 4px 4px;
    box-shadow: $shadow ;
    border: 0px;
-   margin-left: auto;
+   margin-left: 10%;
    margin-right: auto;
    background: $buttonGreen;
 	font-size: 2em;
@@ -653,6 +665,7 @@ button:focus {outline:0!important;
 .mapContainer{
 	width: 100%;
 	position: absolut!important;
+
 }
 
 .mapContainer svg{
@@ -662,6 +675,9 @@ button:focus {outline:0!important;
 
 }
 
+.mapSiteBackground{
+	
+}
 
 
 .region{
@@ -848,6 +864,11 @@ button:focus {outline:0!important;
 	margin-bottom: 10%;
 }
 
+
+.disabled{
+	opacity: 0.2;
+	grayscale: 0.3;
+}
 .productSquare{
 	width: 173px;
     height: 173px;
