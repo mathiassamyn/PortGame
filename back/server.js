@@ -83,6 +83,12 @@ app.get("/products", function (req, res) {
     SQL.getProducts(cookies.teamID, cookies.guideID, res);
 })
 
+app.post("/trade", function (req, res) {
+    var cookies = cookie.parse(req.headers.cookie);
+    console.log(req.body);
+    SQL.tradeProduct(cookies.teamID, cookies.guideID, req.body.playerProduct, req.body.marketProduct, res);
+})
+
 //socket.io
 
 var server = require("http").Server(app);
