@@ -20,7 +20,7 @@
 							<h1>Your Inventory</h1>
 							<div class="yourProducts">								
 								<div class="productSquare manufacturingProduct">
-									<div class="productIcon" ng-click="productSelected.manufacturing = !productSelected.manufacturing">
+									<div class="productIcon" ng-class="productAmount.manufacturing === 0 ? 'disabled': ''" ng-click="productSelected.manufacturing = !productSelected.manufacturing">
 										<img src="img/regions/manufacturing-icon.png">
 									</div>
 								
@@ -31,7 +31,7 @@
 									</div>									
 								</div>							
 								<div class="productSquare terminalProduct">
-									<div class="productIcon" ng-click="productSelected.terminal = !productSelected.terminal">
+									<div class="productIcon" ng-class="productAmount.terminal === 0 ? 'disabled': ''" ng-click="productSelected.terminal = !productSelected.terminal">
 										<img src="img/regions/terminal-icon.png">
 									</div>	
 								
@@ -42,7 +42,7 @@
 									</div>								
 								</div>							
 								<div class="productSquare logisticProduct" >
-									<div class="productIcon" ng-click="productSelected.logistics = !productSelected.logistics">
+									<div class="productIcon" ng-class="productAmount.logistics === 0 ? 'disabled': ''" ng-click="productSelected.logistics = !productSelected.logistics">
 										<img src="img/regions/logistics-icon.png">
 									</div>
 								
@@ -54,7 +54,7 @@
 								</div>
 								
 								<div class="productSquare foodProduct">
-									<div class="productIcon"  ng-click="productSelected.food = !productSelected.food">
+									<div class="productIcon" ng-class="productAmount.food === 0 ? 'disabled': ''"  ng-click="productSelected.food = !productSelected.food">
 										<img src="img/regions/food-icon.png">
 									</div>
 								
@@ -66,7 +66,7 @@
 								</div>
 								
 								<div class="productSquare carsProduct">
-									<div class="productIcon" ng-click="productSelected.cars = !productSelected.cars">
+									<div class="productIcon" ng-class="productAmount.cars === 0 ? 'disabled': ''" ng-click="productSelected.cars = !productSelected.cars">
 										<img src="img/regions/car-icon.png">
 									</div>
 								
@@ -78,7 +78,7 @@
 								</div>
 								
 								<div class="productSquare environmentProduct" >
-									<div class="productIcon" ng-click="productSelected.environment = !productSelected.environment">
+									<div class="productIcon" ng-class="productAmount.environment === 0 ? 'disabled': ''" ng-click="productSelected.environment = !productSelected.environment">
 										<img src="img/regions/environment-icon.png">
 									</div>
 								</button>
@@ -90,7 +90,7 @@
 								</div>
 								
 								<div class="productSquare manufacturing-greyProduct" >
-									<div class="productIcon" ng-click="productSelected.greyManufacturing = !productSelected.greyManufacturing">
+									<div class="productIcon" ng-class="productAmount.greyManufacturing === 0 ? 'disabled': ''" ng-click="productSelected.greyManufacturing = !productSelected.greyManufacturing">
 										<img src="img/regions/manufacturing2-icon.png">
 									</div>
 								

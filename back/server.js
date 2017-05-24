@@ -86,7 +86,7 @@ app.get("/products", function (req, res) {
 app.post("/trade", function (req, res) {
     var cookies = cookie.parse(req.headers.cookie);
     console.log(req.body);
-    SQL.tradeProduct(cookies.teamID, cookies.guideID, req.body.playerProduct, req.body.marketProduct, res);
+    SQL.tradeProduct(cookies.teamID, cookies.guideID, req.body.product, req.body.market, res);
 })
 
 //socket.io
