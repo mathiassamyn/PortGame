@@ -88,7 +88,7 @@ app.post("/trade", function (req, res) {
     SQL.tradeProduct(cookies.teamID, cookies.guideID, req.body.product, req.body.market, res);
 })
 
-app.post("clearDatabase", function (req, res) {
+app.post("/clearDatabase", function (req, res) {
     var cookies = cookie.parse(req.headers.cookie);
     SQL.clearDatabase(cookies.guideID, res);
 })

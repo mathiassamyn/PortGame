@@ -203,5 +203,5 @@ exports.clearDatabase = function (guideID, response) {
                 "delete from players where guide_id = @guide_id; ";
                 "delete from Inventory where guide_id = @guide_id; ";
 
-                executeQuery(query, response);
+    executeQuery(query, response);
 }
