@@ -450,9 +450,31 @@ body {
   font-weight: bold;
   transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0.05s;
+  margin-bottom: 150px;
 }
 
-/* line 380, ../sass/screen.scss */
+/* line 382, ../sass/screen.scss */
+.finalButton {
+  width: 60%;
+  height: 5%;
+  overflow: hidden;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  border: 0px;
+  background: #86BC25;
+  margin-top: 5%;
+  font-size: 2em;
+  font-family: "Futura", Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  font-weight: bold;
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0.05s;
+  margin-left: 20%;
+}
+
+/* line 401, ../sass/screen.scss */
 .undefined {
   width: 60%;
   height: 5%;
@@ -473,21 +495,21 @@ body {
   font-weight: bold;
 }
 
-/* line 403, ../sass/screen.scss */
+/* line 424, ../sass/screen.scss */
 button:active {
   outline: none !important;
   transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0.05s;
 }
 
-/* line 406, ../sass/screen.scss */
+/* line 427, ../sass/screen.scss */
 button:focus {
   outline: 0 !important;
   transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0.05s;
 }
 
-/* line 411, ../sass/screen.scss */
+/* line 432, ../sass/screen.scss */
 .buttonContainer {
   width: 90%;
   margin-left: auto;
@@ -495,7 +517,7 @@ button:focus {
   margin-top: 10%;
 }
 
-/* line 419, ../sass/screen.scss */
+/* line 440, ../sass/screen.scss */
 .startButton {
   width: 90%;
   float: right;
@@ -518,7 +540,7 @@ button:focus {
   transition-delay: 0.05s;
 }
 
-/* line 440, ../sass/screen.scss */
+/* line 461, ../sass/screen.scss */
 .bonusButton {
   width: 90%;
   float: left;
@@ -541,7 +563,7 @@ button:focus {
   transition-delay: 0.05s;
 }
 
-/* line 463, ../sass/screen.scss */
+/* line 484, ../sass/screen.scss */
 .infoText {
   width: 80%;
   text-align: center;
@@ -550,12 +572,12 @@ button:focus {
   margin-top: 22%;
 }
 
-/* line 471, ../sass/screen.scss */
+/* line 492, ../sass/screen.scss */
 .infoText h1 {
   line-height: 70px;
 }
 
-/* line 475, ../sass/screen.scss */
+/* line 496, ../sass/screen.scss */
 .redoButton {
   width: 50%;
   margin: auto;
@@ -578,39 +600,39 @@ button:focus {
   transition-delay: 0.05s;
 }
 
-/* line 499, ../sass/screen.scss */
+/* line 520, ../sass/screen.scss */
 .loadingContainer {
   padding-top: 10%;
   width: 80%;
   margin: auto;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 525, ../sass/screen.scss */
 .loadingContainer h1 {
   color: #ffffff;
   text-align: center;
 }
 
-/* line 508, ../sass/screen.scss */
+/* line 529, ../sass/screen.scss */
 .loadingImage {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 513, ../sass/screen.scss */
+/* line 534, ../sass/screen.scss */
 .loadingImage img {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 523, ../sass/screen.scss */
+/* line 544, ../sass/screen.scss */
 .loading {
   font-size: 30px;
 }
 
-/* line 527, ../sass/screen.scss */
+/* line 548, ../sass/screen.scss */
 .loading:after {
   overflow: hidden;
   display: inline-block;
@@ -632,7 +654,7 @@ button:focus {
     width: 1.25em;
   }
 }
-/* line 551, ../sass/screen.scss */
+/* line 572, ../sass/screen.scss */
 .regionTitleContainer {
   margin-top: -80px;
   position: absolute;
@@ -640,26 +662,26 @@ button:focus {
   width: 100%;
 }
 
-/* line 558, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .regionTitle {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 564, ../sass/screen.scss */
+/* line 585, ../sass/screen.scss */
 .regionTitle h1 {
   color: #ffffff;
   line-height: 80px;
 }
 
-/* line 569, ../sass/screen.scss */
+/* line 590, ../sass/screen.scss */
 .regionBackground {
   width: 100%;
   height: 80vh;
 }
 
-/* line 574, ../sass/screen.scss */
+/* line 595, ../sass/screen.scss */
 .regionContent {
   width: 90%;
   margin-left: auto;
@@ -667,45 +689,45 @@ button:focus {
   padding-top: 2%;
 }
 
-/* line 580, ../sass/screen.scss */
+/* line 601, ../sass/screen.scss */
 .regionContent p {
   color: #ffffff;
   padding: 8px 8px 8px 8px;
   float: left;
 }
 
-/* line 585, ../sass/screen.scss */
+/* line 606, ../sass/screen.scss */
 .regionContent img {
   width: 95%;
 }
 
-/* line 589, ../sass/screen.scss */
+/* line 610, ../sass/screen.scss */
 .regionContent.cars p {
   color: #333333;
   padding: 8px 8px 8px 8px;
   float: left;
 }
 
-/* line 595, ../sass/screen.scss */
+/* line 616, ../sass/screen.scss */
 #cars h1 {
   color: #333333;
   line-height: 80px;
 }
 
-/* line 599, ../sass/screen.scss */
+/* line 620, ../sass/screen.scss */
 .regionContent.food p {
   color: #333333;
   padding: 8px 8px 8px 8px;
   float: left;
 }
 
-/* line 604, ../sass/screen.scss */
+/* line 625, ../sass/screen.scss */
 #food h1 {
   color: #333333;
   line-height: 80px;
 }
 
-/* line 615, ../sass/screen.scss */
+/* line 636, ../sass/screen.scss */
 .regionHeaderChemistry {
   height: 80px;
   width: 100%;
@@ -716,52 +738,52 @@ button:focus {
   bottom: 80px;
 }
 
-/* line 636, ../sass/screen.scss */
+/* line 657, ../sass/screen.scss */
 .pageContainer {
   height: 100vh;
 }
 
-/* line 639, ../sass/screen.scss */
+/* line 660, ../sass/screen.scss */
 .contentContainer {
   height: 100vh;
 }
 
-/* line 643, ../sass/screen.scss */
+/* line 664, ../sass/screen.scss */
 .logo {
   width: 60%;
   margin: 0 auto;
   margin-top: 10%;
 }
 
-/* line 649, ../sass/screen.scss */
+/* line 670, ../sass/screen.scss */
 .logo img {
   width: 100%;
 }
 
-/* line 655, ../sass/screen.scss */
+/* line 676, ../sass/screen.scss */
 .loginForm {
   width: 100%;
 }
 
-/* line 665, ../sass/screen.scss */
+/* line 686, ../sass/screen.scss */
 .mapContainer {
   width: 100%;
   position: absolut !important;
 }
 
-/* line 671, ../sass/screen.scss */
+/* line 692, ../sass/screen.scss */
 .mapContainer svg {
   width: 100%;
   max-height: 94vh;
   z-index: 1;
 }
 
-/* line 683, ../sass/screen.scss */
+/* line 704, ../sass/screen.scss */
 .region {
   z-index: 2;
 }
 
-/* line 688, ../sass/screen.scss */
+/* line 709, ../sass/screen.scss */
 .menuContainer {
   float: right;
   position: fixed;
@@ -769,19 +791,19 @@ button:focus {
   top: 12%;
 }
 
-/* line 695, ../sass/screen.scss */
+/* line 716, ../sass/screen.scss */
 .menuContainer li {
   padding-bottom: 20%;
 }
 
-/* line 699, ../sass/screen.scss */
+/* line 720, ../sass/screen.scss */
 .mapButton {
   float: right;
   top: 7%;
   left: 1%;
 }
 
-/* line 706, ../sass/screen.scss */
+/* line 727, ../sass/screen.scss */
 .regionButton {
   float: right;
   top: 7%;
@@ -789,7 +811,7 @@ button:focus {
   display: none;
 }
 
-/* line 718, ../sass/screen.scss */
+/* line 739, ../sass/screen.scss */
 .endGameContainer {
   height: 80px;
   width: 50%;
@@ -798,7 +820,7 @@ button:focus {
   right: 0px;
 }
 
-/* line 726, ../sass/screen.scss */
+/* line 747, ../sass/screen.scss */
 .endGameContent {
   background: #E30613;
   height: 80px;
@@ -813,27 +835,27 @@ button:focus {
   color: #ffffff;
 }
 
-/* line 740, ../sass/screen.scss */
+/* line 761, ../sass/screen.scss */
 .resultTableContainer {
   width: 80%;
   margin: auto;
 }
 
-/* line 744, ../sass/screen.scss */
+/* line 765, ../sass/screen.scss */
 .resultTable {
   font-size: 2em;
   text-align: center;
   padding: 10%;
 }
 
-/* line 754, ../sass/screen.scss */
+/* line 775, ../sass/screen.scss */
 .resultList:nth-child(1) {
   background: #0086CD;
   border: 10px solid #FFEC38;
   colour: white;
 }
 
-/* line 761, ../sass/screen.scss */
+/* line 782, ../sass/screen.scss */
 .menuButton {
   height: 10%;
   position: absolute;
@@ -841,18 +863,18 @@ button:focus {
   top: 10%;
 }
 
-/* line 768, ../sass/screen.scss */
+/* line 789, ../sass/screen.scss */
 .coinIcon {
   width: 100%;
   position: relativ;
 }
 
-/* line 772, ../sass/screen.scss */
+/* line 793, ../sass/screen.scss */
 .coinIcon img {
   width: 100%;
 }
 
-/* line 776, ../sass/screen.scss */
+/* line 797, ../sass/screen.scss */
 .text-overlay {
   position: absolute;
   bottom: 54%;
@@ -862,12 +884,12 @@ button:focus {
   text-align: center;
 }
 
-/* line 788, ../sass/screen.scss */
+/* line 809, ../sass/screen.scss */
 .inventoryList {
   position: absolut;
 }
 
-/* line 793, ../sass/screen.scss */
+/* line 814, ../sass/screen.scss */
 .listItem {
   height: 80px;
   line-height: 80px;
@@ -879,7 +901,7 @@ button:focus {
   font-family: "Futura", Helvetica, Arial, sans-serif;
 }
 
-/* line 804, ../sass/screen.scss */
+/* line 825, ../sass/screen.scss */
 .productSquareInventory {
   width: 173px;
   height: 173px;
@@ -887,43 +909,43 @@ button:focus {
   display: inline-block;
 }
 
-/* line 811, ../sass/screen.scss */
+/* line 832, ../sass/screen.scss */
 .manufacturingProduct {
   background: #E30613;
 }
 
-/* line 814, ../sass/screen.scss */
+/* line 835, ../sass/screen.scss */
 .manufacturing-greyProduct {
   background: #4E5051;
 }
 
-/* line 818, ../sass/screen.scss */
+/* line 839, ../sass/screen.scss */
 .terminalProduct {
   background: #EF7D00;
 }
 
-/* line 821, ../sass/screen.scss */
+/* line 842, ../sass/screen.scss */
 .carsProduct {
   background: #FFEC38;
   color: #333333;
 }
 
-/* line 825, ../sass/screen.scss */
+/* line 846, ../sass/screen.scss */
 .environmentProduct {
   background: #307438;
 }
 
-/* line 828, ../sass/screen.scss */
+/* line 849, ../sass/screen.scss */
 .logisticProduct {
   background: #00AAB5;
 }
 
-/* line 831, ../sass/screen.scss */
+/* line 852, ../sass/screen.scss */
 .foodProduct {
   background: #80C342;
 }
 
-/* line 835, ../sass/screen.scss */
+/* line 856, ../sass/screen.scss */
 .inventoryProducts {
   display: inline;
   position: relative;
@@ -931,41 +953,41 @@ button:focus {
   left: 2%;
 }
 
-/* line 841, ../sass/screen.scss */
+/* line 862, ../sass/screen.scss */
 .inventoryProducts img {
   width: 6%;
 }
 
-/* line 848, ../sass/screen.scss */
+/* line 869, ../sass/screen.scss */
 .marketPlace {
   width: 80%;
   margin: auto;
   margin-top: 10%;
 }
 
-/* line 854, ../sass/screen.scss */
+/* line 875, ../sass/screen.scss */
 .marketList h1, .yourInventory h1 {
   margin-bottom: 5%;
 }
 
-/* line 858, ../sass/screen.scss */
+/* line 879, ../sass/screen.scss */
 .submit {
   background: #ecf0f1;
 }
 
-/* line 862, ../sass/screen.scss */
+/* line 883, ../sass/screen.scss */
 .yourInventory {
   height: auto;
   margin-bottom: 10%;
 }
 
-/* line 868, ../sass/screen.scss */
+/* line 889, ../sass/screen.scss */
 .disabled {
   opacity: 0.2;
   grayscale: 0.3;
 }
 
-/* line 872, ../sass/screen.scss */
+/* line 893, ../sass/screen.scss */
 .productSquare {
   width: 173px;
   height: 173px;
@@ -973,23 +995,23 @@ button:focus {
   display: inline-block;
 }
 
-/* line 879, ../sass/screen.scss */
+/* line 900, ../sass/screen.scss */
 .productIcon {
   width: 100%;
 }
 
-/* line 883, ../sass/screen.scss */
+/* line 904, ../sass/screen.scss */
 .productIcon img {
   width: 100%;
 }
 
-/* line 887, ../sass/screen.scss */
+/* line 908, ../sass/screen.scss */
 .productAmount {
   width: 100%;
   position: relative;
 }
 
-/* line 891, ../sass/screen.scss */
+/* line 912, ../sass/screen.scss */
 .productAmountCircle {
   border: 1px red;
   border-radius: 50%;
@@ -1002,25 +1024,25 @@ button:focus {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 }
 
-/* line 903, ../sass/screen.scss */
+/* line 924, ../sass/screen.scss */
 .productAmountNumber {
   text-align: center;
   line-height: 50px;
 }
 
-/* line 911, ../sass/screen.scss */
+/* line 932, ../sass/screen.scss */
 .adminPanel {
   width: 100%;
 }
 
-/* line 916, ../sass/screen.scss */
+/* line 937, ../sass/screen.scss */
 .adminButtonContainer {
   width: 80%;
   margin: auto;
   margin-bottom: 10%;
 }
 
-/* line 922, ../sass/screen.scss */
+/* line 943, ../sass/screen.scss */
 .adminButton {
   width: 100%;
   height: 5%;
@@ -1043,7 +1065,7 @@ button:focus {
   transition-delay: 0.05s;
 }
 
-/* line 944, ../sass/screen.scss */
+/* line 965, ../sass/screen.scss */
 .adminStatus {
   margin-top: 5%;
   width: 80%;
@@ -1052,14 +1074,14 @@ button:focus {
   text-align: center;
 }
 
-/* line 952, ../sass/screen.scss */
+/* line 973, ../sass/screen.scss */
 .adminStatus h1 {
   color: #333333;
   line-height: 50px;
   margin-top: 10%;
 }
 
-/* line 957, ../sass/screen.scss */
+/* line 978, ../sass/screen.scss */
 .pause {
   width: 100vw;
   z-index: 5;
@@ -1069,13 +1091,13 @@ button:focus {
   top: 0;
 }
 
-/* line 966, ../sass/screen.scss */
+/* line 987, ../sass/screen.scss */
 .pauseContainer {
   width: 80%;
   margin: auto;
 }
 
-/* line 971, ../sass/screen.scss */
+/* line 992, ../sass/screen.scss */
 .pauseContainer img {
   display: block;
   margin: auto;
@@ -1083,7 +1105,7 @@ button:focus {
   margin-bottom: 10%;
 }
 
-/* line 978, ../sass/screen.scss */
+/* line 999, ../sass/screen.scss */
 .pauseContainer h1 {
   font-weight: initial;
   color: white;
@@ -1093,26 +1115,26 @@ button:focus {
 }
 
 /** GAME RESULT **/
-/* line 990, ../sass/screen.scss */
+/* line 1011, ../sass/screen.scss */
 .result {
   margin-top: 10%;
 }
 
-/* line 994, ../sass/screen.scss */
+/* line 1015, ../sass/screen.scss */
 .yourScore {
   text-align: center;
   line-height: 80px;
   margin-bottom: 5%;
 }
 
-/* line 1000, ../sass/screen.scss */
+/* line 1021, ../sass/screen.scss */
 .top5 {
   line-height: 80px;
   width: 80%;
   margin: auto;
 }
 
-/* line 1008, ../sass/screen.scss */
+/* line 1029, ../sass/screen.scss */
 .top5ListHeader {
   display: table;
   width: 100%;
@@ -1123,7 +1145,7 @@ button:focus {
   /*Optional*/
 }
 
-/* line 1015, ../sass/screen.scss */
+/* line 1036, ../sass/screen.scss */
 .top5list {
   display: table;
   width: 100%;
@@ -1134,15 +1156,21 @@ button:focus {
   /*Optional*/
 }
 
-/* line 1022, ../sass/screen.scss */
+/* line 1043, ../sass/screen.scss */
 .top5listContent {
   width: 25%;
   display: table-cell;
   min-width: 158px;
 }
 
-/* line 1027, ../sass/screen.scss */
+/* line 1048, ../sass/screen.scss */
 .top5listContent h2 {
   color: #333333;
   font-size: 2em;
+}
+
+/* line 1054, ../sass/screen.scss */
+.center {
+  text-align: center;
+  line-height: 50px;
 }

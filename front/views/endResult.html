@@ -1,26 +1,52 @@
-﻿<div class="siteContainer">
-	<div class="pageContainer endResult">  
-		<div class="contentContainer">
-			<div class="pure-g">
-				<div class="pure-u-1-1">
-					<div class="headerContainer" id="endResult">
-					    <h1>Result</h1>
-					</div>
-
-					<!-- BACK TO MAP BUTTON -->
-
-					<div class="resultTableContainer">
-						<div class="resultTable">
-							<ol>
-							    <li ng-repeat="result in endResult" class="resultList" ng-style="{'color' : 'black'}">{{result.team}} | {{result.coins}}</li>
-							</ol>
-						</div>
-					</div>
-
-<a ui-sref="social">next</a>				
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
+﻿<div class="siteContainer">
+
+	<div class="pageContainer endResult">  
+
+		<div class="contentContainer">
+
+			<div class="pure-g">
+
+				<div class="pure-u-1-1">
+
+					<div class="headerContainer" id="endResult">
+
+					    <h1>Result</h1>
+
+					</div>
+
+
+
+					<!-- BACK TO MAP BUTTON -->
+
+
+
+					<div class="resultTableContainer">
+
+						<div class="resultTable">
+
+							<ol>
+
+							    <li ng-repeat="result in endResult" class="resultList" ng-style="{'color' : 'black'}">{{result.team}} | {{result.coins}}</li>
+
+							</ol>
+
+						</div>
+
+					</div>
+					<button class="finalButton" ui-sref="achievements">Achievemnets</button>		
+					<button class="finalButton" ui-sref="social">NEXT</button>	
+			
+								
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+

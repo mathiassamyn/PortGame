@@ -376,6 +376,27 @@ body{
 	font-weight: bold;
 	transition: $shadowclick;
     transition-delay: 0.05s;
+    margin-bottom: 150px;
+}
+
+.finalButton{
+	width: 60%;
+	height: 5%;
+	overflow:hidden;
+   -moz-border-radius: 4px 4px 4px 4px;
+   -webkit-border-radius: 4px 4px 4px 4px;
+   border-radius: 4px 4px 4px 4px;
+   box-shadow: $shadow ;
+   border: 0px;
+   background: $buttonGreen;
+	margin-top: 5%;	
+	font-size: 2em;
+	font-family: "Futura", Helvetica, Arial, sans-serif;
+	color: $white;
+	font-weight: bold;
+	transition: $shadowclick;
+    transition-delay: 0.05s;
+	margin-left: 20%;
 }
 .undefined{
 	width: 60%;
@@ -1027,4 +1048,10 @@ button:focus {outline:0!important;
 .top5listContent h2{
 	color: $black;
 	    font-size: 2em;
+}
+
+
+.center{
+	text-align: center;
+	line-height: 50px;
 }
