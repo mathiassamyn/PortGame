@@ -6,13 +6,14 @@ var DBConfig = require("./DBConfig.json");
 var poolConfig = {
     min: 10,
     max: 60,
-    log: true
+    //log: true
 };
 
 //create the pool
 var pool = new ConnectionPool(poolConfig, DBConfig);
 
 pool.on('error', function (err) {
+    console.log("in pool error");
     console.error(err);
 });
 
@@ -192,4 +193,12 @@ exports.tradeProduct = function (teamID, guideID, playerProduct, marketProduct, 
                 "where guide_id = " + guideID + " and team_id = " + teamID + "; ";
 
     executeQuery(query, response);
+}
+
+exports.clearDatabase = function (guideID, response) {
+    var query = "declare @guide_id int; " +
+                "set @guide_id = " + guideID + "; " +
+                "delete Scores from Players inner join Scores on Players.player_id = Scores.player_id where guide_id = @guide_id; " +
+                "delete from players where guide_id = @guide_id; ";
+                "delete from Inventory where guide_id = @guide_id; "
 }

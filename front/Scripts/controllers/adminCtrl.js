@@ -5,13 +5,6 @@
     $cookies.put("guideID", room);
     socket.emit("join", room);
 
-    //var regions = [];
-    //initData.then(function (response) {
-    //    regions = response.regions;
-    //    for (var i = 0; i < regions.length; i++) {
-    //        socket.emit("join", room + regions.name);
-    //    }
-    //});
     $scope.state = {
         startStop: "The Game needs to be started",
         pauseResume: "The Game needs to be started"
@@ -42,6 +35,16 @@
             });
     };
 
+    $scope.clearDatabase = function () {
+        $http.post("/clearDatabase").then(
+            function successCalback(response) {
+                console.log("DB has been cleared")
+            },
+            function errorCallback(response) {
+                console.log(response);
+            });
+    }
+
     $scope.pauseGame = function () {
         socket.emit("pause", room);
         $scope.state.pauseResume = "The Game has been paused. Click Resume to resume the game for the students.";
@@ -57,22 +60,6 @@
     //whole timing should probably better be done on the server
     socket.on("region", function (msg) {
         var region = msg.region;
-        //switch (region) {
-        //    case 'manufacturing1':
-        //        $interval.cancel();
-        //        console.log($interval(function () {
-        //            socket.emit("product", { region: region, guide: room})
-        //        }, 5000));
-        //        break;
-        //    case 'logistics1':
-        //        $interval(function () {
-        //            socket.emit("product", { region: region, guide: room })
-        //        }, 5000);
-        //        break;
-        //    default:
-        //        console.log("none of the above");
-        //}
-        //console.log("new highscore");
         console.log($scope[region + "interval"]);
         $interval.cancel($scope[region + "interval"]);
         $scope[region + "interval"] = $interval(function () {

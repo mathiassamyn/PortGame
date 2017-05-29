@@ -85,8 +85,12 @@ app.get("/products", function (req, res) {
 
 app.post("/trade", function (req, res) {
     var cookies = cookie.parse(req.headers.cookie);
-    console.log(req.body);
     SQL.tradeProduct(cookies.teamID, cookies.guideID, req.body.product, req.body.market, res);
+})
+
+app.post("clearDatabase", function (req, res) {
+    var cookies = cookie.parse(req.headers.cookie);
+    SQL.clearDatabase(cookies.guideID, res);
 })
 
 //socket.io
