@@ -6,6 +6,7 @@ var DBConfig = require("./DBConfig.json");
 var poolConfig = {
     min: 10,
     max: 60,
+    retryDelay: 100
     //log: true
 };
 
@@ -200,5 +201,7 @@ exports.clearDatabase = function (guideID, response) {
                 "set @guide_id = " + guideID + "; " +
                 "delete Scores from Players inner join Scores on Players.player_id = Scores.player_id where guide_id = @guide_id; " +
                 "delete from players where guide_id = @guide_id; ";
-                "delete from Inventory where guide_id = @guide_id; "
+                "delete from Inventory where guide_id = @guide_id; ";
+
+                executeQuery(query, response);
 }
