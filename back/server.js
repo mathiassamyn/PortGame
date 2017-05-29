@@ -43,12 +43,14 @@ app.post("/guideStarted", function (req, res) {
 
 app.post("/score", function (req, res) {
     var cookies = cookie.parse(req.headers.cookie);
-    SQL.setScore(cookies.playerID, req.body.game, req.body.score, res);
+    console.log(req.body.data.game + " " + req.body.region + " " + req.body.data.score + " " + cookies.playerID);
+    SQL.setScore(cookies.playerID, req.body.data.game, req.body.data.score, req.body.region, res);
 })
 
-app.get("/topFive/:game", function (req, res) {
+app.get("/topFive/:region/:game", function (req, res) {
     var cookies = cookie.parse(req.headers.cookie);
-    SQL.getTopFive(cookies.guideID, req.params.game, res);
+    console.log(req.params.region + " " + req.params.game);
+    SQL.getTopFive(cookies.guideID, req.params.game, req.params.region, res);
 })
 
 app.get("/owner/:region", function (req, res) {
@@ -69,6 +71,26 @@ app.get("/endResult", function (req, res) {
 app.get("/individualCoins", function (req, res) {
     var cookies = cookie.parse(req.headers.cookie);
     SQL.getIndividualCoins(cookies.guideID, res);
+})
+
+app.post("/addProduct", function (req, res) {
+    var cookies = cookie.parse(req.headers.cookie);
+    SQL.addProduct(cookies.teamID, cookies.guideID, req.body.region, res);
+})
+
+app.get("/products", function (req, res) {
+    var cookies = cookie.parse(req.headers.cookie);
+    SQL.getProducts(cookies.teamID, cookies.guideID, res);
+})
+
+app.post("/trade", function (req, res) {
+    var cookies = cookie.parse(req.headers.cookie);
+    SQL.tradeProduct(cookies.teamID, cookies.guideID, req.body.product, req.body.market, res);
+})
+
+app.post("clearDatabase", function (req, res) {
+    var cookies = cookie.parse(req.headers.cookie);
+    SQL.clearDatabase(cookies.guideID, res);
 })
 
 //socket.io
@@ -92,7 +114,7 @@ io.on("connection", function (socket) {
         socket.to(room).emit("start");
     });
     socket.on("stop", function (room) {
-        socket.to(room).emit("stop");
+        io.in(room).emit("stop");
     });
     socket.on("pause", function (room) {
         socket.to(room).emit("pause");
@@ -104,8 +126,12 @@ io.on("connection", function (socket) {
         io.in(data.room).emit("region", data);
     });
     socket.on("product", function (data) {
-        socket.to(data.guide + data.region).emit("product", data.region);
+        socketID = Object.keys(io.sockets.adapter.rooms[data.guide + data.region].sockets)[0]; 
+        socket.to(socketID).emit("product", data.region);
     });
+    //socket.on("newProduct", function (room) {
+    //    io.in(room).emit("newProduct");
+    //});
 });
 
 server.listen(3000, function () {

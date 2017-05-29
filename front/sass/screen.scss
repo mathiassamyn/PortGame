@@ -20,6 +20,7 @@ $brown: #53160A;
 $grey: #4E5051;
 $purple: #9E1981;
 $white: #ffffff;
+$cloud: #ecf0f1;
 $lightGreen: #80C342;
 $lightBlue: #00AAB5;
 
@@ -91,6 +92,16 @@ $lightBlue: #00AAB5;
     background-color: rgb(0,170,181);
     /* RGBa with 0.6 opacity */
     background-color: rgba(0,170,181, 0.7);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+.alpha70grey {
+    /* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(78,80,81);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(78,80,81, 0.7);
     /* For IE 5.5 - 7*/
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
     /* For IE 8*/
@@ -190,6 +201,10 @@ body{
 	background-color: $red;
 	color: $white;
 }
+#grey-manufacturing{
+	background-color: $grey;
+	color: $white;
+}
 #carsTop{
 	background-color: $yellow;
 	color: $black;
@@ -216,6 +231,15 @@ body{
 }
 #logistics{
 	background-color: $lightBlue;
+	color: $white;
+}
+#water{
+	background-color: $blue;
+	color: $white;
+}
+
+#endResult{
+	background-color: $blue;
 	color: $white;
 }
 // MENU HEADERS //
@@ -352,6 +376,27 @@ body{
 	font-weight: bold;
 	transition: $shadowclick;
     transition-delay: 0.05s;
+    margin-bottom: 150px;
+}
+
+.finalButton{
+	width: 60%;
+	height: 5%;
+	overflow:hidden;
+   -moz-border-radius: 4px 4px 4px 4px;
+   -webkit-border-radius: 4px 4px 4px 4px;
+   border-radius: 4px 4px 4px 4px;
+   box-shadow: $shadow ;
+   border: 0px;
+   background: $buttonGreen;
+	margin-top: 5%;	
+	font-size: 2em;
+	font-family: "Futura", Helvetica, Arial, sans-serif;
+	color: $white;
+	font-weight: bold;
+	transition: $shadowclick;
+    transition-delay: 0.05s;
+	margin-left: 20%;
 }
 .undefined{
 	width: 60%;
@@ -388,7 +433,7 @@ button:focus {outline:0!important;
 	    width: 90%;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 2%;
+        margin-top: 10%;
 
 }
 
@@ -431,6 +476,41 @@ button:focus {outline:0!important;
 	font-family: "Futura", Helvetica, Arial, sans-serif;
 	color: $white;
 	font-weight: bold;
+	transition: $shadowclick;
+    transition-delay: 0.05s;
+}
+
+
+.infoText{
+	width: 80%;
+    text-align: center;
+    line-height: 128px;
+    margin: auto;
+    margin-top: 22%;
+}
+
+.infoText h1{
+	line-height: 70px;
+}
+
+.redoButton{
+	width: 50%;
+	margin: auto;
+	height: 10%;
+	overflow:hidden;
+   -moz-border-radius: 4px 4px 4px 4px;
+   -webkit-border-radius: 4px 4px 4px 4px;
+   border-radius: 4px 4px 4px 4px;
+   box-shadow: $shadow ;
+   border: 0px;
+   margin-left: 10%;
+   margin-right: auto;
+   background: $buttonGreen;
+	font-size: 2em;
+	font-family: "Futura", Helvetica, Arial, sans-serif;
+	color: $white;
+	font-weight: bold;
+	padding: $h1Padding;
 	transition: $shadowclick;
     transition-delay: 0.05s;
 }
@@ -606,12 +686,20 @@ button:focus {outline:0!important;
 .mapContainer{
 	width: 100%;
 	position: absolut!important;
+
 }
 
-.mapContainer img{
+.mapContainer svg{
 	width: 100%;
+	max-height: 94vh;
 	z-index: 1;
+
 }
+
+.mapSiteBackground{
+	
+}
+
 
 .region{
 	z-index: 2;	
@@ -630,23 +718,72 @@ button:focus {outline:0!important;
 }
 
 .mapButton{
-	float: left;
-    position: absolute;
+	float: right;
+    
     top: 7%;
     left: 1%;
 }
 
 .regionButton{
 	float: right;
-	position: absolute;
+	//position: absolute;
     top: 7%;
     right: 1%;
+    display: none;
 
+}
+
+
+/// ENDGAME
+
+.endGameContainer{
+    height: 80px;
+    width: 50%;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    
+}
+.endGameContent{
+	background:$red;
+    height: 80px;
+    width: 50%;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+	line-height: 80px;
+    font-family: "Futura", Helvetica, Arial, sans-serif;
+    font-size: 2em;
+    text-align: center;
+    color: $white;
+}
+
+.resultTableContainer{
+	    width: 80%;
+    margin: auto;
+}
+.resultTable{
+	    font-size: 2em;
+    text-align: center;
+    padding: 10%;
+}
+
+.resultList{
+	
+}
+
+.resultList:nth-child(1) {
+    background: $blue;
+    border: 10px solid $yellow;
+    colour: white;    
 }
 
 /// WALLET
 .menuButton{
 	height: 10%;
+	position: absolute;
+	right: 5%;
+    top: 10%;
 }
 
 .coinIcon{
@@ -659,7 +796,7 @@ button:focus {outline:0!important;
 
 .text-overlay{
 	position:absolute; 
-	bottom: 57%;
+	bottom: 54%;
 	font-size: 10em!important;
 	color: $purple;
 	width:100%; 
@@ -685,29 +822,34 @@ button:focus {outline:0!important;
 	font-family: "Futura", Helvetica, Arial, sans-serif;
 }
 
+.productSquareInventory{
+	width: 173px;
+    height: 173px;
+	margin: 2%;
+	display: inline-block;
+}
 
-
-.manufacturing{
+.manufacturingProduct{
 	background: $red;
 }
-.manufacturing-grey{
+.manufacturing-greyProduct{
 	background: $grey;
 }
 
-.terminal{
+.terminalProduct{
 	background: $orange;
 }
-.cars{
+.carsProduct{
 	background: $yellow;
 	color: $black;
 }
-.environment{
+.environmentProduct{
 	background: $green;
 }
-.logistic{
+.logisticProduct{
 	background: $lightBlue;
 }
-.food{
+.foodProduct{
 	background: $lightGreen;
 }
 
@@ -727,6 +869,7 @@ button:focus {outline:0!important;
 .marketPlace{
 	width: 80%;
 	margin: auto;
+	margin-top: 10%;
 }
 
 .marketList h1, .yourInventory h1{
@@ -734,7 +877,7 @@ button:focus {outline:0!important;
 }
 
 .submit{
-	background: $brown ;
+	background: $cloud ;
 }
 
 .yourInventory{
@@ -742,9 +885,14 @@ button:focus {outline:0!important;
 	margin-bottom: 10%;
 }
 
+
+.disabled{
+	opacity: 0.2;
+	grayscale: 0.3;
+}
 .productSquare{
-	width: 150px;
-	height: 150px;
+	width: 173px;
+    height: 173px;
 	margin: 2%;
 	display: inline-block;
 }
@@ -757,4 +905,153 @@ button:focus {outline:0!important;
 	width: 100%;
 }
 
- 
+.productAmount{
+	width:100%;
+	position: relative;
+}
+.productAmountCircle{
+	border: 1px red;
+	border-radius: 50%;
+	background: $purple;
+	width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -35px;
+    right: -16px;
+    box-shadow: $shadow;
+}
+
+.productAmountNumber {
+	text-align: center;
+	line-height: 50px;
+}
+
+
+ /// ADMIN PANEL
+
+ .adminPanel{
+ 	width: 100%;
+ 	
+ }
+
+ .adminButtonContainer{
+ 	width: 80%;
+ 	margin: auto;
+ 	margin-bottom: 10%;
+ }
+
+ .adminButton{
+	width: 100%;
+	height: 5%;
+	overflow:hidden;
+   -moz-border-radius: 4px 4px 4px 4px;
+   -webkit-border-radius: 4px 4px 4px 4px;
+   border-radius: 4px 4px 4px 4px;
+   box-shadow: $shadow ;
+   border: 0px;
+   background: $buttonGreen;
+	margin-top: 5%;
+	font-size: 2em;
+	font-family: "Futura", Helvetica, Arial, sans-serif;
+	color: $white;
+	margin-top: 10%;
+	margin-left: auto;
+	margin-right: auto;
+	font-weight: bold;
+	transition: $shadowclick;
+    transition-delay: 0.05s;
+}
+
+.adminStatus{
+	margin-top: 5%;
+	width: 80%;
+	margin: 0 auto;
+	display:block;
+	text-align: center;
+}
+
+.adminStatus h1{
+	color: $black;
+	line-height: 50px;
+	margin-top: 10%;
+}
+.pause{
+	width: 100vw;
+    z-index: 5;
+    height: 100vh;
+    position: absolute;
+    background: rgba(0,134,205,0.75);
+    top: 0;
+}
+
+.pauseContainer{
+	    width: 80%;
+    margin: auto;
+}
+
+.pauseContainer img{
+	display:block;
+    margin:auto;
+        margin-top: 20%;
+    margin-bottom: 10%;
+}
+
+.pauseContainer h1{
+	font-weight: initial;
+    color: white;
+    text-align: center;
+    font-size: 3em;
+	line-height: 80px;
+}
+
+
+
+/** GAME RESULT **/
+
+.result{
+	margin-top: 10%;
+}
+
+.yourScore{
+	text-align: center;
+	line-height: 80px;
+	margin-bottom: 5%;
+}
+
+.top5{
+	
+	line-height: 80px;
+	width: 80%;
+	margin:auto;
+}
+
+
+.top5ListHeader{
+	display: table;
+	width: 100%; /*Optional*/
+    table-layout: fixed; /*Optional*/
+    border-spacing: 1%; /*Optional*/
+}
+
+.top5list{
+	display: table;
+	width: 100%; /*Optional*/
+    table-layout: fixed; /*Optional*/
+    border-spacing: 1%; /*Optional*/
+}
+
+.top5listContent{
+	width: 25%;
+	display: table-cell;
+	    min-width: 158px;
+}
+.top5listContent h2{
+	color: $black;
+	    font-size: 2em;
+}
+
+
+.center{
+	text-align: center;
+	line-height: 50px;
+}

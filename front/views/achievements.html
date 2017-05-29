@@ -1,5 +1,54 @@
-﻿<ol>
-    <li ng-repeat="result in ranking" ng-style="{'color' : 'black'}">{{result.player}} | {{result.coins}}</li>
-</ol>
+﻿<div class="siteContainer">
 
-<a ui-sref="endresult">back to result</a>
+	<div class="pageContainer endResult">  
+
+		<div class="contentContainer">
+
+			<div class="pure-g">
+
+				<div class="pure-u-1-1">
+
+					<div class="headerContainer" id="endResult">
+
+					    <h1>Achievements</h1>
+
+					</div>
+
+					<h1 class="center">This is were the Achievements will be displayed.</h1>
+
+					<!-- BACK TO MAP BUTTON -->
+
+
+
+					<div class="resultTableContainer">
+
+						<div class="resultTable">
+
+							<ol>
+
+							    <li ng-repeat="result in endResult" class="resultList" ng-style="{'color' : 'black'}">{{result.team}} | {{result.coins}}</li>
+
+							</ol>
+
+						</div>
+					</div>
+					<button class="finalButton" ui-sref="endresult">BACK TO THE RESULT</button>		
+					
+					
+			
+								
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+

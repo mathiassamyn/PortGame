@@ -64,11 +64,11 @@
 
         })
 
-        .state("game.flappybird", {
+        .state("game.flappycontainer", {
 
             templateUrl: "../views/canvas.html",
 
-            controller: "flappyBirdCtrl"
+            controller: "flappyContainerCtrl"
 
         })
 
@@ -153,7 +153,7 @@
 
         .state("region.manufacturing1", {
 
-            templateUrl: "../views/r-manufacturing.html"
+            templateUrl: "../views/r-manufacturing1.html"
 
         })
 
@@ -172,14 +172,14 @@
             templateUrl: "../views/r-manufacturing4.html"
 
         })
-        .state("region.manufacturing5", {
+        .state("region.grey-manufacturing1", {
 
-            templateUrl: "../views/r-manufacturing5.html"
+            templateUrl: "../views/r-grey-manufacturing1.html"
 
         })
-        .state("region.manufacturing6", {
+        .state("region.grey-manufacturing2", {
 
-            templateUrl: "../views/r-manufacturing6.html"
+            templateUrl: "../views/r-grey-manufacturing2.html"
 
         })
         .state("region.terminal1", {

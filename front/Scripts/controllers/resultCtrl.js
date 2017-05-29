@@ -11,8 +11,9 @@
     $scope.score = $stateParams.score;
     $scope.topFive = [];
 
-    $http.get("/topFive/" + game).then(
-        function successCallback(response) {  
+    $http.get("/topFive/" + region + "/" + game).then(
+        function successCallback(response) {
+            console.log("top five: " + response.data);
             for (var i = 0; i < response.data.length; i++) {
                 $scope.topFive[i] = {
                     player: response.data[i][0].value,
@@ -28,6 +29,8 @@
     //would be better if this was looked at on the server, but this requires changes on the server.
     $http.get("/owner/" + region).then(
         function successCallback(response) {
+            console.log(response.data);
+            console.log($scope[region]);
             if (response.data.length > 0) {
                 if ($scope[region].teamid !== response.data[0][0].value) {
                 //if ($cookies.get(region).teamID !== response.data[0][0].value) {

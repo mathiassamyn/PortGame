@@ -11,7 +11,7 @@
 
     $scope.standardGameView = function () {
         for (var i = 0; i < minigames.length; i++) {
-            if (minigames[i].region === $stateParams.region && minigames[i].basegame === true) {
+            if (angular.lowercase(minigames[i].region) === $stateParams.region && minigames[i].basegame === true) {
                 $state.go("game." + angular.lowercase(minigames[i].game.replace(/[\s]/g, '')), { region: $stateParams.region });
             }
         }

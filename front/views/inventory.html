@@ -12,20 +12,87 @@
 							<a ui-sref="map"><img src="img/menu/mapButton.png"></a>
 						</div>
 						<div class="regionButton">
-							<img src="img/menu/product.png">
+							
 						</div>
 					</div>
-					<div class="inventoryList">			
-						<div class="inventory">
-							<div class="listItem manufacturing">Manufacturing: <div class="inventoryProducts">{{product.manufacturing}} <img src="img/menu/wallet.png"></div></div>
-							<div class="listItem terminal">Terminal: <div class="inventoryProducts">{{product.termnial}}</div></div>
-							<div class="listItem logistic">Logistic: <div class="inventoryProducts">{{product.logistic}}</div></div>
-							<div class="listItem food">Food:<div class="inventoryProducts"> {{product.food}}</div></div>
-							<div class="listItem cars">Cars:<div class="inventoryProducts"> {{product.cars}}</div></div>
-							<div class="listItem environment">Environment: <div class="inventoryProducts"> {{product.environment}}</div></div>
-							<div class="listItem manufacturing-grey">Manufacturing II: <div class="inventoryProducts"> {{product.manufacturing2}}</div></div>
-						</div>					
-					</div>
+					<div class="marketPlace">
+						<div class="yourInventory">
+								<h1>Your Inventory</h1>
+								<div class="yourProducts">
+									<div class="productSquareInventory manufacturingProduct">
+										<div class="productIcon">
+											<img src="img/regions/manufacturing-icon.png">
+										</div>
+										<div class="productAmount">
+											<div class="productAmountCircle">
+												<p class="productAmountNumber">{{productAmount.manufacturing}}</p>
+											</div>			
+										</div>
+									</div>
+									<div class="productSquareInventory terminalProduct">
+										<div class="productIcon">
+											<img src="img/regions/terminal-icon.png">
+										</div>	
+										<div class="productAmount">
+											<div class="productAmountCircle">
+												<p class="productAmountNumber">{{productAmount.terminal}}</p>
+											</div>			
+										</div>								
+									</div>
+									
+									<div class="productSquareInventory logisticProduct">
+										<div class="productIcon">
+											<img src="img/regions/logistics-icon.png">
+										</div>
+										<div class="productAmount">
+											<div class="productAmountCircle">
+												<p class="productAmountNumber">{{productAmount.logistics}}</p>
+											</div>			
+										</div>
+									</div>
+									<div class="productSquareInventory foodProduct">
+										<div class="productIcon">
+											<img src="img/regions/food-icon.png">
+										</div>
+										<div class="productAmount">
+											<div class="productAmountCircle food">
+												<p class="productAmountNumber">{{productAmount.food}}</p>
+											</div>			
+										</div>
+									</div>
+									<div class="productSquareInventory carsProduct">
+										<div class="productIcon">
+											<img src="img/regions/car-icon.png">
+										</div>
+										<div class="productAmount">
+											<div class="productAmountCircle cars">
+												<p class="productAmountNumber">{{productAmount.cars}}</p>
+											</div>			
+										</div>
+									</div>
+									<div class="productSquareInventory environmentProduct">
+										<div class="productIcon">
+											<img src="img/regions/environment-icon.png">
+										</div>
+										<div class="productAmount">
+											<div class="productAmountCircle">
+												<p class="productAmountNumber">{{productAmount.environment}}</p>
+											</div>			
+										</div>
+									</div>
+									<div class="productSquareInventory manufacturing-greyProduct">
+										<div class="productIcon">
+											<img src="img/regions/manufacturing2-icon.png">
+										</div>
+										<div class="productAmount">
+											<div class="productAmountCircle">
+												<p class="productAmountNumber">{{productAmount.greyManufacturing}}</p>
+											</div>			
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 				</div>
 			</div>
 		</div>

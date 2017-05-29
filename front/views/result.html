@@ -1,7 +1,53 @@
-﻿Your score: {{score}}
-Top 5:
-<ol>
-    <li ng-repeat="result in topFive" ng-style="{'color' : 'black'}">{{result.player}} | {{result.team}} | {{result.score}}</li>
-</ol>
-<button ng-click="playAgain()">play again</button>
-<a ui-sref="map">map</a>
+﻿<div class="siteContainer">
+	<div class="pageContainer water">  
+		<div class="contentContainer">
+			<div class="pure-g">
+				<div class="pure-u-1-1">
+					<div class="headerContainer" id="water">
+					    <h1>Result</h1>
+					</div>
+				</div>
+			</div>
+			<div class="menuButton">
+				<div class="mapButton">
+					<a ui-sref="map"><img src="img/menu/mapButton.png"></a>
+				</div>
+			</div>
+			<div class="result">	
+				<div class="yourScore">
+					<h1>Your score: {{score}}</h1>
+				</div>
+				<div class="top5">
+					<h1>Top 5:</h1>
+						<div class="top5ListHeader">
+							<div class="top5listContent"><h2>Player</h2></div>
+							<div class="top5listContent"><h2>Team</h2></div>
+							<div class="top5listContent"><h2>Points</h2></div>
+						</div>
+						<div class="top5List">
+							<ol>
+    							<li ng-repeat="result in topFive" ng-style="{'color' : 'black'}">
+    								<div class="top5listContent">
+    									<h2>{{result.player}}</h2>
+    								</div>
+    								<div class="top5listContent">
+    									<h2>{{result.team}}</h2>
+    								</div>
+    								<div class="top5listContent">
+    									<h2>{{result.score}}</h2>
+    								</div>
+    							</li>
+							</ol>
+						</div>
+				</div>
+
+					<button class="redoButton" ng-click="playAgain()">play again</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+						
+					

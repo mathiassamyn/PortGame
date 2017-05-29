@@ -6,13 +6,15 @@ var DBConfig = require("./DBConfig.json");
 var poolConfig = {
     min: 10,
     max: 60,
-    log: true
+    retryDelay: 100
+    //log: true
 };
 
 //create the pool
 var pool = new ConnectionPool(poolConfig, DBConfig);
 
 pool.on('error', function (err) {
+    console.log("in pool error");
     console.error(err);
 });
 
@@ -49,9 +51,15 @@ function executeQuery(query, response) {
 }
 
 exports.addUser = function (username, teamID, guideID, response) {
-    var query = "insert into Players (Name, GUIDE_ID, TEAM_ID) " +
+    var query = "declare @guide_id int, @team_id int, @username varchar(255); " +
+                "set @guide_id = " + guideID + "; " +
+                "set @team_id = " + teamID + "; " +
+                "set @username = '" + username + "'; " +
+                "insert into Players (Name, GUIDE_ID, TEAM_ID) " +
                 "output inserted.PLAYER_ID " +
-                "values ('" + username + "', '" + guideID + "', '" + teamID + "');";
+                "values (@username, @guide_id, @team_id); " +
+                "if not exists (select * from inventory where guide_id = @guide_id and team_id = @team_id) " +
+                "insert into inventory (team_id, guide_id) values (@team_id, @guide_id); ";
 
     executeQuery(query, response);
 }
@@ -90,13 +98,14 @@ exports.getRegions = function (response) {
     executeQuery(query, response);
 }
 
-exports.setScore = function (playerID, game, score, response) {
-    var query = "declare @minigame_id int; " +
-        "set @minigame_id = (select minigame_id from minigames where name = '" + game + "'); " +
+exports.setScore = function (playerID, game, score, region, response) {
+    var query = "declare @minigame_id int, @region_id int; " +
+        "set @region_id = (select region_id from regions where name = '" + region + "'); " +
+        "set @minigame_id = (select minigame_id from minigames where name = '" + game + "' and REGION_ID = @region_id); " +
         "declare @score int; " +
-        "set @score = (select MAX(score) from scores where player_id = " + playerID + "); " +
+        "set @score = (select MAX(score) from scores where player_id = " + playerID + " and minigame_id = @minigame_id); " +
         "if @score is NULL set @score = -1; " +
-        "if @score < " + score + " insert into scores (score, player_id, minigame_id) values (" + score + "," + playerID + ", @minigame_id); delete from scores where score_id <>(select MAX(score_id) from scores where player_id = " + playerID + ") and player_id = " + playerID + "; " +
+        "if @score < " + score + " insert into scores (score, player_id, minigame_id) values (" + score + "," + playerID + ", @minigame_id); delete from scores where score_id <>(select MAX(score_id) from scores where player_id = " + playerID + " and minigame_id = @minigame_id) and player_id = " + playerID + " and minigame_id = @minigame_id; " +
         "update Players " +
         "set Coins += " + score + " " +
         "where PLAYER_ID = " + playerID;
@@ -128,11 +137,12 @@ exports.getOwner = function (guideID, region, response) {
     executeQuery(query, response);
 }
 
-exports.getTopFive = function (guideID, game, response) {
-    var query = "declare @guide_id int, @minigame_id int, @game varchar(255); " +
+exports.getTopFive = function (guideID, game, region, response) {
+    var query = "declare @guide_id int, @minigame_id int, @region_id int, @game varchar(255); " +
                 "set @guide_id = " + guideID + "; " +
                 "set @game = '" + game + "'; " +
-                "set @minigame_id = (select minigame_id from minigames where name = @game); " +
+                "set @region_id = (select region_id from regions where name = '" + region + "'); " +
+                "set @minigame_id = (select minigame_id from minigames where name = @game and region_id = @region_id); " +
 
                 "select top 5 players.name, teams.name, score from scores " +
                 "inner join players on scores.player_id = players.player_id " +
@@ -165,3 +175,33 @@ exports.getIndividualCoins = function (guideID, response) {
     executeQuery(query, response);
 }
 
+exports.addProduct = function (teamID, guideID, region, response) {
+    var query = "update Inventory " +
+                "set " + region + " += 1 " +
+                "where guide_id = " + guideID + " and team_id = " + teamID + "; ";
+
+    executeQuery(query, response);
+}
+
+exports.getProducts = function (teamID, guideID, response) {
+    var query = "select * from Inventory where team_id = " + teamID + " and guide_id = " + guideID + "; ";
+    executeQuery(query, response);
+}
+
+exports.tradeProduct = function (teamID, guideID, playerProduct, marketProduct, response) {
+    var query = "update inventory " +
+                "set " + playerProduct + " -= 1, " + marketProduct + " += 1 " +
+                "where guide_id = " + guideID + " and team_id = " + teamID + "; ";
+
+    executeQuery(query, response);
+}
+
+exports.clearDatabase = function (guideID, response) {
+    var query = "declare @guide_id int; " +
+                "set @guide_id = " + guideID + "; " +
+                "delete Scores from Players inner join Scores on Players.player_id = Scores.player_id where guide_id = @guide_id; " +
+                "delete from players where guide_id = @guide_id; ";
+                "delete from Inventory where guide_id = @guide_id; ";
+
+                executeQuery(query, response);
+}

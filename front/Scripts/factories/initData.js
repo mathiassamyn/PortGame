@@ -65,7 +65,7 @@ app.factory('initData', ["$http", "$q", function ($http, $q) {
                 for (var i = 0; i < response.data.length; i++) {
                     regionList[i] = {
                         regionID: response.data[i][0].value,
-                        name: response.data[i][1].value
+                        name: angular.lowercase(response.data[i][1].value)
                     }
                 }
                 return regionList;
