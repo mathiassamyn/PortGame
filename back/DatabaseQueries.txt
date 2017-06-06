@@ -12,6 +12,17 @@ CREATE TABLE [dbo].[Teams] (
     PRIMARY KEY CLUSTERED ([TEAM_ID] ASC)
 );
 
+CREATE TABLE [dbo].[Players] (
+    [PLAYER_ID] INT           IDENTITY (1, 1) NOT NULL,
+    [Name]      VARCHAR (255) NOT NULL,
+    [GUIDE_ID]  INT           NOT NULL,
+    [TEAM_ID]   INT           NOT NULL,
+    [Coins]     INT           DEFAULT ((0)) NULL,
+    PRIMARY KEY CLUSTERED ([PLAYER_ID] ASC),
+    FOREIGN KEY ([GUIDE_ID]) REFERENCES [dbo].[Guides] ([GUIDE_ID]),
+    FOREIGN KEY ([TEAM_ID]) REFERENCES [dbo].[Teams] ([TEAM_ID])
+);
+
 CREATE TABLE [dbo].[Scores] (
     [SCORE_ID]    INT IDENTITY (1, 1) NOT NULL,
     [Score]       INT NOT NULL,
