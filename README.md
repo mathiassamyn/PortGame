@@ -56,7 +56,7 @@ Clone or download the project from Github to your computer by using the respecti
 2. Use the queries from the "[DatabaseQueries.txt](https://github.com/mathiassamyn/PortGame/blob/master/back/DatabaseQueries.txt)" file to create the database.   
 3. Add a JSON-file with the name "DBConfig" to the "[back](https://github.com/mathiassamyn/PortGame/tree/master/back)" folder and put your database configuration in the file as shown below.
 
-	```
+`
 {
 	"userName": "usernameForDatabase", 
 	"password": "passwordForDatabase", 
@@ -66,12 +66,12 @@ Clone or download the project from Github to your computer by using the respecti
 		"encrypt": "yes/no"
 	}
 }
-```
+`
 
 4. Fill the Guides, Teams, Regions and Minigames tables with data. This can be done by using the following code:
 
-	```INSERT INTO table_name (column1, column2, column3, ...)
-VALUES (value1, value2, value3, ...);```
+	`INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);`
 
 ### Starting the server ###
 
