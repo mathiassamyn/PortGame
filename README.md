@@ -56,7 +56,7 @@ Clone or download the project from Github to your computer by using the respecti
 2. Use the queries from the "[DatabaseQueries.txt](https://github.com/mathiassamyn/PortGame/blob/master/back/DatabaseQueries.txt)" file to create the database.   
 3. Add a JSON-file with the name "DBConfig" to the "[back](https://github.com/mathiassamyn/PortGame/tree/master/back)" folder and put your database configuration in the file as shown below.
 
-`
+	`
 {
 	"userName": "usernameForDatabase", 
 	"password": "passwordForDatabase", 
