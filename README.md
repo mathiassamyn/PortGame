@@ -20,7 +20,7 @@ Multiple technologies have been used during the development of this game and are
 **Front-end:**
 
 - AngularJS
-- HTML
+- HTML5
 - CSS
 - Sass
 
