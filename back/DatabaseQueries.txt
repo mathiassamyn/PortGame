@@ -1,0 +1,66 @@
+CREATE TABLE [dbo].[Guides] (
+    [GUIDE_ID]  INT           IDENTITY (1, 1) NOT NULL,
+    [FirstName] VARCHAR (255) NOT NULL,
+    [LastName]  VARCHAR (255) NOT NULL,
+    [Started]   BIT           DEFAULT ((0)) NOT NULL,
+    PRIMARY KEY CLUSTERED ([GUIDE_ID] ASC)
+);
+
+CREATE TABLE [dbo].[Teams] (
+    [TEAM_ID] INT           IDENTITY (1, 1) NOT NULL,
+    [Name]    VARCHAR (255) NOT NULL,
+    PRIMARY KEY CLUSTERED ([TEAM_ID] ASC)
+);
+
+CREATE TABLE [dbo].[Players] (
+    [PLAYER_ID] INT           IDENTITY (1, 1) NOT NULL,
+    [Name]      VARCHAR (255) NOT NULL,
+    [GUIDE_ID]  INT           NOT NULL,
+    [TEAM_ID]   INT           NOT NULL,
+    [Coins]     INT           DEFAULT ((0)) NULL,
+    PRIMARY KEY CLUSTERED ([PLAYER_ID] ASC),
+    FOREIGN KEY ([GUIDE_ID]) REFERENCES [dbo].[Guides] ([GUIDE_ID]),
+    FOREIGN KEY ([TEAM_ID]) REFERENCES [dbo].[Teams] ([TEAM_ID])
+);
+
+CREATE TABLE [dbo].[Regions] (
+    [REGION_ID] INT           IDENTITY (1, 1) NOT NULL,
+    [Name]      VARCHAR (255) NOT NULL,
+    PRIMARY KEY CLUSTERED ([REGION_ID] ASC)
+);
+
+CREATE TABLE [dbo].[Minigames] (
+    [MINIGAME_ID] INT           IDENTITY (1, 1) NOT NULL,
+    [Name]        VARCHAR (255) NOT NULL,
+    [BaseGame]    BIT           NOT NULL,
+    [REGION_ID]   INT           NOT NULL,
+    PRIMARY KEY CLUSTERED ([MINIGAME_ID] ASC),
+    FOREIGN KEY ([REGION_ID]) REFERENCES [dbo].[Regions] ([REGION_ID])
+);
+
+CREATE TABLE [dbo].[Scores] (
+    [SCORE_ID]    INT IDENTITY (1, 1) NOT NULL,
+    [Score]       INT NOT NULL,
+    [PLAYER_ID]   INT NOT NULL,
+    [MINIGAME_ID] INT NOT NULL,
+    PRIMARY KEY CLUSTERED ([SCORE_ID] ASC),
+    FOREIGN KEY ([PLAYER_ID]) REFERENCES [dbo].[Players] ([PLAYER_ID]),
+    FOREIGN KEY ([MINIGAME_ID]) REFERENCES [dbo].[Minigames] ([MINIGAME_ID])
+);
+
+CREATE TABLE [dbo].[Inventory] (
+    [INVENTORY_ID]      INT IDENTITY (1, 1) NOT NULL,
+    [Manufacturing]     INT DEFAULT ((0)) NOT NULL,
+    [Terminal]          INT DEFAULT ((0)) NOT NULL,
+    [Logistics]         INT DEFAULT ((0)) NOT NULL,
+    [GreyManufacturing] INT DEFAULT ((0)) NOT NULL,
+    [Food]              INT DEFAULT ((0)) NOT NULL,
+    [Cars]              INT DEFAULT ((0)) NOT NULL,
+    [Environment]       INT DEFAULT ((0)) NOT NULL,
+    [Management]        INT DEFAULT ((0)) NOT NULL,
+    [TEAM_ID]           INT NOT NULL,
+    [GUIDE_ID]          INT NOT NULL,
+    PRIMARY KEY CLUSTERED ([INVENTORY_ID] ASC),
+    FOREIGN KEY ([TEAM_ID]) REFERENCES [dbo].[Teams] ([TEAM_ID]),
+    FOREIGN KEY ([GUIDE_ID]) REFERENCES [dbo].[Guides] ([GUIDE_ID])
+);
