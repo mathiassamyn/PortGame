@@ -11,6 +11,7 @@ Students will play mini games in different regions and they will read informatio
 The longer they own a region, the more products they will collect. Products are traded on the market place and then are used to unlock mini games to give students extra coins. 
 
 For more information, visit the Port Control [website](http://portcentre.maltegrapentin.com/).
+To try a live demo, visit [Port Control](http://portcontrol.westeurope.cloudapp.azure.com/#!/login).
 
 
 ## Technologies ##
@@ -33,7 +34,7 @@ Multiple technologies have been used during the development of this game and are
 
 ## Get started ##
 
-*This tutorial will tell you how you can get the project running locally on a Windows computer.*
+*This tutorial will tell you how you can get the project running locally on a Windows computer. Please note that the game has been designed for IPad sized devices, and that you should use a screen of this size to have the full experience.*
 
 ### Getting the project ###
 
