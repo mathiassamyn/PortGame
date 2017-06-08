@@ -90,6 +90,7 @@ app.post("/trade", function (req, res) {
 
 app.post("/clearDatabase", function (req, res) {
     var cookies = cookie.parse(req.headers.cookie);
+    console.log("in cleardb");
     SQL.clearDatabase(cookies.guideID, res);
 })
 
