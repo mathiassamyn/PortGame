@@ -1,8 +1,10 @@
 # Port Control #
 
+***IMPORTANT: This prototype is only made as a proof of concept and it will therefore be prone to bugs and errors. Large parts of the game have not yet been developed and thus certain pages will not include any functionalities. Please note that the game has been designed for IPad sized devices, and that you should use a screen of this size, in portrait mode, to have the full experience.***
+
 ## Introduction ##
 
-Port Control is an interactive educational web based game. It takes place in the The Port of Antwerp and is given to young adults to play when they go on a bus tour of the port. The game is pre-loaded on tablets which are kept in the Havencentrum and given to students before they enter the bus or when they are on the bus. The game is only intended to be played when the students are on the tour. 
+Port Control is an interactive educational web based game. It takes place in the The Port of Antwerp and is given to young adults to play when they go on a bus tour of the port. The game is pre-loaded on tablets which are kept in the Port Centre and given to students before they enter the bus or when they are on the bus. The game is only intended to be played when the students are on the tour. 
 
 The aim of the game is simple: have the most coins at the end. Students will work individually and in teams to play games, own regions and gain products to unlock bonus games for more coins. Eventually the team with the most coins in their wallet will win. 
 
@@ -34,7 +36,7 @@ Multiple technologies have been used during the development of this game and are
 
 ## Get started ##
 
-*This tutorial will tell you how you can get the project running locally on a Windows computer. Please note that the game has been designed for IPad sized devices, and that you should use a screen of this size to have the full experience.*
+*This tutorial will tell you how you can get the project running locally on a Windows computer.*
 
 ### Getting the project ###
 
