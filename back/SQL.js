@@ -22,7 +22,8 @@ pool.on('error', function (err) {
 function executeQuery(query, response) {
     pool.acquire(function (err, connection) {
         if (err) {
-            console.error(err);
+connection.release(); 
+           console.error(err);
             return;
         }
 
@@ -200,8 +201,8 @@ exports.clearDatabase = function (guideID, response) {
     var query = "declare @guide_id int; " +
                 "set @guide_id = " + guideID + "; " +
                 "delete Scores from Players inner join Scores on Players.player_id = Scores.player_id where guide_id = @guide_id; " +
-                "delete from players where guide_id = @guide_id; ";
-                "delete from Inventory where guide_id = @guide_id; ";
+                "delete from players where guide_id = @guide_id; " +
+                "delete from inventory where guide_id = @guide_id; ";
 
     executeQuery(query, response);
 }
