@@ -277,15 +277,28 @@ body{
 #login{
 	background-color: $blue;
 	color: $white;
+	
 }
 .login{
+	background-color: $blue;
+	height: 200vh;
+}
+.makeitblue{
+	width:100%;
+	height: 200vh;
 	background-color: $blue;
 }
 
 .loginContainer{
-	width: 75%;
+	width: 80%;
 	margin: 0 auto;
 	padding: $h1Padding;
+	background-color: $blue;
+}
+.contentContainerLogin{
+	width:100%;
+	height: 200vh;
+	background-color: $blue;
 }
 
 .headerImg{
@@ -339,7 +352,7 @@ body{
 .inputLogin{
 	  overflow:hidden;
    width:100%;
-   height: 5%;
+   height: 6%;
    -moz-border-radius: 4px 4px 4px 4px;
    -webkit-border-radius: 4px 4px 4px 4px;
    border-radius: 4px 4px 4px 4px;
